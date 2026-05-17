@@ -458,9 +458,10 @@ h2 {
   }
 
   .hero-poster {
-    max-height: 72vh;
+    max-height: none;
     order: -1;
-    object-position: 50% 18%;
+    object-fit: contain;
+    object-position: center;
     width: min(100%, 430px);
   }
 
