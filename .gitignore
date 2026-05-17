@@ -1,0 +1,11 @@
+# Local scratch
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Generated media and exports can be large.
+exports/
+renders/
+generated/
+
