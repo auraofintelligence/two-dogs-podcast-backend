@@ -38,6 +38,7 @@ const type = document.getElementById("recurringType");
 const preview = document.getElementById("recurringPreview");
 const filename = document.getElementById("recurringFilename");
 const statusLine = document.getElementById("recurringStatus");
+const unObservancePanel = document.getElementById("unObservancePanel");
 
 document.getElementById("recurringDownload").addEventListener("click", downloadMarkdown);
 document.getElementById("recurringCopy").addEventListener("click", copyMarkdown);
@@ -76,6 +77,7 @@ function renderForm() {
   const data = getData(activeScene);
   type.textContent = item.lane;
   title.textContent = item.name;
+  syncUnObservancePanel();
   form.innerHTML = "";
 
   const fields = [
@@ -221,6 +223,11 @@ function getScene(id) {
 function getData(id) {
   if (!savedState.forms[id]) savedState.forms[id] = {};
   return savedState.forms[id];
+}
+
+function syncUnObservancePanel() {
+  if (!unObservancePanel) return;
+  unObservancePanel.hidden = activeScene !== "un-world-day";
 }
 
 function requestedSceneId() {

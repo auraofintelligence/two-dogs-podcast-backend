@@ -29,7 +29,6 @@
 
     const search = mount.querySelector("[data-un-search]");
     const month = mount.querySelector("[data-un-month]");
-    const list = mount.querySelector("[data-un-list]");
     const calendar = mount.querySelector("[data-un-calendar]");
     const count = mount.querySelector("[data-un-count]");
 
@@ -51,7 +50,6 @@
       const matches = filtered(state);
       count.textContent = `${matches.length} observance${matches.length === 1 ? "" : "s"} shown`;
       calendar.innerHTML = renderCalendar(state, matches);
-      list.innerHTML = matches.length ? matches.map(renderResult).join("") : `<p class="un-empty">No observances matched that search.</p>`;
     }
   });
 
@@ -77,10 +75,9 @@
       </div>
       <div class="un-finder-meta">
         <span data-un-count></span>
-        <span>Snapshot: ${payload.generated} · ${payload.count} observances</span>
+        <span>Snapshot: ${payload.generated}. ${payload.count} observances.</span>
       </div>
       <div class="un-calendar" data-un-calendar aria-label="UN observance calendar"></div>
-      <div class="un-results" data-un-list aria-label="UN observance search results"></div>
     `;
   }
 
@@ -124,6 +121,7 @@
 
     return `
       <div class="un-calendar-title">${months[monthNumber]}</div>
+      ${matches.length ? "" : `<p class="un-empty">No observances matched that search in ${months[monthNumber]}.</p>`}
       <div class="un-calendar-grid">
         ${Array.from({ length: daysInMonth }, (_, index) => {
           const day = index + 1;
@@ -135,18 +133,6 @@
           </div>`;
         }).join("")}
       </div>
-    `;
-  }
-
-  function renderResult(item) {
-    return `
-      <article class="un-result">
-        <time>${item.dateLabel}</time>
-        <div>
-          <a href="${item.url}" target="_blank" rel="noopener"><strong>${escapeHtml(item.title)}</strong></a>
-          ${item.resolution ? `<a class="un-resolution" href="${item.resolutionUrl}" target="_blank" rel="noopener">${escapeHtml(item.resolution)}</a>` : ""}
-        </div>
-      </article>
     `;
   }
 

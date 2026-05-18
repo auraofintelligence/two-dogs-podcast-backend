@@ -651,8 +651,7 @@ h2 {
   text-decoration: none;
 }
 
-.un-day a:hover,
-.un-result a:hover {
+.un-day a:hover {
   color: var(--blue);
 }
 
@@ -678,40 +677,6 @@ h2 {
 .un-month-strip .has-match {
   background: var(--surface-soft);
   color: var(--text);
-}
-
-.un-results {
-  display: grid;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-.un-result {
-  align-items: start;
-  background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  display: grid;
-  gap: 12px;
-  grid-template-columns: 72px minmax(0, 1fr);
-  padding: 10px 12px;
-}
-
-.un-result time {
-  color: var(--red);
-  font-weight: 900;
-}
-
-.un-result a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.un-resolution {
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 900;
-  margin-left: 8px;
 }
 
 @media (max-width: 1180px) {
@@ -859,15 +824,6 @@ h2 {
 
   .un-month-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .un-result {
-    grid-template-columns: 1fr;
-  }
-
-  .un-resolution {
-    display: block;
-    margin: 4px 0 0;
   }
 
   .actions .button {

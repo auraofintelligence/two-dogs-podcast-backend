@@ -58,7 +58,7 @@ Use for official UN days, weeks and observances that create a topical doorway in
 
 Red Dog angle: "Apparently today is World Something Day, and weirdly, it might help us explain this."
 
-Source check: use the searchable calendar on `recurring-scenes.html` or `builders/recurring-scenes.html` as the local snapshot, then open the official UN observances list before claiming an official UN day.
+Source check: use the searchable calendar on `builders/recurring-scenes.html?scene=un-world-day` as the local snapshot, then open the official UN observances list before claiming an official UN day.
 
 Reference: https://www.un.org/en/observances/list-days-weeks
 
