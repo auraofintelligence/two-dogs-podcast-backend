@@ -56,14 +56,14 @@
           <span id="topbarSource">Freestyle fallback beats</span>
         </div>
         <div class="topbar-actions" aria-label="Cockpit actions">
-          <label class="file-loader" data-icon="↥">
+          <label class="file-loader cat-import" data-icon="L" aria-label="Load Markdown runsheet">
             <input id="runsheetFile" type="file" accept=".md,text/markdown,text/plain" />
-            Load
+            MD
           </label>
-          <button class="top-button" type="button" id="syncLatestRunsheet" data-icon="↻">Sync</button>
-          <button class="top-button" type="button" id="copyLog" data-icon="⧉">Copy</button>
-          <button class="top-button" type="button" id="exportLog" data-icon="↧">Export</button>
-          <button class="top-button" type="button" id="fullscreenButton" data-icon="⛶">Full</button>
+          <button class="top-button cat-sync" type="button" id="syncLatestRunsheet" data-icon="S" aria-label="Sync latest runsheet">SYN</button>
+          <button class="top-button cat-edit" type="button" id="copyLog" data-icon="C" aria-label="Copy log">CPY</button>
+          <button class="top-button cat-export" type="button" id="exportLog" data-icon="E" aria-label="Export log">EXP</button>
+          <button class="top-button cat-full" type="button" id="fullscreenButton" data-icon="F" aria-label="Fullscreen">FUL</button>
         </div>
       </section>
 
@@ -78,7 +78,7 @@
         <aside class="panel runsheet-panel" data-panel="runsheet">
           <div class="panel-heading">
             <p>Runsheet beats</p>
-            <button class="small-button" type="button" id="resetBeats" data-icon="↺">Reset</button>
+            <button class="small-button cat-edit" type="button" id="resetBeats" data-icon="R" aria-label="Reset beats">RST</button>
           </div>
           <div class="runsheet-source" id="runsheetSource">No imported runsheet yet. Use the builder or load a Markdown file.</div>
           <div class="beat-list" id="beatList" aria-label="Imported runsheet beats"></div>
@@ -92,56 +92,68 @@
           </div>
           <div class="beat-clock" id="beatClock">00:00</div>
           <div class="beat-remaining" id="beatRemaining">No beat loaded yet</div>
-          <div class="duration-row" aria-label="Current beat duration controls">
-            <button class="duration-button" type="button" id="shortenBeat" aria-label="Shorten current beat by one minute" data-icon="−">1 min</button>
-            <button class="duration-button" type="button" id="lengthenBeat" aria-label="Lengthen current beat by one minute" data-icon="+">1 min</button>
+          <div class="duration-control cat-timing" aria-label="Current beat duration control">
+            <div class="duration-readout">
+              <span>Trim timer</span>
+              <output id="beatDurationValue" for="beatDurationSlider">2 min set</output>
+            </div>
+            <input id="beatDurationSlider" type="range" min="-20" max="20" step="1" value="0" aria-label="Trim current beat length: left shorter, right longer" />
+            <div class="duration-scale" aria-hidden="true">
+              <span>Shorter</span>
+              <span>No change</span>
+              <span>Longer</span>
+            </div>
           </div>
           <div class="beat-progress"><span id="beatProgress"></span></div>
-          <button class="scene-cut-button" type="button" id="sceneCutButton" data-icon="✂">Scene Cut</button>
+          <button class="scene-cut-button" type="button" id="sceneCutButton" data-icon="!" aria-label="Scene cut marker">CUT</button>
           <p class="beat-note" id="beatNote">Load a runsheet, sync the latest builder output, or freestyle from the programmable pads.</p>
           <div class="transport-row">
-            <button class="transport start" type="button" id="startPauseButton" data-icon="▶">Start</button>
-            <button class="transport reset" type="button" id="resetTimerButton" data-icon="↺">Reset</button>
+            <button class="transport start" type="button" id="startPauseButton" data-icon=">" aria-label="Start or pause timer">GO</button>
+            <button class="transport reset cat-edit" type="button" id="resetTimerButton" data-icon="R" aria-label="Reset timer">RST</button>
           </div>
           <div class="beat-nav-row">
-            <button class="next-beat-button" type="button" id="prevBeatButton" data-icon="‹">Previous beat</button>
-            <button class="next-beat-button" type="button" id="nextBeatButton" data-icon="›">Next beat</button>
+            <button class="next-beat-button" type="button" id="prevBeatButton" data-icon="<" aria-label="Previous beat">PREV</button>
+            <button class="next-beat-button" type="button" id="nextBeatButton" data-icon=">" aria-label="Next beat">NEXT</button>
           </div>
           <div class="marker-row">
-            <button class="marker-button" type="button" data-marker="On Air" data-icon="●">On Air</button>
-            <button class="marker-button" type="button" data-marker="Mic Check" data-icon="◌">Mic Check</button>
-            <button class="marker-button" type="button" data-marker="Keep This" data-icon="★">Keep This</button>
-            <button class="marker-button" type="button" data-marker="Follow Up" data-icon="⚑">Follow Up</button>
+            <button class="marker-button cat-recording" type="button" data-marker="On Air" data-icon="ON" aria-label="On air marker">AIR</button>
+            <button class="marker-button cat-sound" type="button" data-marker="Mic Check" data-icon="MC" aria-label="Mic check marker">MIC</button>
+            <button class="marker-button cat-good" type="button" data-marker="Keep This" data-icon="K" aria-label="Keep this marker">KEEP</button>
+            <button class="marker-button cat-edit" type="button" data-marker="Follow Up" data-icon="F" aria-label="Follow up marker">FUP</button>
           </div>
         </section>
 
         <aside class="panel log-panel" data-panel="log">
           <div class="panel-heading">
             <p>Session log</p>
-            <button class="small-button" type="button" id="clearLog" data-icon="×">Clear</button>
+            <button class="small-button cat-risk" type="button" id="clearLog" data-icon="X" aria-label="Clear log">CLR</button>
           </div>
           <ol class="session-log" id="sessionLog"></ol>
           <label class="quick-note">
             <span>Quick note</span>
             <textarea id="quickNote" maxlength="220" placeholder="Type a note for post-production..."></textarea>
           </label>
-          <button class="top-button full-width" type="button" id="addNote" data-icon="+">Add note</button>
+          <button class="top-button full-width cat-edit" type="button" id="addNote" data-icon="+" aria-label="Add timestamped note">NOTE</button>
         </aside>
 
-        <section class="panel sfx-panel" data-panel="sfx">
-          <div class="panel-heading">
-            <p>SFX and markers</p>
-            <button class="small-button" type="button" id="resetPads" data-icon="↺">Reset</button>
-          </div>
-          <div class="sfx-grid" id="sfxGrid" aria-label="Sound effect buttons"></div>
+        <section class="panel deck-panel" data-panel="sfx">
+          <div class="deck-track" id="controlDeck" aria-label="Swipe quick control pads"></div>
         </section>
+      </section>
+    </main>
 
-        <section class="panel custom-panel" data-panel="sfx">
-          <div class="panel-heading">
-            <p>Programmable buttons</p>
-            <button class="small-button" type="button" id="saveCustomPad" data-icon="✓">Save</button>
+    <section class="explainer-key" id="controlKey">
+      <div class="key-shell">
+        <h2>Control key</h2>
+        <p>Swipe the pad deck sideways during recording. The cockpit keeps the buttons short on purpose; this key spells them out when you scroll down.</p>
+        <div class="key-grid" id="controlKeyList"></div>
+
+        <details class="pad-editor">
+          <summary>Edit programmable pads</summary>
+          <div class="editor-actions">
+            <button class="small-button cat-risk" type="button" id="resetPads" data-icon="R" aria-label="Reset programmable pads">RST</button>
+            <button class="small-button cat-sync" type="button" id="saveCustomPad" data-icon="S" aria-label="Save selected programmable pad">SAVE</button>
           </div>
-          <div class="custom-pad-grid" id="customPadGrid" aria-label="Custom programmable buttons"></div>
           <form class="custom-editor" id="customPadForm">
             <label>
               <span>Selected button</span>
@@ -175,9 +187,9 @@
               </select>
             </label>
           </form>
-        </section>
-      </section>
-    </main>
+        </details>
+      </div>
+    </section>
 
     <script src="../builders/site-nav.js"></script>
     <script src="recording-cockpit.js"></script>

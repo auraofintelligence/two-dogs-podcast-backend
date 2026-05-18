@@ -70,8 +70,8 @@ const elements = {
   beatRemaining: document.getElementById("beatRemaining"),
   beatProgress: document.getElementById("beatProgress"),
   beatNote: document.getElementById("beatNote"),
-  shortenBeat: document.getElementById("shortenBeat"),
-  lengthenBeat: document.getElementById("lengthenBeat"),
+  beatDurationSlider: document.getElementById("beatDurationSlider"),
+  beatDurationValue: document.getElementById("beatDurationValue"),
   startPause: document.getElementById("startPauseButton"),
   resetTimer: document.getElementById("resetTimerButton"),
   prevBeat: document.getElementById("prevBeatButton"),
@@ -81,9 +81,9 @@ const elements = {
   clearLog: document.getElementById("clearLog"),
   quickNote: document.getElementById("quickNote"),
   addNote: document.getElementById("addNote"),
-  sfxGrid: document.getElementById("sfxGrid"),
+  controlDeck: document.getElementById("controlDeck"),
+  controlKeyList: document.getElementById("controlKeyList"),
   resetPads: document.getElementById("resetPads"),
-  customPadGrid: document.getElementById("customPadGrid"),
   customPadSelect: document.getElementById("customPadSelect"),
   customLabel: document.getElementById("customLabel"),
   customType: document.getElementById("customType"),
@@ -104,6 +104,7 @@ let beatStartAt = 0;
 let beatAccumulatedMs = 0;
 let logEntries = [];
 let timerId = null;
+let durationTrimBaseMinutes = null;
 
 restoreSession();
 bindControls();
@@ -136,8 +137,10 @@ function bindControls() {
   elements.resetBeats.addEventListener("click", resetBeats);
   elements.startPause.addEventListener("click", toggleRunning);
   elements.resetTimer.addEventListener("click", resetTimers);
-  elements.shortenBeat.addEventListener("click", () => adjustCurrentBeatMinutes(-1));
-  elements.lengthenBeat.addEventListener("click", () => adjustCurrentBeatMinutes(1));
+  elements.beatDurationSlider.addEventListener("pointerdown", beginBeatTrim);
+  elements.beatDurationSlider.addEventListener("focus", beginBeatTrim);
+  elements.beatDurationSlider.addEventListener("input", previewCurrentBeatTrim);
+  elements.beatDurationSlider.addEventListener("change", commitCurrentBeatTrim);
   elements.prevBeat.addEventListener("click", () => moveBeat(-1));
   elements.nextBeat.addEventListener("click", () => moveBeat(1));
   elements.sceneCut.addEventListener("click", sceneCut);
@@ -155,6 +158,7 @@ function bindControls() {
   document.querySelectorAll(".mobile-tabs button").forEach((button) => {
     button.addEventListener("click", () => activateTab(button.dataset.tab));
   });
+  window.addEventListener("resize", handleDeckResize);
 }
 
 function restoreSession() {
@@ -304,6 +308,7 @@ function renderBeats() {
     elements.beatList.appendChild(button);
   });
   renderNextCard();
+  syncDurationControl();
 }
 
 function renderNextCard() {
@@ -314,42 +319,20 @@ function renderNextCard() {
 }
 
 function renderSfx() {
-  elements.sfxGrid.innerHTML = "";
-  defaultSfx.forEach((item) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "sfx-button";
-    button.dataset.icon = iconForSound(item.sound);
-    button.innerHTML = `<strong>${escapeHtml(item.label)}</strong><span>${escapeHtml(item.hint)}</span>`;
-    button.addEventListener("click", () => {
-      playSound(item.sound);
-      log("SFX", item.label, item.sound);
-    });
-    elements.sfxGrid.appendChild(button);
-  });
+  renderControlDeck();
+  renderControlKey();
 }
 
 function renderCustomPads() {
-  elements.customPadGrid.innerHTML = "";
   elements.customPadSelect.innerHTML = "";
   customPads.forEach((item, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `custom-pad-button ${item.colour}${index === selectedPadIndex ? " selected" : ""}`;
-    button.dataset.icon = iconForPadType(item.type);
-    button.innerHTML = `<strong>${escapeHtml(item.label)}</strong><span>${escapeHtml(item.type)}</span>`;
-    button.addEventListener("click", () => {
-      selectedPadIndex = index;
-      selectPad(index);
-      triggerPad(item);
-    });
-    elements.customPadGrid.appendChild(button);
-
     const option = document.createElement("option");
     option.value = index;
     option.textContent = item.label;
     elements.customPadSelect.appendChild(option);
   });
+  renderControlDeck();
+  renderControlKey();
   selectPad(Math.min(selectedPadIndex, customPads.length - 1));
 }
 
@@ -361,9 +344,184 @@ function selectPad(index) {
   elements.customLabel.value = item.label;
   elements.customType.value = item.type;
   elements.customColour.value = item.colour;
-  Array.from(elements.customPadGrid.children).forEach((child, childIndex) => {
-    child.classList.toggle("selected", childIndex === index);
+  elements.controlDeck.querySelectorAll("[data-pad-index]").forEach((child) => {
+    child.classList.toggle("selected", Number(child.dataset.padIndex) === index);
   });
+}
+
+function renderControlDeck() {
+  if (!elements.controlDeck) return;
+  const controls = buildControls();
+  elements.controlDeck.innerHTML = "";
+  chunkControls(controls, controlsPerDeckPage()).forEach((group) => {
+    const page = document.createElement("div");
+    page.className = "deck-page";
+    group.forEach((control) => page.appendChild(createDeckButton(control)));
+    elements.controlDeck.appendChild(page);
+  });
+}
+
+function controlsPerDeckPage() {
+  return window.matchMedia("(min-width: 821px)").matches ? 16 : 8;
+}
+
+let lastDeckPageSize = controlsPerDeckPage();
+
+function handleDeckResize() {
+  const nextSize = controlsPerDeckPage();
+  if (nextSize === lastDeckPageSize) return;
+  lastDeckPageSize = nextSize;
+  renderControlDeck();
+}
+
+function buildControls() {
+  const sfxControls = defaultSfx.map((item) => ({
+    kind: "sfx",
+    label: item.label,
+    hint: item.hint,
+    icon: iconForSound(item.sound),
+    abbr: abbreviationForLabel(item.label),
+    sound: item.sound,
+    category: categoryForSound(item.sound)
+  }));
+  const padControls = customPads.map((item, index) => ({
+    kind: "pad",
+    label: item.label,
+    hint: item.type,
+    icon: iconForPadType(item.type),
+    abbr: abbreviationForLabel(item.label),
+    colour: item.colour,
+    type: item.type,
+    index,
+    category: categoryForPad(item)
+  }));
+  return [...sfxControls, ...padControls];
+}
+
+function createDeckButton(control) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = `deck-button ${control.kind} cat-${control.category}${control.colour ? ` ${control.colour}` : ""}`;
+  button.setAttribute("aria-label", `${control.label}: ${control.hint}`);
+  button.title = `${control.label}: ${control.hint}`;
+  button.innerHTML = `<span class="deck-icon">${escapeHtml(control.icon)}</span><span class="deck-abbr">${escapeHtml(control.abbr)}</span>`;
+  if (control.kind === "sfx") {
+    button.addEventListener("click", () => {
+      flashDeckButton(button);
+      playSound(control.sound);
+      log("SFX", control.label, control.sound);
+    });
+  } else {
+    button.dataset.padIndex = String(control.index);
+    button.classList.toggle("selected", control.index === selectedPadIndex);
+    button.addEventListener("click", () => {
+      flashDeckButton(button);
+      selectedPadIndex = control.index;
+      selectPad(control.index);
+      triggerPad(customPads[control.index]);
+    });
+  }
+  return button;
+}
+
+function flashDeckButton(button) {
+  button.classList.remove("fired");
+  void button.offsetWidth;
+  button.classList.add("fired");
+  window.setTimeout(() => button.classList.remove("fired"), 220);
+}
+
+function renderControlKey() {
+  if (!elements.controlKeyList) return;
+  const controls = buildControls();
+  elements.controlKeyList.innerHTML = "";
+  controls.forEach((control) => {
+    const item = document.createElement("div");
+    item.className = `key-item ${control.kind} cat-${control.category}${control.colour ? ` ${control.colour}` : ""}`;
+    item.innerHTML = `<span class="key-code"><b>${escapeHtml(control.icon)}</b><strong>${escapeHtml(control.abbr)}</strong></span><span><strong>${escapeHtml(control.label)}</strong><em>${escapeHtml(control.hint)}</em></span>`;
+    elements.controlKeyList.appendChild(item);
+  });
+}
+
+function chunkControls(items, size) {
+  const chunks = [];
+  for (let index = 0; index < items.length; index += size) chunks.push(items.slice(index, index + size));
+  return chunks;
+}
+
+function abbreviationForLabel(label) {
+  const fixed = {
+    "Can Crack": "CAN",
+    "Dog Whistle": "WSL",
+    Waves: "WAV",
+    Kookaburra: "KOO",
+    "News Sting": "NEWS",
+    "Comedy Sting": "COM",
+    "Good Dog": "GOOD",
+    "Bad Dog": "BAD",
+    "Gate Knock": "GATE",
+    "Treat Bag": "TRT",
+    "Ferry Horn": "FERY",
+    "Soft Mark": "MARK",
+    "Source Check": "SRC",
+    "Blue Dog Cue": "BLUE",
+    "Guest Cue": "GST",
+    "Ad Break": "AD",
+    "Segue Ready": "SEG",
+    "Cut Later": "CUT",
+    "Keep This": "KEEP",
+    "Too Long": "LONG",
+    "Big Laugh": "LAFF",
+    "Reset Energy": "RST",
+    "Postie Arrives": "POST",
+    "Walk Scene": "WALK",
+    "Research Later": "RCH",
+    "Weather Check": "WX",
+    "Sports Check": "SPRT",
+    "UN Day": "UN",
+    "Merch Cue": "MRCH",
+    "Dogs And Allies": "ALLY"
+  };
+  if (fixed[label]) return fixed[label];
+  return label
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 4)
+    .toUpperCase();
+}
+
+function categoryForSound(sound) {
+  const categories = {
+    can: "recording",
+    whistle: "sound",
+    waves: "scene",
+    kookaburra: "scene",
+    news: "current",
+    comedy: "comedy",
+    success: "good",
+    buzz: "risk",
+    knock: "scene",
+    treat: "scene",
+    horn: "scene",
+    soft: "edit"
+  };
+  return categories[sound] || "edit";
+}
+
+function categoryForPad(item) {
+  const label = item.label.toLowerCase();
+  if (item.type === "cut" || item.type === "buzz" || label.includes("too long")) return "risk";
+  if (label.includes("blue") || label.includes("guest") || label.includes("segue")) return "cue";
+  if (label.includes("ad") || label.includes("merch")) return "support";
+  if (label.includes("weather") || label.includes("sports") || label.includes("un day")) return "current";
+  if (label.includes("postie") || label.includes("walk")) return "scene";
+  if (label.includes("keep") || label.includes("laugh") || label.includes("dogs")) return "good";
+  if (label.includes("source") || label.includes("research") || label.includes("reset")) return "edit";
+  if (item.type === "ding") return "good";
+  if (item.type === "soft") return "cue";
+  return "edit";
 }
 
 function saveSelectedPad(event) {
@@ -398,8 +556,8 @@ function toggleRunning() {
     isRunning = false;
     clearInterval(timerId);
     timerId = null;
-    elements.startPause.textContent = "Start";
-    elements.startPause.dataset.icon = "▶";
+    elements.startPause.textContent = "GO";
+    elements.startPause.dataset.icon = ">";
     elements.startPause.classList.remove("paused");
     elements.status.classList.remove("live");
     elements.status.lastChild.textContent = " Paused";
@@ -409,8 +567,8 @@ function toggleRunning() {
     beatStartAt = Date.now() - beatAccumulatedMs;
     isRunning = true;
     timerId = setInterval(updateClocks, 250);
-    elements.startPause.textContent = "Pause";
-    elements.startPause.dataset.icon = "Ⅱ";
+    elements.startPause.textContent = "PAU";
+    elements.startPause.dataset.icon = "II";
     elements.startPause.classList.add("paused");
     elements.status.classList.add("live");
     elements.status.lastChild.textContent = " Live";
@@ -422,34 +580,34 @@ function toggleRunning() {
 
 function iconForSound(sound) {
   const icons = {
-    can: "◉",
-    whistle: "⌁",
-    waves: "≈",
+    can: "CAN",
+    whistle: "~",
+    waves: "~",
     kookaburra: "!",
-    news: "▣",
+    news: "N",
     comedy: "ha",
-    success: "★",
+    success: "+",
     buzz: "!",
-    knock: "⌂",
-    treat: "◆",
-    horn: "◁",
-    soft: "·"
+    knock: "G",
+    treat: "T",
+    horn: "H",
+    soft: "."
   };
-  return icons[sound] || "•";
+  return icons[sound] || ".";
 }
 
 function iconForPadType(type) {
   const icons = {
-    marker: "●",
-    cut: "✂",
-    soft: "·",
-    ding: "◆",
+    marker: "*",
+    cut: "CUT",
+    soft: ".",
+    ding: "+",
     buzz: "!",
-    knock: "⌂",
-    treat: "◆",
-    horn: "◁"
+    knock: "G",
+    treat: "T",
+    horn: "H"
   };
-  return icons[type] || "•";
+  return icons[type] || ".";
 }
 
 function resetTimers() {
@@ -477,15 +635,58 @@ function moveBeat(direction) {
   jumpToBeat(Math.max(0, Math.min(beats.length - 1, currentBeat + direction)));
 }
 
-function adjustCurrentBeatMinutes(delta) {
+function beginBeatTrim() {
   const item = beats[currentBeat];
   if (!item) return;
-  const nextMinutes = Math.max(1, Math.min(180, Math.round((Number(item.minutes) || 1) + delta)));
+  durationTrimBaseMinutes = Math.max(1, Math.round(Number(item.minutes) || 1));
+}
+
+function previewCurrentBeatTrim() {
+  const item = beats[currentBeat];
+  if (!item) return;
+  if (durationTrimBaseMinutes === null) beginBeatTrim();
+  const delta = Math.round(Number(elements.beatDurationSlider.value) || 0);
+  const base = durationTrimBaseMinutes || Math.round(Number(item.minutes) || 1);
+  const nextMinutes = Math.max(1, Math.min(240, base + delta));
   item.minutes = nextMinutes;
+  updateDurationOutput(nextMinutes, delta);
+  updateClocks();
+}
+
+function commitCurrentBeatTrim() {
+  const item = beats[currentBeat];
+  if (!item) return;
+  const delta = Math.round(Number(elements.beatDurationSlider.value) || 0);
+  const base = durationTrimBaseMinutes || Math.round(Number(item.minutes) || 1);
+  const finalMinutes = Math.max(1, Math.min(240, base + delta));
+  const effectiveDelta = finalMinutes - base;
+  const changed = effectiveDelta !== 0;
+  item.minutes = finalMinutes;
+  durationTrimBaseMinutes = null;
+  elements.beatDurationSlider.value = "0";
   renderBeats();
   updateClocks();
-  log("Beat Length", `${item.title} is now about ${nextMinutes} min.`, "marker");
-  persistSession();
+  if (changed) {
+    log("Beat Length", `${item.title} ${effectiveDelta > 0 ? "lengthened" : "shortened"} by ${Math.abs(effectiveDelta)} min to about ${finalMinutes} min.`, "marker");
+  } else {
+    persistSession();
+  }
+}
+
+function syncDurationControl() {
+  if (!elements.beatDurationSlider || !elements.beatDurationValue) return;
+  const item = beats[currentBeat] || fallbackBeats[0];
+  const minutes = Math.max(1, Math.round(Number(item.minutes) || 1));
+  elements.beatDurationSlider.min = "-20";
+  elements.beatDurationSlider.max = "20";
+  elements.beatDurationSlider.value = "0";
+  updateDurationOutput(minutes, 0);
+}
+
+function updateDurationOutput(minutes, delta) {
+  if (!elements.beatDurationValue) return;
+  const deltaText = delta === 0 ? "set" : `${delta > 0 ? "+" : ""}${delta} min`;
+  elements.beatDurationValue.textContent = `${minutes} min ${deltaText}`;
 }
 
 function sceneCut() {
