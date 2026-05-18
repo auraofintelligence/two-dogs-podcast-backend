@@ -510,12 +510,14 @@ a {
 }
 
 .beat-item strong {
+  color: #d7fff5;
   display: block;
   line-height: 1.15;
+  text-shadow: 0 0 12px rgba(34, 194, 189, 0.12);
 }
 
 .beat-item span {
-  color: var(--muted);
+  color: #93bdb6;
   display: block;
   font-size: 0.82rem;
   font-weight: 800;
@@ -526,6 +528,17 @@ a {
   background: #edf5f3;
   border-left-color: var(--red);
   color: var(--ink);
+}
+
+.beat-item.active strong {
+  color: #ffe0a3;
+  text-shadow:
+    0 0 14px rgba(240, 185, 67, 0.2),
+    0 0 22px rgba(240, 90, 69, 0.14);
+}
+
+.beat-item.active span {
+  color: #ffbba8;
 }
 
 .current-meta {
@@ -548,42 +561,55 @@ a {
   border-radius: 12px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
   display: grid;
-  gap: 5px;
-  padding: 10px 12px 8px;
-}
-
-.timer-topline {
-  align-items: start;
-  display: flex;
-  gap: 12px;
-  justify-content: space-between;
-  min-height: 42px;
+  gap: 2px;
+  min-height: 176px;
+  padding: 10px 14px 8px;
+  position: relative;
 }
 
 .timer-console .current-meta {
   background: transparent;
   border: 0;
   box-shadow: none;
+  left: 18px;
+  max-width: calc(100% - 126px);
   min-width: 0;
   padding: 0;
+  position: absolute;
+  top: 16px;
+  z-index: 2;
+}
+
+.timer-console .current-meta span,
+.timer-console .current-meta strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timer-console .current-meta strong {
+  font-size: clamp(1.16rem, 1.9vw, 1.9rem);
 }
 
 .timer-reset {
-  flex: 0 0 auto;
   min-height: 34px;
   padding: 6px 9px;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 2;
 }
 
 .beat-clock {
-  background: #121c17;
+  background: transparent;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: none;
   color: #f9efe3;
   font-size: clamp(5.2rem, 9vw, 8rem);
   font-weight: 950;
   letter-spacing: 0;
   line-height: 0.95;
-  padding: 8px 12px 4px;
+  padding: 54px 12px 0;
   text-align: center;
 }
 
@@ -1523,7 +1549,6 @@ textarea {
 
 .runsheet-source,
 .next-card,
-.beat-item span,
 .session-log,
 .beat-note,
 .quick-note span,
@@ -1535,12 +1560,33 @@ textarea {
   box-shadow: none;
 }
 
+.beat-item strong {
+  color: #d7fff5;
+}
+
+.beat-item span {
+  color: #93bdb6;
+}
+
 .beat-item.active {
   background:
-    radial-gradient(circle at 0% 0%, rgba(240, 90, 69, 0.22), transparent 50%),
+    radial-gradient(circle at 0% 0%, rgba(240, 90, 69, 0.28), transparent 52%),
+    linear-gradient(90deg, rgba(240, 90, 69, 0.14), rgba(240, 185, 67, 0.06) 34%, rgba(57, 191, 115, 0.03)),
     rgba(16, 37, 31, 0.98);
+  border-color: rgba(240, 90, 69, 0.38);
   border-left-color: var(--red);
+  box-shadow:
+    0 0 0 1px rgba(240, 90, 69, 0.16),
+    0 0 22px rgba(240, 90, 69, 0.12);
   color: var(--ink);
+}
+
+.beat-item.active strong {
+  color: #ffe0a3;
+}
+
+.beat-item.active span {
+  color: #ffbba8;
 }
 
 .current-meta {
@@ -1563,12 +1609,8 @@ textarea {
 }
 
 .beat-clock {
-  background:
-    radial-gradient(circle at 50% -12%, rgba(57, 191, 115, 0.34), transparent 54%),
-    linear-gradient(180deg, #061611, #030b08);
-  box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 18px 36px rgba(0, 0, 0, 0.34);
+  background: transparent;
+  box-shadow: none;
 }
 
 .beat-progress {
@@ -2061,7 +2103,7 @@ textarea {
   }
 
   .current-meta {
-    padding: 4px 8px;
+    padding: 0;
   }
 
   .current-meta span {
@@ -2072,9 +2114,35 @@ textarea {
     font-size: 1rem;
   }
 
+  .timer-console {
+    min-height: 138px;
+    padding: 8px 10px 7px;
+  }
+
+  .timer-console .current-meta {
+    left: 12px;
+    max-width: calc(100% - 94px);
+    top: 12px;
+  }
+
+  .timer-console .current-meta span {
+    font-size: 0.62rem;
+  }
+
+  .timer-console .current-meta strong {
+    font-size: 0.96rem;
+  }
+
+  .timer-reset {
+    min-height: 30px;
+    padding: 4px 7px;
+    right: 10px;
+    top: 10px;
+  }
+
   .beat-clock {
     font-size: clamp(4rem, 13vh, 6rem);
-    padding: 2px 8px 0;
+    padding: 42px 8px 0;
   }
 
   .beat-remaining {
@@ -2377,8 +2445,31 @@ textarea {
   }
 
   .beat-clock {
-    font-size: clamp(3.6rem, 18vw, 5.6rem);
-    padding: 12px 8px 14px;
+    font-size: clamp(4rem, 17vw, 5.2rem);
+    padding: 64px 8px 0;
+  }
+
+  .timer-console {
+    min-height: 196px;
+  }
+
+  .timer-console .current-meta {
+    left: 14px;
+    max-width: calc(100% - 112px);
+    top: 18px;
+  }
+
+  .timer-console .current-meta span {
+    font-size: 0.62rem;
+  }
+
+  .timer-console .current-meta strong {
+    font-size: 0.9rem;
+  }
+
+  .timer-reset {
+    right: 12px;
+    top: 16px;
   }
 
   .marker-row,
