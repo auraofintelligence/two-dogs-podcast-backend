@@ -31,6 +31,8 @@ Red Dog can frame joyful responsible abundance as a direction of hope: not prete
 
 - What "joyful responsible abundance" means in everyday words.
 - Why civic repair needs prototypes, not just slogans.
+- Aura Genesis as a political stress test: what if candidates had to face health, capability, trust and anti-bullshit before asking for power?
+- How politicians might adopt the proposal, dodge it, parody it, or flee the room when the mirror turns on.
 - Public ledgers as trust tools when used carefully.
 - How Two Dogs can talk politics without becoming a shouting match.
 
@@ -39,9 +41,11 @@ Red Dog can frame joyful responsible abundance as a direction of hope: not prete
 - Two dogs moderate a beach debate where the first rule is "say one useful thing".
 - A purple civic lab appears as a temporary market stall, not a parliament building.
 - Red Dog tests whether a slogan survives the pub test.
+- A mock Aura Genesis chamber opens beside the debate stage and every candidate suddenly remembers an urgent appointment.
 
 ## Segment Seeds
 
+- Aura Genesis: adopt it or flee it?
 - Pub test politics
 - Joyful responsible abundance in plain words
 - Did we solve anything?
@@ -50,8 +54,8 @@ Red Dog can frame joyful responsible abundance as a direction of hope: not prete
 
 - Strange But True Sample Worlds: Civic lab / P4A Purple Civic Lab
 - Public world: https://auraofintelligence.github.io/p4a_xyz/
+- Aura Genesis Protocol: https://auraofintelligence.github.io/p4a_xyz/pages/aura-genesis.html
 
 ## Next Useful Action
 
 Use the Segment builder for a recurring "pub test politics" bit.
-

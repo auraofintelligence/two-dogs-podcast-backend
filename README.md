@@ -27,7 +27,7 @@ This repo should help someone plan the next yarn, not force the show through a h
 ## Folders
 
 - [builders](./builders/) - local interactive feedback forms that export `.md` files.
-- [episodes](./episodes/) - generated episode plans and rough outlines.
+- [episodes](./episodes/) - generated episode plans, rough outlines and public first-draft discussion pages.
 - [scenes](./scenes/) - generated animated scene ideas, cold opens, transitions and visual moments.
 - [guests](./guests/) - generated guest notes and guest-chosen spirit animal details.
 - [ads-sponsors](./ads-sponsors/) - generated ad reads, sponsor ideas and ethical fit notes.
@@ -45,6 +45,12 @@ This repo should help someone plan the next yarn, not force the show through a h
 4. Fill the feedback fields and export Markdown.
 5. Save the exported file into the matching folder.
 6. If deeper context is needed, use [docs/source-routing.md](./docs/source-routing.md) before opening any large source document.
+
+## First Draft Discussion Pages
+
+The generated public discussion pages are collected at [episodes/index.html](./episodes/index.html).
+
+Each page clearly says `First draft discussion` and gathers the episode seed with its generated scene, ad/sponsor, segment and source-reference drafts so Luke and Angel can talk through what belongs in a full episode, what is only a segment, and what should stay parked. Guest and handoff forms are intentionally skipped in this pass.
 
 ## Current Seed
 
