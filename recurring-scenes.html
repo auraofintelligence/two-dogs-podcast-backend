@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recurring Scenes | Two Dogs Podcast</title>
+    <link rel="stylesheet" href="builders/styles.css" />
+    <style>
+      .recurring-shell {
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 24px;
+      }
+
+      .recurring-hero {
+        align-items: center;
+        display: grid;
+        gap: 28px;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
+      }
+
+      .recurring-hero img {
+        aspect-ratio: 1290 / 1892;
+        border: 1px solid rgba(23, 32, 27, 0.18);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        max-height: 540px;
+        object-fit: cover;
+        object-position: 50% 18%;
+        width: 100%;
+      }
+
+      .scene-grid,
+      .run-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 18px;
+      }
+
+      .scene-card,
+      .run-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        min-width: 0;
+        padding: 18px;
+      }
+
+      .scene-card strong,
+      .run-card strong {
+        display: block;
+        font-size: 1.16rem;
+        line-height: 1.15;
+      }
+
+      .scene-card p,
+      .run-card p {
+        color: var(--muted);
+        margin: 10px 0 0;
+      }
+
+      .scene-tag {
+        color: var(--red);
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 900;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+      }
+
+      .scene-section {
+        margin-top: 34px;
+      }
+
+      .source-note {
+        background: #fffaf0;
+        border: 1px solid #e7cf9c;
+        border-left: 6px solid var(--gold);
+        border-radius: 8px;
+        color: var(--text);
+        margin-top: 22px;
+        padding: 16px;
+      }
+
+      @media (max-width: 920px) {
+        .recurring-hero,
+        .scene-grid,
+        .run-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .recurring-hero img {
+          max-height: none;
+          width: min(100%, 420px);
+        }
+      }
+
+      @media (max-width: 560px) {
+        .recurring-shell {
+          padding: 16px 14px 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="Two Dogs Podcast home">
+        <img class="poster-mark" src="assets/two-dogs-podcast.webp" alt="Illustrated Two Dogs Podcast poster" width="1290" height="1892" />
+        <span>
+          <span class="brand-kicker">Two Dogs Podcast</span>
+          <strong>Recurring scenes</strong>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Two Dogs navigation">
+        <a href="index.html">Home</a>
+        <a href="episodes/index.html">Drafts</a>
+        <a class="active" href="recurring-scenes.html">Recurring</a>
+        <a href="builders/index.html">Builders</a>
+        <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>
+      </nav>
+    </header>
+
+    <main class="recurring-shell">
+      <section class="recurring-hero">
+        <div>
+          <p class="kicker">Standing show rhythm</p>
+          <h1>Recurring scenes for news, jokes, wins, warnings and useful little doorways.</h1>
+          <p class="lede">Use these as repeatable Two Dogs scene lanes. They are not locked scripts. Red Dog can prep the doorway and source check; Blue Dog stays open for Angel to direct.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="docs/recurring-scenes.md">Open Markdown menu</a>
+            <a class="button" href="builders/segment.html">Open segment builder</a>
+            <a class="button" href="episodes/index.html">Open drafts</a>
+          </div>
+        </div>
+        <img src="assets/two-dogs-podcast.webp" alt="Two Dogs Podcast artwork with two heelers on the beach" width="1290" height="1892" />
+      </section>
+
+      <section class="source-note">
+        <strong>Current material needs a fresh check.</strong>
+        News, weather, sports, public claims and Bad Dog items should be verified on recording day. Use official or credible sources, and keep developing stories clearly labelled.
+      </section>
+
+      <section class="scene-section" aria-label="Recurring scene menu">
+        <div class="section-heading">
+          <p class="kicker">Scene menu</p>
+          <h2>Pick the bit that gives the episode rhythm.</h2>
+        </div>
+        <div class="scene-grid">
+          <article class="scene-card"><span class="scene-tag">Current</span><strong>News Flash</strong><p>What happened, why it matters, and what a normal person should watch next.</p></article>
+          <article class="scene-card"><span class="scene-tag">Comedy</span><strong>Comedy Minute</strong><p>One quick joke, visual gag or absurd plain-English translation before the dense idea returns.</p></article>
+          <article class="scene-card"><span class="scene-tag">Accountability</span><strong>Bad Dog</strong><p>Corruption, bad choices, avoidable accidents, risky moves and poor process, handled with careful sourcing.</p></article>
+          <article class="scene-card"><span class="scene-tag">Wins</span><strong>Good Dog</strong><p>Good news, achievements, community care, useful inventions and people giving life a fair go.</p></article>
+          <article class="scene-card"><span class="scene-tag">Calendar</span><strong>UN World Day Of Whatever</strong><p>An official observance becomes a doorway into the episode, once checked against the UN list.</p></article>
+          <article class="scene-card"><span class="scene-tag">Sport</span><strong>Sports Desk</strong><p>Scores, clubs, rivalries, community health and what the game teaches about people.</p></article>
+          <article class="scene-card"><span class="scene-tag">Island</span><strong>Weather Window</strong><p>Storms, heat, tides, ferry mood, outdoor screenings and humility from the sky.</p></article>
+          <article class="scene-card"><span class="scene-tag">Sound</span><strong>Music Drop</strong><p>Theme-song cues, local tracks, release memory, guest songs and soundtrack beds.</p></article>
+          <article class="scene-card"><span class="scene-tag">Screen</span><strong>Film Club</strong><p>Films, shorts, animation tests, outdoor cinema and the question: what would this look like as a scene?</p></article>
+          <article class="scene-card"><span class="scene-tag">Visual</span><strong>Art Show</strong><p>Exhibitions, posters, murals, props and visual ideas that make the topic easier to feel.</p></article>
+          <article class="scene-card"><span class="scene-tag">Play</span><strong>Games Table</strong><p>Tabletop ideas, public ledger games, simulation toys and playful decision tests.</p></article>
+          <article class="scene-card"><span class="scene-tag">Evidence</span><strong>Science Sniff Test</strong><p>What is the claim, what is the evidence, and what are we not allowed to say yet?</p></article>
+          <article class="scene-card"><span class="scene-tag">Useful</span><strong>Life Hack</strong><p>One practical tip in words we understand: scams, gadgets, forms, repairs or everyday AI use.</p></article>
+          <article class="scene-card"><span class="scene-tag">Front door</span><strong>Onboarding</strong><p>How the show works, how guests choose animals, and how people can join without feeling silly.</p></article>
+          <article class="scene-card"><span class="scene-tag">Support</span><strong>Merch Table</strong><p>Shirts, stickers, posters, digital support bundles and joke products that should stay grounded.</p></article>
+          <article class="scene-card"><span class="scene-tag">Community</span><strong>Dogs And Allies</strong><p>Shout-outs, helpers, guests, builders, clubs and allies, with consent before naming people.</p></article>
+        </div>
+      </section>
+
+      <section class="scene-section" aria-label="Simple run sheet">
+        <div class="section-heading">
+          <p class="kicker">Simple run sheet</p>
+          <h2>Use the scenes like a rhythm section.</h2>
+        </div>
+        <div class="run-grid">
+          <article class="run-card"><strong>Open</strong><p>Start with News Flash, Weather Window, Good Dog or Bad Dog if the day has a clear doorway.</p></article>
+          <article class="run-card"><strong>Bridge</strong><p>Drop Comedy Minute, Life Hack, Music Drop or Science Sniff Test when the topic gets too dense.</p></article>
+          <article class="run-card"><strong>Close</strong><p>Finish with Good Dog, Dogs And Allies, Onboarding or a simple next useful action.</p></article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

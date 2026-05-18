@@ -327,6 +327,7 @@ function episodePageHtml(data) {
       <nav aria-label="Episode pages">
         <a href="../index.html">Home</a>
         <a href="index.html">All episodes</a>
+        <a href="../recurring-scenes.html">Recurring</a>
         <a href="../builders/index.html">Builders</a>
         <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>
       </nav>
@@ -441,6 +442,7 @@ function buildEpisodeIndex(drafts) {
       </a>
       <nav aria-label="Episode pages">
         <a href="../index.html">Home</a>
+        <a href="../recurring-scenes.html">Recurring</a>
         <a href="../builders/index.html">Builders</a>
         <a href="../builders/episode.html">Episode builder</a>
         <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>

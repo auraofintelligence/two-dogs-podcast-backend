@@ -8,6 +8,8 @@ This is a public-facing planning bench where interactive feedback forms generate
 
 Public home: [Two Dogs Podcast Planning](https://auraofintelligence.github.io/two-dogs-podcast-backend/)
 
+Recurring scenes: [Recurring Scenes](https://auraofintelligence.github.io/two-dogs-podcast-backend/recurring-scenes.html)
+
 Backlink: [Film Club World](https://auraofintelligence.github.io/strange-but-true/film-club-world.html)
 
 ## Premise
@@ -55,6 +57,12 @@ The generated public discussion pages are collected at [episodes/index.html](./e
 Each page clearly says `First draft discussion` and gathers the episode seed with its generated scene, ad/sponsor, segment and source-reference drafts so Luke and Angel can talk through what belongs in a full episode, what is only a segment, and what should stay parked. Guest and handoff forms are intentionally skipped in this pass.
 
 The public page order is narrative, not alphabetical. The opener is the broad Two Dogs / Strange But True premise, while music and distribution infrastructure now sit later in the run.
+
+## Recurring Scenes
+
+The standing scene menu is collected at [recurring-scenes.html](./recurring-scenes.html), with the Markdown version at [docs/recurring-scenes.md](./docs/recurring-scenes.md).
+
+Use it for repeatable bits such as News Flash, Comedy Minute, Bad Dog, Good Dog, UN World Day Of Whatever, Sports Desk, Weather Window, Music Drop, Film Club, Art Show, Games Table, Science Sniff Test, Life Hack, Onboarding, Merch Table and Dogs And Allies.
 
 ## Current Seed
 
