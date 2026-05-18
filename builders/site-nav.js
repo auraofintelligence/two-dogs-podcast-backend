@@ -3,6 +3,7 @@ function enhanceBuilderMenu() {
   if (!siteNav || siteNav.dataset.builderMenuReady === "true") return;
 
   const builderFiles = new Set([
+    "index.html",
     "episode.html",
     "runsheet.html",
     "scene.html",
@@ -31,6 +32,8 @@ function enhanceBuilderMenu() {
       primaryLinks.push(clone);
     }
   });
+
+  if (builderLinks.length < 2) return;
 
   const activeBuilder = builderLinks.find((link) => {
     const linkUrl = new URL(link.href, window.location.href);
@@ -77,7 +80,7 @@ function enhanceMobilePageMenu() {
   label.textContent = "Choose page";
 
   const select = document.createElement("select");
-  select.setAttribute("aria-label", "Choose builder page");
+  select.setAttribute("aria-label", "Choose page");
 
   const currentUrl = new URL(window.location.href);
   let selectedIndex = 0;

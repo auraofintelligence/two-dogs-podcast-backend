@@ -93,6 +93,10 @@ a {
   padding: 8px 10px;
 }
 
+.mobile-page-menu {
+  display: none;
+}
+
 main {
   margin: 0 auto;
   max-width: 1180px;
@@ -378,6 +382,33 @@ ul {
   .site-header nav a {
     flex: 1 1 auto;
     text-align: center;
+  }
+
+  .mobile-nav-ready .site-header nav.site-nav {
+    display: none;
+  }
+
+  .mobile-nav-ready .mobile-page-menu {
+    display: grid;
+    gap: 6px;
+  }
+
+  .mobile-page-menu span {
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 900;
+  }
+
+  .mobile-page-menu select {
+    appearance: auto;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    color: var(--text);
+    font-weight: 900;
+    min-height: 48px;
+    padding: 10px 12px;
+    width: 100%;
   }
 
   .draft-grid,
