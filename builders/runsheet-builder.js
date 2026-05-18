@@ -1,4 +1,5 @@
 const STORE_KEY = "two-dogs-runsheet-builder-v1";
+const LATEST_RUNSHEET_KEY = "two-dogs-latest-runsheet-md-v1";
 
 const coreBoundary = [
   "- Angel is Blue Dog / Blue Heeler.",
@@ -84,9 +85,12 @@ function component(id, name, lane, minutes, purpose) {
 function renderComponentList() {
   componentList.innerHTML = "";
   components.forEach((item) => {
+    const row = document.createElement("div");
+    row.className = "component-option";
+    if (state.selected.includes(item.id)) row.classList.add("active");
+
     const label = document.createElement("label");
-    label.className = "component-option";
-    if (state.selected.includes(item.id)) label.classList.add("active");
+    label.className = "component-check";
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -94,16 +98,43 @@ function renderComponentList() {
     checkbox.addEventListener("change", () => {
       if (checkbox.checked && !state.selected.includes(item.id)) state.selected.push(item.id);
       if (!checkbox.checked) state.selected = state.selected.filter((id) => id !== item.id);
-      label.classList.toggle("active", checkbox.checked);
       persistState();
+      renderComponentList();
       updateOutput();
     });
 
     const text = document.createElement("span");
-    text.innerHTML = `<strong>${item.name}</strong><span>${item.lane} - about ${item.minutes} min</span>`;
+    text.innerHTML = `<strong>${item.name}</strong><span>${item.lane} - about ${componentMinutes(item)} min</span>`;
+
+    const duration = document.createElement("div");
+    duration.className = "duration-adjuster";
+    duration.setAttribute("aria-label", `${item.name} duration`);
+
+    const minus = document.createElement("button");
+    minus.type = "button";
+    minus.textContent = "-";
+    minus.setAttribute("aria-label", `Shorten ${item.name}`);
+    minus.addEventListener("click", () => updateDuration(item.id, componentMinutes(item) - 1));
+
+    const minutes = document.createElement("input");
+    minutes.type = "number";
+    minutes.min = "1";
+    minutes.max = "180";
+    minutes.step = "1";
+    minutes.value = String(componentMinutes(item));
+    minutes.setAttribute("aria-label", `${item.name} minutes`);
+    minutes.addEventListener("change", () => updateDuration(item.id, minutes.value));
+
+    const plus = document.createElement("button");
+    plus.type = "button";
+    plus.textContent = "+";
+    plus.setAttribute("aria-label", `Lengthen ${item.name}`);
+    plus.addEventListener("click", () => updateDuration(item.id, componentMinutes(item) + 1));
 
     label.append(checkbox, text);
-    componentList.appendChild(label);
+    duration.append(minus, minutes, plus);
+    row.append(label, duration);
+    componentList.appendChild(row);
   });
 }
 
@@ -240,11 +271,28 @@ function updateOutput() {
   markdown.value = renderMarkdown(data, selected);
   filename.textContent = `runsheet-${dateStamp()}-${slugify(data.showTitle)}.md`;
   preview.innerHTML = renderPreview(data, selected);
+  syncLatestRunsheet(markdown.value, filename.textContent, data);
   statusLine.textContent = "Autosaved in this browser.";
 }
 
 function selectedComponents() {
-  return components.filter((item) => state.selected.includes(item.id));
+  return components
+    .filter((item) => state.selected.includes(item.id))
+    .map((item) => ({ ...item, minutes: componentMinutes(item) }));
+}
+
+function componentMinutes(item) {
+  const value = Number(state.durations?.[item.id]);
+  return Number.isFinite(value) && value > 0 ? value : item.minutes;
+}
+
+function updateDuration(id, value) {
+  const minutes = Math.max(1, Math.min(180, Math.round(Number(value) || 1)));
+  state.durations = state.durations || {};
+  state.durations[id] = minutes;
+  persistState();
+  renderComponentList();
+  updateOutput();
 }
 
 function currentData() {
@@ -424,7 +472,9 @@ function resetRunsheet() {
 function loadState() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORE_KEY));
-    if (parsed && Array.isArray(parsed.selected) && parsed.data) return parsed;
+    if (parsed && Array.isArray(parsed.selected) && parsed.data) {
+      return { selected: parsed.selected, data: parsed.data, durations: parsed.durations || {} };
+    }
   } catch (error) {
     console.warn("Could not load runsheet state", error);
   }
@@ -432,11 +482,29 @@ function loadState() {
 }
 
 function defaultState() {
-  return { selected: [...coreSet], data: {} };
+  return { selected: [...coreSet], data: {}, durations: {} };
 }
 
 function persistState() {
   localStorage.setItem(STORE_KEY, JSON.stringify(state));
+}
+
+function syncLatestRunsheet(markdownValue, filenameValue, data) {
+  try {
+    localStorage.setItem(
+      LATEST_RUNSHEET_KEY,
+      JSON.stringify({
+        markdown: markdownValue,
+        filename: filenameValue,
+        showTitle: data.showTitle,
+        episodeCode: data.episodeCode,
+        updatedAt: new Date().toISOString(),
+        source: "runsheet-builder"
+      })
+    );
+  } catch (error) {
+    console.warn("Could not sync latest runsheet for recording cockpit", error);
+  }
 }
 
 function doc(parts) {

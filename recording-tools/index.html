@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recording Cockpit | Two Dogs Podcast</title>
+    <link rel="stylesheet" href="recording-cockpit.css" />
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="../index.html" aria-label="Two Dogs Podcast home">
+        <img src="../assets/two-dogs-podcast.webp" alt="Two Dogs Podcast artwork" width="1290" height="1892" />
+        <span><strong>Two Dogs Podcast</strong><small>Recording cockpit</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Two Dogs navigation">
+        <a href="../index.html">Home</a>
+        <a href="../episodes/index.html">Drafts</a>
+        <a href="../recurring-scenes.html">Show Rhythm</a>
+        <a class="active" href="index.html">Recording</a>
+        <a href="../builders/index.html">Builders</a>
+        <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>
+      </nav>
+      <label class="mobile-page-menu">
+        <span>Navigation</span>
+        <select onchange="window.location.href = this.value">
+          <option value="../index.html">Home</option>
+          <option value="../episodes/index.html">Drafts</option>
+          <option value="../recurring-scenes.html">Show Rhythm</option>
+          <option value="index.html" selected>Recording</option>
+          <option value="../builders/index.html">Builders</option>
+          <option value="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</option>
+        </select>
+      </label>
+    </header>
+
+    <main class="cockpit-shell">
+      <section class="cockpit-topbar" aria-label="Recording session controls">
+        <div class="session-brand">
+          <img src="../assets/two-dogs-podcast.webp" alt="" width="1290" height="1892" />
+          <div>
+            <p>Two Dogs Podcast</p>
+            <h1>Cockpit</h1>
+          </div>
+        </div>
+        <div class="status-chip" id="recordingStatus"><span></span> Standby</div>
+        <div class="master-clock">
+          <strong id="elapsedClock">00:00:00</strong>
+          <span>elapsed</span>
+        </div>
+        <div class="session-summary">
+          <strong>Session</strong>
+          <span id="topbarSource">Freestyle fallback beats</span>
+        </div>
+        <div class="topbar-actions" aria-label="Cockpit actions">
+          <label class="file-loader" data-icon="↥">
+            <input id="runsheetFile" type="file" accept=".md,text/markdown,text/plain" />
+            Load
+          </label>
+          <button class="top-button" type="button" id="syncLatestRunsheet" data-icon="↻">Sync</button>
+          <button class="top-button" type="button" id="copyLog" data-icon="⧉">Copy</button>
+          <button class="top-button" type="button" id="exportLog" data-icon="↧">Export</button>
+          <button class="top-button" type="button" id="fullscreenButton" data-icon="⛶">Full</button>
+        </div>
+      </section>
+
+      <section class="mobile-tabs" aria-label="Cockpit panels">
+        <button class="active" type="button" data-tab="live">Live</button>
+        <button type="button" data-tab="sfx">SFX</button>
+        <button type="button" data-tab="runsheet" aria-label="Runsheet">Run</button>
+        <button type="button" data-tab="log">Log</button>
+      </section>
+
+      <section class="cockpit-grid">
+        <aside class="panel runsheet-panel" data-panel="runsheet">
+          <div class="panel-heading">
+            <p>Runsheet beats</p>
+            <button class="small-button" type="button" id="resetBeats" data-icon="↺">Reset</button>
+          </div>
+          <div class="runsheet-source" id="runsheetSource">No imported runsheet yet. Use the builder or load a Markdown file.</div>
+          <div class="beat-list" id="beatList" aria-label="Imported runsheet beats"></div>
+          <div class="next-card" id="nextCard"></div>
+        </aside>
+
+        <section class="panel live-panel" data-panel="live">
+          <div class="current-meta">
+            <span id="currentBeatLane">Current beat</span>
+            <strong id="currentBeatLabel">Open cockpit</strong>
+          </div>
+          <div class="beat-clock" id="beatClock">00:00</div>
+          <div class="beat-remaining" id="beatRemaining">No beat loaded yet</div>
+          <div class="duration-row" aria-label="Current beat duration controls">
+            <button class="duration-button" type="button" id="shortenBeat" aria-label="Shorten current beat by one minute" data-icon="−">1 min</button>
+            <button class="duration-button" type="button" id="lengthenBeat" aria-label="Lengthen current beat by one minute" data-icon="+">1 min</button>
+          </div>
+          <div class="beat-progress"><span id="beatProgress"></span></div>
+          <button class="scene-cut-button" type="button" id="sceneCutButton" data-icon="✂">Scene Cut</button>
+          <p class="beat-note" id="beatNote">Load a runsheet, sync the latest builder output, or freestyle from the programmable pads.</p>
+          <div class="transport-row">
+            <button class="transport start" type="button" id="startPauseButton" data-icon="▶">Start</button>
+            <button class="transport reset" type="button" id="resetTimerButton" data-icon="↺">Reset</button>
+          </div>
+          <div class="beat-nav-row">
+            <button class="next-beat-button" type="button" id="prevBeatButton" data-icon="‹">Previous beat</button>
+            <button class="next-beat-button" type="button" id="nextBeatButton" data-icon="›">Next beat</button>
+          </div>
+          <div class="marker-row">
+            <button class="marker-button" type="button" data-marker="On Air" data-icon="●">On Air</button>
+            <button class="marker-button" type="button" data-marker="Mic Check" data-icon="◌">Mic Check</button>
+            <button class="marker-button" type="button" data-marker="Keep This" data-icon="★">Keep This</button>
+            <button class="marker-button" type="button" data-marker="Follow Up" data-icon="⚑">Follow Up</button>
+          </div>
+        </section>
+
+        <aside class="panel log-panel" data-panel="log">
+          <div class="panel-heading">
+            <p>Session log</p>
+            <button class="small-button" type="button" id="clearLog" data-icon="×">Clear</button>
+          </div>
+          <ol class="session-log" id="sessionLog"></ol>
+          <label class="quick-note">
+            <span>Quick note</span>
+            <textarea id="quickNote" maxlength="220" placeholder="Type a note for post-production..."></textarea>
+          </label>
+          <button class="top-button full-width" type="button" id="addNote" data-icon="+">Add note</button>
+        </aside>
+
+        <section class="panel sfx-panel" data-panel="sfx">
+          <div class="panel-heading">
+            <p>SFX and markers</p>
+            <button class="small-button" type="button" id="resetPads" data-icon="↺">Reset</button>
+          </div>
+          <div class="sfx-grid" id="sfxGrid" aria-label="Sound effect buttons"></div>
+        </section>
+
+        <section class="panel custom-panel" data-panel="sfx">
+          <div class="panel-heading">
+            <p>Programmable buttons</p>
+            <button class="small-button" type="button" id="saveCustomPad" data-icon="✓">Save</button>
+          </div>
+          <div class="custom-pad-grid" id="customPadGrid" aria-label="Custom programmable buttons"></div>
+          <form class="custom-editor" id="customPadForm">
+            <label>
+              <span>Selected button</span>
+              <select id="customPadSelect"></select>
+            </label>
+            <label>
+              <span>Label</span>
+              <input id="customLabel" type="text" maxlength="28" />
+            </label>
+            <label>
+              <span>Action type</span>
+              <select id="customType">
+                <option value="marker">Marker only</option>
+                <option value="cut">Scene cut tone</option>
+                <option value="soft">Soft beep</option>
+                <option value="ding">Ding</option>
+                <option value="buzz">Buzz</option>
+                <option value="knock">Gate knock</option>
+                <option value="treat">Treat bag</option>
+                <option value="horn">Ferry horn</option>
+              </select>
+            </label>
+            <label>
+              <span>Colour</span>
+              <select id="customColour">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="gold">Gold</option>
+                <option value="ink">Ink</option>
+              </select>
+            </label>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="../builders/site-nav.js"></script>
+    <script src="recording-cockpit.js"></script>
+    <script src="../assets/back-to-top.js"></script>
+  </body>
+</html>

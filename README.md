@@ -35,6 +35,7 @@ This repo should help someone plan the next yarn, not force the show through a h
 
 - [builders](./builders/) - local interactive builder forms that export `.md` files.
 - [runsheets](./runsheets/) - generated showrunner runsheets for structured or freestyle episodes.
+- [recording cockpit](./recording-tools/index.html) - live touch panel for timers, scene-cut markers, synced runsheets, session notes and programmable buttons.
 - [episodes](./episodes/) - generated episode plans, rough outlines and public first-draft discussion pages.
 - [scenes](./scenes/) - generated animated scene ideas, cold opens, transitions, micro-scenes and visual moments.
 - [guests](./guests/) - generated guest notes and guest-chosen spirit animal details.
@@ -50,9 +51,10 @@ This repo should help someone plan the next yarn, not force the show through a h
 1. Open [docs/premise-and-boundaries.md](./docs/premise-and-boundaries.md).
 2. Open [builders/index.html](./builders/index.html) in a browser.
 3. Use the builder navigation to open the right page: runsheet, episode, scene, micro scene, guest onboarding, ad, segment, source or handoff.
-4. Fill the feedback fields and export Markdown.
-5. Save the exported file into the matching folder.
-6. If deeper context is needed, use [docs/source-routing.md](./docs/source-routing.md) before opening any large source document.
+4. Use the recording cockpit when a generated runsheet needs to become a live showrunner panel.
+5. Fill the feedback fields and export Markdown.
+6. Save the exported file into the matching folder.
+7. If deeper context is needed, use [docs/source-routing.md](./docs/source-routing.md) before opening any large source document.
 
 ## First Draft Discussion Pages
 
