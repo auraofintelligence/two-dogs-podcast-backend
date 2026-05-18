@@ -57,6 +57,7 @@ const elements = {
   runsheetFile: document.getElementById("runsheetFile"),
   syncLatest: document.getElementById("syncLatestRunsheet"),
   copyLog: document.getElementById("copyLog"),
+  exportFormat: document.getElementById("exportFormat"),
   exportLog: document.getElementById("exportLog"),
   fullscreen: document.getElementById("fullscreenButton"),
   resetBeats: document.getElementById("resetBeats"),
@@ -798,30 +799,65 @@ function updateClocks() {
 }
 
 function copyLog() {
-  navigator.clipboard.writeText(logMarkdown()).then(
-    () => log("Export", "Copied session log Markdown.", "ding"),
+  const payload = exportPayload();
+  navigator.clipboard.writeText(payload.text).then(
+    () => log("Export", `Copied session log ${payload.label}.`, "ding"),
     () => log("Export", "Clipboard copy failed.", "buzz")
   );
 }
 
 function exportLog() {
-  const blob = new Blob([logMarkdown()], { type: "text/markdown;charset=utf-8" });
+  const payload = exportPayload();
+  const blob = new Blob([payload.text], { type: payload.mime });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `recording-log-${new Date().toISOString().slice(0, 10)}.md`;
+  link.download = `recording-log-${new Date().toISOString().slice(0, 10)}.${payload.extension}`;
   document.body.appendChild(link);
   link.click();
   link.remove();
   URL.revokeObjectURL(url);
-  log("Export", "Downloaded session log Markdown.", "ding");
+  log("Export", `Downloaded session log ${payload.label}.`, "ding");
+}
+
+function selectedExportFormat() {
+  return elements.exportFormat?.value || "md";
+}
+
+function exportPayload(format = selectedExportFormat()) {
+  if (format === "srt") {
+    return {
+      extension: "srt",
+      label: "SRT cues",
+      mime: "application/x-subrip;charset=utf-8",
+      text: logSrt()
+    };
+  }
+
+  if (format === "txt") {
+    return {
+      extension: "txt",
+      label: "plain text",
+      mime: "text/plain;charset=utf-8",
+      text: logText()
+    };
+  }
+
+  return {
+    extension: "md",
+    label: "Markdown",
+    mime: "text/markdown;charset=utf-8",
+    text: logMarkdown()
+  };
+}
+
+function chronologicalEntries() {
+  return logEntries.slice().reverse();
 }
 
 function logMarkdown() {
   const active = beats[currentBeat] || {};
-  const entries = logEntries
-    .slice()
-    .reverse()
+  const entries = chronologicalEntries()
     .map((entry) => `- ${entry.at} | ${entry.type} | ${entry.label} | beat: ${entry.beat}`)
     .join("\n");
   const beatList = beats.map((item) => `- ${item.start} ${item.title} (about ${formatBeatDuration(item)}): ${item.note}`).join("\n");
@@ -845,6 +881,65 @@ ${entries || "- No log entries yet."}
 
 ${pads}
 `;
+}
+
+function logText() {
+  const active = beats[currentBeat] || {};
+  const beatList = beats
+    .map((item) => `${item.start} | ${item.title} | about ${formatBeatDuration(item)} | ${item.note}`)
+    .join("\n");
+  const entries = chronologicalEntries()
+    .map((entry) => `${entry.at} | ${entry.type} | ${entry.label} | beat: ${entry.beat}`)
+    .join("\n");
+  const pads = customPads.map((item) => `${item.label} (${item.type}, ${item.colour})`).join("\n");
+  return `Two Dogs Recording Log
+
+Source runsheet: ${sourceLabel}
+Exported: ${new Date().toISOString()}
+Elapsed: ${formatDuration(elapsedMs())}
+Active beat: ${active.title || "No beat"}
+
+BEATS
+${beatList || "No beats."}
+
+LOG ENTRIES
+${entries || "No log entries yet."}
+
+PROGRAMMABLE BUTTONS
+${pads || "No programmable buttons."}
+`;
+}
+
+function logSrt() {
+  const entries = chronologicalEntries();
+  if (!entries.length) return "";
+  return `${entries.map((entry, index) => {
+    const startSeconds = timestampToSeconds(entry.at);
+    const nextStart = entries[index + 1] ? timestampToSeconds(entries[index + 1].at) : null;
+    const naturalEnd = nextStart && nextStart > startSeconds ? Math.min(nextStart, startSeconds + 6) : startSeconds + 4;
+    const endSeconds = Math.max(startSeconds + 1, naturalEnd);
+    return `${index + 1}
+${formatSrtTime(startSeconds)} --> ${formatSrtTime(endSeconds)}
+${entry.type}: ${entry.label}
+Beat: ${entry.beat}`;
+  }).join("\n\n")}
+`;
+}
+
+function timestampToSeconds(value) {
+  const parts = String(value || "00:00:00").split(":").map((part) => Number(part));
+  if (parts.some((part) => Number.isNaN(part))) return 0;
+  if (parts.length === 3) return (parts[0] * 3600) + (parts[1] * 60) + parts[2];
+  if (parts.length === 2) return (parts[0] * 60) + parts[1];
+  return parts[0] || 0;
+}
+
+function formatSrtTime(seconds) {
+  const total = Math.max(0, Math.floor(Number(seconds) || 0));
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const secs = total % 60;
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")},000`;
 }
 
 function resetBeats() {

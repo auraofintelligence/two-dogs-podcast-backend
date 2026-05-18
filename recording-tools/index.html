@@ -62,6 +62,14 @@
           </label>
           <button class="top-button cat-sync" type="button" id="syncLatestRunsheet" data-icon="S" aria-label="Sync latest runsheet">SYN</button>
           <button class="top-button cat-edit" type="button" id="copyLog" data-icon="C" aria-label="Copy log">CPY</button>
+          <label class="export-format cat-export" aria-label="Export format">
+            <span>FMT</span>
+            <select id="exportFormat">
+              <option value="md">MD</option>
+              <option value="txt">TXT</option>
+              <option value="srt">SRT</option>
+            </select>
+          </label>
           <button class="top-button cat-export" type="button" id="exportLog" data-icon="E" aria-label="Export log">EXP</button>
           <button class="top-button cat-full" type="button" id="fullscreenButton" data-icon="F" aria-label="Fullscreen">FUL</button>
         </div>
@@ -76,16 +84,14 @@
 
       <section class="cockpit-grid">
         <aside class="panel runsheet-panel" data-panel="runsheet">
-          <div class="panel-heading">
-            <p>Runsheet beats</p>
-            <button class="small-button cat-edit" type="button" id="resetBeats" data-icon="R" aria-label="Reset beats">RST</button>
-          </div>
+          <button class="small-button floating-action cat-edit" type="button" id="resetBeats" data-icon="R" aria-label="Reset beats">RST</button>
           <div class="runsheet-source" id="runsheetSource">No imported runsheet yet. Use the builder or load a Markdown file.</div>
           <div class="beat-list" id="beatList" aria-label="Imported runsheet beats"></div>
           <div class="next-card" id="nextCard"></div>
         </aside>
 
         <section class="panel live-panel" data-panel="live">
+          <button class="small-button floating-action cat-edit" type="button" id="resetTimerButton" data-icon="R" aria-label="Reset timer">RST</button>
           <div class="current-meta">
             <span id="currentBeatLane">Current beat</span>
             <strong id="currentBeatLabel">Open cockpit</strong>
@@ -107,9 +113,8 @@
           <div class="beat-progress"><span id="beatProgress"></span></div>
           <button class="scene-cut-button" type="button" id="sceneCutButton" data-icon="!" aria-label="Scene cut marker">CUT</button>
           <p class="beat-note" id="beatNote">Load a runsheet, sync the latest builder output, or freestyle from the programmable pads.</p>
-          <div class="transport-row">
+          <div class="transport-row primary-action-row">
             <button class="transport start" type="button" id="startPauseButton" data-icon=">" aria-label="Start or pause timer">GO</button>
-            <button class="transport reset cat-edit" type="button" id="resetTimerButton" data-icon="R" aria-label="Reset timer">RST</button>
           </div>
           <div class="beat-nav-row">
             <button class="next-beat-button" type="button" id="prevBeatButton" data-icon="<" aria-label="Previous beat">PREV</button>
@@ -124,16 +129,12 @@
         </section>
 
         <aside class="panel log-panel" data-panel="log">
-          <div class="panel-heading">
-            <p>Session log</p>
-            <button class="small-button cat-risk" type="button" id="clearLog" data-icon="X" aria-label="Clear log">CLR</button>
-          </div>
+          <button class="small-button floating-action cat-risk" type="button" id="clearLog" data-icon="X" aria-label="Clear log">CLR</button>
           <ol class="session-log" id="sessionLog"></ol>
-          <label class="quick-note">
-            <span>Quick note</span>
-            <textarea id="quickNote" maxlength="220" placeholder="Type a note for post-production..."></textarea>
-          </label>
-          <button class="top-button full-width cat-edit" type="button" id="addNote" data-icon="+" aria-label="Add timestamped note">NOTE</button>
+          <div class="quick-note">
+            <textarea id="quickNote" maxlength="220" aria-label="Quick post-production note" placeholder="Type a note for post-production..."></textarea>
+            <button class="small-button note-add-button cat-edit" type="button" id="addNote" data-icon="+" aria-label="Add timestamped note">NOTE</button>
+          </div>
         </aside>
 
         <section class="panel deck-panel" data-panel="sfx">

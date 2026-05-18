@@ -248,6 +248,7 @@ a {
 
 .top-button,
 .file-loader,
+.export-format,
 .small-button,
 .marker-button,
 .next-beat-button,
@@ -269,6 +270,7 @@ a {
 
 .top-button,
 .file-loader,
+.export-format,
 .small-button,
 .marker-button,
 .next-beat-button,
@@ -317,6 +319,7 @@ a {
 
 .top-button,
 .file-loader,
+.export-format,
 .small-button {
   background: linear-gradient(180deg, #ffffff 0%, #edf4f1 100%);
   color: var(--ink);
@@ -326,6 +329,7 @@ a {
 
 .top-button:hover,
 .file-loader:hover,
+.export-format:hover,
 .small-button:hover,
 .marker-button:hover,
 .next-beat-button:hover,
@@ -343,6 +347,7 @@ a {
 
 .top-button:focus-visible,
 .file-loader:focus-within,
+.export-format:focus-within,
 .small-button:focus-visible,
 .marker-button:focus-visible,
 .next-beat-button:focus-visible,
@@ -392,6 +397,7 @@ a {
   min-width: 0;
   overflow: hidden;
   padding: 14px;
+  position: relative;
 }
 
 .runsheet-panel,
@@ -443,6 +449,22 @@ a {
   justify-content: space-between;
   margin: -2px 0 12px;
   padding-bottom: 10px;
+}
+
+.floating-action {
+  font-size: 0.72rem;
+  min-height: 30px;
+  padding: 5px 8px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 3;
+}
+
+.runsheet-panel .runsheet-source,
+.live-panel .current-meta,
+.log-panel .session-log {
+  padding-right: 74px;
 }
 
 .runsheet-source,
@@ -563,6 +585,10 @@ a {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.transport-row.primary-action-row {
+  grid-template-columns: 1fr;
+}
+
 .marker-row {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -654,9 +680,9 @@ a {
 }
 
 .quick-note {
-  display: grid;
-  gap: 6px;
+  display: block;
   margin: 10px 0;
+  position: relative;
 }
 
 textarea,
@@ -674,6 +700,23 @@ select {
 textarea {
   min-height: 82px;
   resize: vertical;
+}
+
+.quick-note textarea {
+  display: block;
+  min-height: 74px;
+  padding-bottom: 44px;
+  padding-right: 92px;
+  resize: vertical;
+}
+
+.note-add-button {
+  bottom: 8px;
+  min-height: 30px;
+  padding: 5px 8px;
+  position: absolute;
+  right: 8px;
+  z-index: 2;
 }
 
 .full-width {
@@ -839,12 +882,13 @@ textarea {
 .topbar-actions {
   display: grid;
   gap: 8px;
-  grid-template-columns: repeat(5, minmax(62px, 1fr));
+  grid-template-columns: repeat(6, minmax(56px, 1fr));
   min-width: 0;
 }
 
 .cockpit-topbar .top-button,
-.cockpit-topbar .file-loader {
+.cockpit-topbar .file-loader,
+.cockpit-topbar .export-format {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
@@ -852,9 +896,37 @@ textarea {
 }
 
 .cockpit-topbar .top-button:hover,
-.cockpit-topbar .file-loader:hover {
+.cockpit-topbar .file-loader:hover,
+.cockpit-topbar .export-format:hover {
   background: rgba(255, 255, 255, 0.14);
   border-color: rgba(255, 255, 255, 0.42);
+}
+
+.export-format {
+  align-items: center;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: auto minmax(0, 1fr);
+  min-width: 0;
+}
+
+.export-format span {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.export-format select {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 0.9rem;
+  font-weight: 950;
+  line-height: 1;
+  min-height: 0;
+  padding: 0;
 }
 
 .cockpit-grid {
@@ -1303,6 +1375,7 @@ textarea {
 
 .top-button,
 .file-loader,
+.export-format,
 .small-button,
 .marker-button,
 .next-beat-button,
@@ -1314,7 +1387,8 @@ textarea {
 }
 
 .cockpit-topbar .top-button,
-.cockpit-topbar .file-loader {
+.cockpit-topbar .file-loader,
+.cockpit-topbar .export-format {
   background:
     radial-gradient(circle at 50% 0%, rgba(var(--cat-rgb, 255, 255, 255), 0.35), transparent 62%),
     linear-gradient(180deg, rgba(var(--cat-rgb, 255, 255, 255), 0.2), rgba(255, 255, 255, 0.07));
@@ -1445,6 +1519,7 @@ textarea {
 
 .top-button,
 .file-loader,
+.export-format,
 .small-button,
 .marker-button,
 .next-beat-button,
@@ -1462,6 +1537,7 @@ textarea {
 
 .top-button:hover,
 .file-loader:hover,
+.export-format:hover,
 .small-button:hover,
 .marker-button:hover,
 .next-beat-button:hover,
@@ -1651,7 +1727,7 @@ input::placeholder {
 }
 
 .cockpit-topbar {
-  grid-template-columns: minmax(156px, 0.8fr) auto auto minmax(122px, 0.52fr) minmax(288px, auto);
+  grid-template-columns: minmax(156px, 0.8fr) auto auto minmax(122px, 0.52fr) minmax(366px, auto);
   min-height: 58px;
   padding: 6px;
 }
@@ -1686,7 +1762,8 @@ input::placeholder {
 .cockpit-topbar .status-chip,
 .cockpit-topbar .master-clock,
 .cockpit-topbar .top-button,
-.cockpit-topbar .file-loader {
+.cockpit-topbar .file-loader,
+.cockpit-topbar .export-format {
   min-height: 34px;
 }
 
@@ -1704,6 +1781,7 @@ input::placeholder {
 
 .top-button,
 .file-loader,
+.export-format,
 .small-button {
   border-radius: 10px;
   min-height: 34px;
@@ -1892,7 +1970,7 @@ textarea {
 
   .cockpit-topbar {
     gap: 5px;
-    grid-template-columns: minmax(156px, 0.88fr) auto auto minmax(112px, 0.52fr) minmax(292px, auto);
+    grid-template-columns: minmax(156px, 0.88fr) auto auto minmax(112px, 0.52fr) minmax(366px, auto);
   }
 
   .session-brand img {
@@ -2107,7 +2185,7 @@ textarea {
   }
 
   .topbar-actions {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 3px;
     width: 100%;
   }
@@ -2115,7 +2193,8 @@ textarea {
   .master-clock,
   .status-chip,
   .top-button,
-  .file-loader {
+  .file-loader,
+  .export-format {
     min-width: 0;
     width: 100%;
   }
@@ -2146,7 +2225,8 @@ textarea {
   }
 
   .cockpit-topbar .top-button,
-  .cockpit-topbar .file-loader {
+  .cockpit-topbar .file-loader,
+  .cockpit-topbar .export-format {
     font-size: 0.68rem;
     min-height: 30px;
     padding: 5px 1px;
