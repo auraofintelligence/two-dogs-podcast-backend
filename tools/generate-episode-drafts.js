@@ -402,6 +402,7 @@ function episodePageHtml(data) {
         <a href="${escapeAttr(next)}"><span>Next</span><strong>${next === "index.html" ? "Episode Index" : "Next Episode"}</strong></a>
       </nav>
     </main>
+    <script src="../assets/back-to-top.js"></script>
   </body>
 </html>
 `;
@@ -460,6 +461,7 @@ function buildEpisodeIndex(drafts) {
         ${cards}
       </section>
     </main>
+    <script src="../assets/back-to-top.js"></script>
   </body>
 </html>
 `;
@@ -761,6 +763,36 @@ ul {
   font-weight: 900;
 }
 
+.back-to-top {
+  background: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  box-shadow: var(--shadow);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 900;
+  min-height: 48px;
+  opacity: 0;
+  padding: 0 16px;
+  pointer-events: none;
+  position: fixed;
+  right: 18px;
+  transform: translateY(10px);
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 80;
+}
+
+.back-to-top.is-visible {
+  opacity: 0.94;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--red);
+}
+
 @media (max-width: 900px) {
   .site-header {
     align-items: stretch;
@@ -804,6 +836,11 @@ ul {
   .brand-link img {
     height: 92px;
     width: 63px;
+  }
+
+  .back-to-top {
+    bottom: calc(88px + env(safe-area-inset-bottom));
+    right: 14px;
   }
 }
 `;
