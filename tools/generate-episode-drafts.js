@@ -452,10 +452,13 @@ function buildEpisodeIndex(drafts) {
 
     <main>
       <section class="hero index-hero">
-        <p class="draft-badge">First draft discussion index</p>
-        <h1>Two Dogs episode discussion drafts.</h1>
-        <p class="lede">Each page gathers the episode seed plus scene, ad/sponsor, segment and source-reference drafts so Luke and Angel can talk through what belongs in a full episode, what is only a segment, and what should stay parked. Guest and handoff forms are intentionally skipped for this pass.</p>
-        <p class="draft-note">Nothing here is complete or locked. These are working pages for conversation before recording, sourcing, guests, or production decisions.</p>
+        <div>
+          <p class="draft-badge">First draft discussion index</p>
+          <h1>Two Dogs episode discussion drafts.</h1>
+          <p class="lede">Each page gathers the episode seed plus scene, ad/sponsor, segment and source-reference drafts so Luke and Angel can talk through what belongs in a full episode, what is only a segment, and what should stay parked. Guest and handoff forms are intentionally skipped for this pass.</p>
+          <p class="draft-note">Nothing here is complete or locked. These are working pages for conversation before recording, sourcing, guests, or production decisions.</p>
+        </div>
+        <img class="draft-style-board" src="../assets/two-dogs-draft-styles.webp" alt="Draft style board showing four possible animated looks for Red Heeler and Blue Heeler hosts" width="1254" height="1254" />
       </section>
       <section class="episode-grid" aria-label="Episode discussion drafts">
         ${cards}
@@ -578,7 +581,23 @@ main {
 }
 
 .index-hero {
+  align-items: center;
+  display: grid;
+  gap: 22px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
   margin-bottom: 22px;
+}
+
+.draft-style-board {
+  aspect-ratio: 1 / 1;
+  background: #101310;
+  border: 1px solid rgba(23, 32, 27, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(23, 32, 27, 0.16);
+  display: block;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
 }
 
 .draft-badge {
@@ -811,8 +830,14 @@ ul {
   .draft-grid,
   .discussion-grid,
   .episode-grid,
+  .index-hero,
   .pager {
     grid-template-columns: 1fr;
+  }
+
+  .draft-style-board {
+    max-width: 520px;
+    order: -1;
   }
 
   .draft-card:first-child {

@@ -16,17 +16,18 @@
         align-items: center;
         display: grid;
         gap: 28px;
-        grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
+        grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
       }
 
       .recurring-hero img {
-        aspect-ratio: 1290 / 1892;
+        aspect-ratio: 1536 / 1024;
+        background: #101310;
         border: 1px solid rgba(23, 32, 27, 0.18);
         border-radius: 8px;
         box-shadow: var(--shadow);
-        max-height: 540px;
-        object-fit: cover;
-        object-position: 50% 18%;
+        height: auto;
+        max-height: 620px;
+        object-fit: contain;
         width: 100%;
       }
 
@@ -111,7 +112,7 @@
 
         .recurring-hero img {
           max-height: none;
-          width: min(100%, 420px);
+          width: 100%;
         }
       }
 
@@ -153,7 +154,7 @@
             <a class="button" href="episodes/index.html">Open drafts</a>
           </div>
         </div>
-        <img src="assets/two-dogs-podcast.webp" alt="Two Dogs Podcast artwork with two heelers on the beach" width="1290" height="1892" />
+        <img src="assets/two-dogs-recurring-scenes.webp" alt="Recurring scenes board for Two Dogs Podcast with News Flash, Comedy Minute, Bad Dog, Good Dog, weather, music, film, art and games panels" width="1536" height="1024" />
       </section>
 
       <section class="source-note">

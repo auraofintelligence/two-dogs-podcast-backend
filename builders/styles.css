@@ -205,6 +205,19 @@ a {
   width: 100%;
 }
 
+.feature-board {
+  background: #101310;
+  border: 1px solid rgba(23, 32, 27, 0.18);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  height: auto;
+  margin: 22px 0 0;
+  max-height: 620px;
+  object-fit: contain;
+  width: 100%;
+}
+
 h1,
 h2 {
   letter-spacing: 0;
