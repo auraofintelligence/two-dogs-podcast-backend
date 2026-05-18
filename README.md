@@ -14,6 +14,8 @@ Micro scene pipeline: [Micro Scenes Builder](https://auraofintelligence.github.i
 
 Backlink: [Film Club World](https://auraofintelligence.github.io/strange-but-true/film-club-world.html)
 
+Licence: [Two Dogs Podcast Public Planning Licence](./LICENCE.md)
+
 ## Premise
 
 Two animated CGI/AI dogs host the show.
@@ -77,3 +79,9 @@ Use it for tiny animated cutaways such as the postman arriving, Red Dog research
 ## Current Seed
 
 The first creative seed is the work-in-progress theme song [Two Dogs on Island Country](./docs/two-dogs-on-island-country.md). Use the episode or scene builder to turn song fragments into generated planning notes.
+
+## Licence
+
+This repository uses the [Two Dogs Podcast Public Planning Licence](./LICENCE.md).
+
+The short version: public non-commercial learning, remixing and community use are welcome with attribution. Commercial rights in the Two Dogs Podcast world, characters, images, show formats, scripts, merch, sponsor material and derivative productions are reserved to Luke Hayes and Angel. Commercial use requires written permission by contacting Luke via GitHub or the [Strange But True contact form](https://auraofintelligence.github.io/strange-but-true/contact.html).
