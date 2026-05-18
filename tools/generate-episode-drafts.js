@@ -316,7 +316,11 @@ function episodePageHtml(data) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>${escapeHtml(episode.shortTitle)} | Two Dogs Discussion Draft</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2026-05-18-good-dog" />
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
   </head>
   <body>
     <header class="site-header">
@@ -327,7 +331,6 @@ function episodePageHtml(data) {
       <nav aria-label="Episode pages">
         <a href="../index.html">Home</a>
         <a href="index.html">All episodes</a>
-        <a href="../recurring-scenes.html">Recurring</a>
         <a href="../builders/index.html">Builders</a>
         <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>
       </nav>
@@ -433,7 +436,11 @@ function buildEpisodeIndex(drafts) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Two Dogs Episode Discussion Drafts</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2026-05-18-good-dog" />
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
   </head>
   <body>
     <header class="site-header">
@@ -443,7 +450,6 @@ function buildEpisodeIndex(drafts) {
       </a>
       <nav aria-label="Episode pages">
         <a href="../index.html">Home</a>
-        <a href="../recurring-scenes.html">Recurring</a>
         <a href="../builders/index.html">Builders</a>
         <a href="../builders/episode.html">Episode builder</a>
         <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>
@@ -458,7 +464,7 @@ function buildEpisodeIndex(drafts) {
           <p class="lede">Each page gathers the episode seed plus scene, ad/sponsor, segment and source-reference drafts so Luke and Angel can talk through what belongs in a full episode, what is only a segment, and what should stay parked. Guest and handoff forms are intentionally skipped for this pass.</p>
           <p class="draft-note">Nothing here is complete or locked. These are working pages for conversation before recording, sourcing, guests, or production decisions.</p>
         </div>
-        <img class="draft-style-board" src="../assets/two-dogs-draft-styles.webp" alt="Draft style board showing four possible animated looks for Red Heeler and Blue Heeler hosts" width="1254" height="1254" />
+        <img class="draft-style-board" src="../assets/two-dogs-draft-styles.webp" alt="Draft style board showing four possible animated looks for Red Heeler and Blue Heeler hosts" width="1254" height="1254" style="display: block; height: auto; max-width: min(100%, 420px); width: min(100%, 420px);" />
       </section>
       <section class="episode-grid" aria-label="Episode discussion drafts">
         ${cards}
@@ -596,8 +602,10 @@ main {
   box-shadow: 0 18px 40px rgba(23, 32, 27, 0.16);
   display: block;
   height: auto;
+  justify-self: end;
+  max-width: min(100%, 420px);
   object-fit: contain;
-  width: 100%;
+  width: min(100%, 420px);
 }
 
 .draft-badge {

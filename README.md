@@ -8,7 +8,7 @@ This is a public-facing planning bench where interactive feedback forms generate
 
 Public home: [Two Dogs Podcast Planning](https://auraofintelligence.github.io/two-dogs-podcast-backend/)
 
-Recurring scenes: [Recurring Scenes](https://auraofintelligence.github.io/two-dogs-podcast-backend/recurring-scenes.html)
+Show rhythm menu: [Regular Show Bits](https://auraofintelligence.github.io/two-dogs-podcast-backend/recurring-scenes.html)
 
 Micro scene pipeline: [Micro Scenes Builder](https://auraofintelligence.github.io/two-dogs-podcast-backend/builders/micro-scenes.html)
 
@@ -60,13 +60,13 @@ Each page clearly says `First draft discussion` and gathers the episode seed wit
 
 The public page order is narrative, not alphabetical. The opener is the broad Two Dogs / Strange But True premise, while music and distribution infrastructure now sit later in the run.
 
-## Recurring Scenes
+## Regular Show Bits
 
 The standing scene menu is collected at [recurring-scenes.html](./recurring-scenes.html), with the Markdown version at [docs/recurring-scenes.md](./docs/recurring-scenes.md).
 
 Use it for repeatable bits such as News Flash, Comedy Minute, Bad Dog, Good Dog, UN World Day Of Whatever, Sports Desk, Weather Window, Music Drop, Film Club, Art Show, Games Table, Science Sniff Test, Life Hack, Onboarding, Merch Table and Dogs And Allies.
 
-Each recurring scene also has a concise strategic export form at [builders/recurring-scenes.html](./builders/recurring-scenes.html). The [UN World Day builder](./builders/recurring-scenes.html?scene=un-world-day) includes a searchable calendar snapshot from the official United Nations observances list; refresh it with `node tools/build-un-observances.mjs`.
+Each regular show bit also has a concise strategic export form at [builders/recurring-scenes.html](./builders/recurring-scenes.html). The [UN World Day builder](./builders/recurring-scenes.html?scene=un-world-day) includes a searchable calendar snapshot from the official United Nations observances list; refresh it with `node tools/build-un-observances.mjs`.
 
 ## Micro Scenes
 

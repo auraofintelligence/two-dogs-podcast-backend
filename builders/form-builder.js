@@ -267,7 +267,7 @@ const builderPages = [
   { key: "guest", href: "guest.html", label: "Guest", note: "Guest prep and chosen character notes" },
   { key: "ad", href: "ad-sponsor.html", label: "Ad/Sponsor", note: "Sponsor fit and ad reads" },
   { key: "segment", href: "segment.html", label: "Segment", note: "Recurring show bits" },
-  { key: "recurring", href: "recurring-scenes.html", label: "Recurring Scenes", note: "Strategic mini-forms" },
+  { key: "recurring", href: "recurring-scenes.html", label: "Recurring Builder", note: "Strategic show-bit forms" },
   { key: "source", href: "source-reference.html", label: "Source", note: "Source trails and context" },
   { key: "handoff", href: "handoff.html", label: "Handoff", note: "Small agent task packets" }
 ];

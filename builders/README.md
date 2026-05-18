@@ -12,7 +12,7 @@ The builder area is a small multi-page workbench. It creates `.md` planning file
 - [Guest](./guest.html)
 - [Ad/Sponsor](./ad-sponsor.html)
 - [Segment](./segment.html)
-- [Recurring Scenes](./recurring-scenes.html)
+- [Recurring Builder](./recurring-scenes.html)
 - [Source Reference](./source-reference.html)
 - [Handoff](./handoff.html)
 
