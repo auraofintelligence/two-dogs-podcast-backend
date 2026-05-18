@@ -699,8 +699,7 @@ h3 {
   padding: 18px;
 }
 
-.draft-card:first-child,
-.draft-card:last-child {
+.draft-card:first-child {
   grid-column: 1 / -1;
 }
 
@@ -784,8 +783,7 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .draft-card:first-child,
-  .draft-card:last-child {
+  .draft-card:first-child {
     grid-column: auto;
   }
 
