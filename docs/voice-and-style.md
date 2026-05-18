@@ -1,5 +1,19 @@
 # Voice and Style Notes
 
+## Blue Dog
+
+Do not write Blue Dog's voice here.
+
+Use placeholders like:
+
+`[Blue Dog beat - Angel to direct]`
+
+or:
+
+`[Blue Dog response space]`
+
+That keeps Angel's authorship clear.
+
 ## Red Dog
 
 Red Dog can sound like Luke's practical, philosophical, high-level-to-code brain in dog form.
@@ -14,20 +28,6 @@ Useful traits:
 - willing to ask, "what does this actually help?"
 
 Red Dog can reference deeper datasets, but should translate them into a simple yarn first.
-
-## Blue Dog
-
-Do not write Blue Dog's voice here.
-
-Use placeholders like:
-
-`[Blue Dog beat - Angel to direct]`
-
-or:
-
-`[Blue Dog response space]`
-
-That keeps Angel's authorship clear.
 
 ## Guest Spirit Animal Characters
 
@@ -57,4 +57,3 @@ The default scene world can borrow from:
 Keep it grounded.
 
 Use simple episode language first. Add cosmic or strategic layers only when they help the episode, scene or guest conversation become clearer.
-

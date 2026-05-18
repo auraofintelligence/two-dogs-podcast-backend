@@ -91,9 +91,10 @@ a {
 }
 
 .site-nav {
+  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  flex-wrap: nowrap;
+  gap: 8px;
   justify-content: flex-end;
 }
 
@@ -102,6 +103,7 @@ a {
 }
 
 .site-nav a,
+.builder-menu summary,
 .side-nav a,
 .button {
   border-radius: 6px;
@@ -109,19 +111,71 @@ a {
   text-decoration: none;
 }
 
-.site-nav a {
+.site-nav a,
+.builder-menu summary {
   color: var(--muted);
+  cursor: pointer;
   padding: 9px 11px;
 }
 
 .site-nav a:hover,
-.site-nav a.active {
+.site-nav a.active,
+.builder-menu summary:hover,
+.builder-menu summary.active {
   background: var(--surface-soft);
   color: var(--text);
 }
 
-.site-nav a.active {
+.site-nav a.active,
+.builder-menu summary.active {
   box-shadow: inset 0 -3px 0 var(--red);
+}
+
+.builder-menu {
+  position: relative;
+}
+
+.builder-menu summary {
+  list-style: none;
+  white-space: nowrap;
+}
+
+.builder-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.builder-menu summary::after {
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  content: "";
+  display: inline-block;
+  height: 7px;
+  margin-left: 10px;
+  transform: translateY(-2px) rotate(45deg);
+  width: 7px;
+}
+
+.builder-menu[open] summary::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
+.builder-menu-panel {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 4px;
+  min-width: 230px;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  z-index: 20;
+}
+
+.builder-menu-panel a {
+  display: block;
 }
 
 .home-shell,

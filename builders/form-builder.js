@@ -1,9 +1,9 @@
 const STORE_KEY = "two-dogs-markdown-builder-v1";
 
 const sharedBoundary = [
-  "- Luke is Red Dog / Red Heeler.",
   "- Angel is Blue Dog / Blue Heeler.",
   "- Blue Dog material is Angel-directed only.",
+  "- Luke is Red Dog / Red Heeler.",
   "- Guests choose their own spirit animal character and nickname."
 ].join("\n");
 
@@ -18,8 +18,8 @@ const forms = {
       field("workingTitle", "Working title"),
       field("hook", "One-line yarn", "textarea"),
       field("whyNow", "Why this episode", "textarea"),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
       field("redDogAngle", "Red Dog angle", "textarea", null, "What can Luke / Red Dog bring from lived context, humour or deeper datasets?"),
-      field("angelSuppliedBlueDog", "Angel-supplied Blue Dog note", "textarea", null, "Leave blank unless Angel has supplied the note."),
       field("guestName", "Guest name"),
       field("guestChoice", "Guest-chosen animal and nickname", "textarea", null, "Only record what the guest chooses."),
       field("mainBeats", "Main beats", "textarea", null, "One per line is fine."),
@@ -36,8 +36,8 @@ const forms = {
         section("Core Boundaries", sharedBoundary),
         section("Hook", data.hook),
         section("Why This Episode", data.whyNow),
+        section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
         section("Red Dog Angle", data.redDogAngle),
-        section("Blue Dog Boundary", blueDog(data.angelSuppliedBlueDog)),
         section("Guest", guestBlock(data)),
         listSection("Main Beats", data.mainBeats),
         listSection("Scene Seeds", data.sceneSeeds),
@@ -59,8 +59,8 @@ const forms = {
       field("linkedEpisode", "Linked episode"),
       field("visualBeat", "Visual beat", "textarea"),
       field("conversationBeat", "Conversation beat", "textarea"),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
       field("redDogBeat", "Red Dog beat", "textarea"),
-      field("angelSuppliedBlueDog", "Angel-supplied Blue Dog note", "textarea", null, "Leave blank unless Angel has supplied the note."),
       field("guestChoice", "Guest-chosen animal and nickname", "textarea"),
       field("animationNotes", "Animation notes", "textarea"),
       field("soundNotes", "Sound or music notes", "textarea"),
@@ -75,8 +75,8 @@ const forms = {
         section("Core Boundaries", sharedBoundary),
         section("Visual Beat", data.visualBeat),
         section("Conversation Beat", data.conversationBeat),
+        section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
         section("Red Dog Beat", data.redDogBeat),
-        section("Blue Dog Boundary", blueDog(data.angelSuppliedBlueDog)),
         section("Guest Character", guestChoice(data.guestChoice)),
         listSection("Animation Notes", data.animationNotes),
         listSection("Sound Or Music Notes", data.soundNotes),
@@ -102,8 +102,8 @@ const forms = {
       field("visualFeel", "Visual feel they want", "textarea"),
       field("avoid", "Things to avoid", "textarea"),
       field("publicPrivate", "Public/private notes", "textarea"),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
       field("redDogPrep", "Red Dog prep", "textarea"),
-      field("angelSuppliedBlueDog", "Angel-supplied Blue Dog note", "textarea", null, "Leave blank unless Angel has supplied the note."),
       field("sourceRefs", "Source references", "textarea"),
       field("nextAction", "Next useful action", "textarea")
     ],
@@ -123,8 +123,8 @@ const forms = {
           line("Things to avoid", data.avoid)
         ].filter(Boolean).join("\n\n")),
         section("Consent And Boundaries", data.publicPrivate),
+        section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
         section("Red Dog Prep", data.redDogPrep),
-        section("Blue Dog Boundary", blueDog(data.angelSuppliedBlueDog)),
         listSection("Source References", data.sourceRefs),
         section("Next Useful Action", data.nextAction)
       ]);
@@ -141,8 +141,8 @@ const forms = {
       field("episodeLink", "Episode link"),
       field("fit", "Why it fits", "textarea"),
       field("offer", "Plain-English offer", "textarea"),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
       field("redDogRead", "Red Dog read", "textarea"),
-      field("angelSuppliedBlueDog", "Angel-supplied Blue Dog note", "textarea", null, "Leave blank unless Angel has supplied the note."),
       field("scenePossibility", "Scene possibility", "textarea"),
       field("claimsToAvoid", "Claims or wording to avoid", "textarea"),
       field("nextAction", "Next useful action", "textarea")
@@ -154,8 +154,8 @@ const forms = {
         section("Episode Link", data.episodeLink),
         section("Fit", data.fit),
         section("Plain-English Offer", data.offer),
+        section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
         section("Red Dog Read", data.redDogRead),
-        section("Blue Dog Boundary", blueDog(data.angelSuppliedBlueDog)),
         section("Scene Possibility", data.scenePossibility),
         section("Boundaries", data.claimsToAvoid),
         section("Next Useful Action", data.nextAction)
@@ -172,8 +172,8 @@ const forms = {
       field("segmentName", "Segment name"),
       field("purpose", "Purpose", "textarea"),
       field("format", "Format", "textarea"),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
       field("redDogRole", "Red Dog role", "textarea"),
-      field("angelSuppliedBlueDog", "Angel-supplied Blue Dog note", "textarea", null, "Leave blank unless Angel has supplied the note."),
       field("guestRole", "Guest role", "textarea", null, "Only include animal/nickname details if the guest has chosen them."),
       field("exampleUses", "Example uses", "textarea"),
       field("sourceRefs", "Source references", "textarea")
@@ -184,8 +184,8 @@ const forms = {
         meta(data),
         section("Purpose", data.purpose),
         section("Format", data.format),
+        section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
         section("Red Dog Role", data.redDogRole),
-        section("Blue Dog Boundary", blueDog(data.angelSuppliedBlueDog)),
         section("Guest Role", data.guestRole),
         listSection("Example Uses", data.exampleUses),
         listSection("Source References", data.sourceRefs)
@@ -203,6 +203,8 @@ const forms = {
       field("sourcePath", "Source path or URL"),
       field("visibility", "Public / private / mixed", "select", ["mixed", "private", "public"]),
       field("whyMatters", "Why it matters", "textarea"),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
+      field("redDogUse", "Red Dog use", "textarea", null, "How Red Dog might use or explain this source."),
       field("usefulFor", "Useful for", "textarea"),
       field("plainTakeaway", "Plain-English takeaway", "textarea"),
       field("notOverclaim", "What not to overclaim", "textarea"),
@@ -215,6 +217,8 @@ const forms = {
         section("Source", data.sourcePath),
         section("Visibility", data.visibility),
         section("Why It Matters", data.whyMatters),
+        section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
+        section("Red Dog Use", data.redDogUse),
         listSection("Useful For", data.usefulFor),
         section("Plain-English Takeaway", data.plainTakeaway),
         section("What Not To Overclaim", data.notOverclaim),
@@ -231,6 +235,8 @@ const forms = {
       field("status", "Status", "select", ["seed", "ready", "done", "parked"]),
       field("handoffTitle", "Handoff title"),
       field("task", "Exact task", "textarea"),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
+      field("redDogContext", "Red Dog context", "textarea", null, "What Red Dog is trying to get done or keep intact."),
       field("workFrom", "File to work from", "textarea"),
       field("allowedSources", "Allowed sources", "textarea"),
       field("doNotTouch", "What not to touch", "textarea"),
@@ -242,6 +248,8 @@ const forms = {
         heading("Handoff", data.handoffTitle),
         meta(data),
         section("Task", data.task),
+        section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
+        section("Red Dog Context", data.redDogContext),
         section("Work From", data.workFrom),
         listSection("Allowed Sources", data.allowedSources),
         listSection("Do Not Touch", data.doNotTouch),

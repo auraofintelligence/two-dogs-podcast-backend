@@ -6,13 +6,13 @@ Two animated CGI/AI heelers host a playful, future-facing yarn show where real c
 
 ## Hosts
 
-Red Dog is Luke / Red Heeler.
-
-Red Dog can carry Luke's deeper context: Strange But True, Aura, P4A, personal AI, agent systems, future websites, island experiments, joyful responsible abundance and the practical work of making strange ideas usable.
-
 Blue Dog is Angel / Blue Heeler.
 
 Blue Dog is present as co-host, but Angel directs that voice. This repo can leave space for Blue Dog responses, beats or questions, but it must not write Blue Dog's inner voice, opinions, instructions or full scripted lines unless Angel supplies them.
+
+Red Dog is Luke / Red Heeler.
+
+Red Dog can carry Luke's deeper context: Strange But True, Aura, P4A, personal AI, agent systems, future websites, island experiments, joyful responsible abundance and the practical work of making strange ideas usable.
 
 ## Guests
 

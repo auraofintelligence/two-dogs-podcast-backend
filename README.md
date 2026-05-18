@@ -16,9 +16,9 @@ Backlink: [Film Club World](https://auraofintelligence.github.io/strange-but-tru
 
 Two animated CGI/AI dogs host the show.
 
-- Luke is Red Dog / Red Heeler.
 - Angel is Blue Dog / Blue Heeler.
 - Blue Dog is present as co-host, but Angel directs Blue Dog's voice, prompts, tone and decisions.
+- Luke is Red Dog / Red Heeler.
 - Guests choose their own spirit animal character and nickname.
 - The show can turn real conversations into animated scenes, local set pieces, banter, music bits, sponsor reads and future film-club experiments.
 

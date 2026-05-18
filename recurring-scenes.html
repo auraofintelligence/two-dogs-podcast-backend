@@ -48,6 +48,16 @@
         padding: 18px;
       }
 
+      .scene-card {
+        display: block;
+        text-decoration: none;
+      }
+
+      .scene-card:hover {
+        border-color: var(--blue);
+        transform: translateY(-1px);
+      }
+
       .scene-card strong,
       .run-card strong {
         display: block;
@@ -68,6 +78,14 @@
         font-weight: 900;
         margin-bottom: 8px;
         text-transform: uppercase;
+      }
+
+      .scene-open {
+        color: var(--green);
+        display: block;
+        font-size: 0.84rem;
+        font-weight: 900;
+        margin-top: 12px;
       }
 
       .scene-section {
@@ -127,7 +145,7 @@
         <div>
           <p class="kicker">Standing show rhythm</p>
           <h1>Recurring scenes for news, jokes, wins, warnings and useful little doorways.</h1>
-          <p class="lede">Use these as repeatable Two Dogs scene lanes. They are not locked scripts. Red Dog can prep the doorway and source check; Blue Dog stays open for Angel to direct.</p>
+          <p class="lede">Use these as repeatable Two Dogs scene lanes. They are not locked scripts. Blue Dog stays open for Angel to direct; Red Dog can prep the doorway and source check.</p>
           <div class="hero-actions">
             <a class="button primary" href="docs/recurring-scenes.md">Open Markdown menu</a>
             <a class="button" href="builders/recurring-scenes.html">Open recurring forms</a>
@@ -149,22 +167,22 @@
           <h2>Pick the bit that gives the episode rhythm.</h2>
         </div>
         <div class="scene-grid">
-          <article class="scene-card"><span class="scene-tag">Current</span><strong>News Flash</strong><p>What happened, why it matters, and what a normal person should watch next.</p></article>
-          <article class="scene-card"><span class="scene-tag">Comedy</span><strong>Comedy Minute</strong><p>One quick joke, visual gag or absurd plain-English translation before the dense idea returns.</p></article>
-          <article class="scene-card"><span class="scene-tag">Accountability</span><strong>Bad Dog</strong><p>Corruption, bad choices, avoidable accidents, risky moves and poor process, handled with careful sourcing.</p></article>
-          <article class="scene-card"><span class="scene-tag">Wins</span><strong>Good Dog</strong><p>Good news, achievements, community care, useful inventions and people giving life a fair go.</p></article>
-          <article class="scene-card"><span class="scene-tag">Calendar</span><strong>UN World Day Of Whatever</strong><p>An official observance becomes a doorway into the episode, once checked against the UN list.</p></article>
-          <article class="scene-card"><span class="scene-tag">Sport</span><strong>Sports Desk</strong><p>Scores, clubs, rivalries, community health and what the game teaches about people.</p></article>
-          <article class="scene-card"><span class="scene-tag">Island</span><strong>Weather Window</strong><p>Storms, heat, tides, ferry mood, outdoor screenings and humility from the sky.</p></article>
-          <article class="scene-card"><span class="scene-tag">Sound</span><strong>Music Drop</strong><p>Theme-song cues, local tracks, release memory, guest songs and soundtrack beds.</p></article>
-          <article class="scene-card"><span class="scene-tag">Screen</span><strong>Film Club</strong><p>Films, shorts, animation tests, outdoor cinema and the question: what would this look like as a scene?</p></article>
-          <article class="scene-card"><span class="scene-tag">Visual</span><strong>Art Show</strong><p>Exhibitions, posters, murals, props and visual ideas that make the topic easier to feel.</p></article>
-          <article class="scene-card"><span class="scene-tag">Play</span><strong>Games Table</strong><p>Tabletop ideas, public ledger games, simulation toys and playful decision tests.</p></article>
-          <article class="scene-card"><span class="scene-tag">Evidence</span><strong>Science Sniff Test</strong><p>What is the claim, what is the evidence, and what are we not allowed to say yet?</p></article>
-          <article class="scene-card"><span class="scene-tag">Useful</span><strong>Life Hack</strong><p>One practical tip in words we understand: scams, gadgets, forms, repairs or everyday AI use.</p></article>
-          <article class="scene-card"><span class="scene-tag">Front door</span><strong>Onboarding</strong><p>How the show works, how guests choose animals, and how people can join without feeling silly.</p></article>
-          <article class="scene-card"><span class="scene-tag">Support</span><strong>Merch Table</strong><p>Shirts, stickers, posters, digital support bundles and joke products that should stay grounded.</p></article>
-          <article class="scene-card"><span class="scene-tag">Community</span><strong>Dogs And Allies</strong><p>Shout-outs, helpers, guests, builders, clubs and allies, with consent before naming people.</p></article>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=news-flash"><span class="scene-tag">Current</span><strong>News Flash</strong><p>What happened, why it matters, and what a normal person should watch next.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=comedy-minute"><span class="scene-tag">Comedy</span><strong>Comedy Minute</strong><p>One quick joke, visual gag or absurd plain-English translation before the dense idea returns.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=bad-dog"><span class="scene-tag">Accountability</span><strong>Bad Dog</strong><p>Corruption, bad choices, avoidable accidents, risky moves and poor process, handled with careful sourcing.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=good-dog"><span class="scene-tag">Wins</span><strong>Good Dog</strong><p>Good news, achievements, community care, useful inventions and people giving life a fair go.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=un-world-day"><span class="scene-tag">Calendar</span><strong>UN World Day Of Whatever</strong><p>An official observance becomes a doorway into the episode, once checked against the UN list.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=sports-desk"><span class="scene-tag">Sport</span><strong>Sports Desk</strong><p>Scores, clubs, rivalries, community health and what the game teaches about people.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=weather-window"><span class="scene-tag">Island</span><strong>Weather Window</strong><p>Storms, heat, tides, ferry mood, outdoor screenings and humility from the sky.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=music-drop"><span class="scene-tag">Sound</span><strong>Music Drop</strong><p>Theme-song cues, local tracks, release memory, guest songs and soundtrack beds.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=film-club"><span class="scene-tag">Screen</span><strong>Film Club</strong><p>Films, shorts, animation tests, outdoor cinema and the question: what would this look like as a scene?</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=art-show"><span class="scene-tag">Visual</span><strong>Art Show</strong><p>Exhibitions, posters, murals, props and visual ideas that make the topic easier to feel.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=games-table"><span class="scene-tag">Play</span><strong>Games Table</strong><p>Tabletop ideas, public ledger games, simulation toys and playful decision tests.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=science-sniff-test"><span class="scene-tag">Evidence</span><strong>Science Sniff Test</strong><p>What is the claim, what is the evidence, and what are we not allowed to say yet?</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=life-hack"><span class="scene-tag">Useful</span><strong>Life Hack</strong><p>One practical tip in words we understand: scams, gadgets, forms, repairs or everyday AI use.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=onboarding"><span class="scene-tag">Front door</span><strong>Onboarding</strong><p>How the show works, how guests choose animals, and how people can join without feeling silly.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=merch-table"><span class="scene-tag">Support</span><strong>Merch Table</strong><p>Shirts, stickers, posters, digital support bundles and joke products that should stay grounded.</p><span class="scene-open">Open form</span></a>
+          <a class="scene-card" href="builders/recurring-scenes.html?scene=dogs-and-allies"><span class="scene-tag">Community</span><strong>Dogs And Allies</strong><p>Shout-outs, helpers, guests, builders, clubs and allies, with consent before naming people.</p><span class="scene-open">Open form</span></a>
         </div>
       </section>
 

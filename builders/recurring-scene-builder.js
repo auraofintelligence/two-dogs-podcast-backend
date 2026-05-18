@@ -1,9 +1,9 @@
 const STORE_KEY = "two-dogs-recurring-scene-builder-v1";
 
 const sharedBoundary = [
-  "- Luke is Red Dog / Red Heeler.",
   "- Angel is Blue Dog / Blue Heeler.",
   "- Blue Dog material is Angel-directed only.",
+  "- Luke is Red Dog / Red Heeler.",
   "- Guests choose their own spirit animal character and nickname.",
   "- Current events, weather, sports and public claims need fresh source checks on recording day."
 ].join("\n");
@@ -28,7 +28,7 @@ const recurringScenes = [
 ];
 
 let savedState = loadState();
-let activeScene = savedState.activeScene || recurringScenes[0].id;
+let activeScene = requestedSceneId() || savedState.activeScene || recurringScenes[0].id;
 if (!recurringScenes.some((item) => item.id === activeScene)) activeScene = recurringScenes[0].id;
 
 const picker = document.getElementById("recurringScenePicker");
@@ -56,11 +56,14 @@ function renderPicker() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = item.id === activeScene ? "active" : "";
+    button.dataset.scene = item.id;
+    button.setAttribute("aria-pressed", item.id === activeScene ? "true" : "false");
     button.innerHTML = `<strong>${item.name}</strong><span>${item.lane}</span>`;
     button.addEventListener("click", () => {
       activeScene = item.id;
       savedState.activeScene = activeScene;
       persistState();
+      updateSceneUrl(item.id);
       renderPicker();
       renderForm();
     });
@@ -79,6 +82,7 @@ function renderForm() {
     field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
     field("episodeLink", "Episode or recording link", "text", null, "Optional. Link the episode, date or recording this bit belongs inside."),
     field("whyNow", "Why this bit now", "textarea", null, "One strategic reason this scene belongs today."),
+    field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
     field("redDogSetup", "Red Dog setup", "textarea", null, "The plain-language doorway. Keep it short."),
     field("sourceCheck", "Source check", "textarea", null, "What must be verified before recording?"),
     field("visualCue", "Visual or sound cue", "textarea", null, "One animation, prop, SFX or edit note."),
@@ -176,8 +180,8 @@ function renderMarkdown(item, data) {
     section("Core Boundaries", sharedBoundary),
     section("Episode Or Recording Link", data.episodeLink),
     section("Why This Bit Now", data.whyNow),
+    section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
     section("Red Dog Setup", data.redDogSetup),
-    section("Blue Dog Boundary", "[Blue Dog space - Angel to direct]"),
     section("Guest Or Ally Boundary", "Only name people, allies, animals or nicknames after consent or guest choice."),
     section("Source Check", data.sourceCheck || item.sourceCheck),
     section("Visual Or Sound Cue", data.visualCue),
@@ -219,6 +223,20 @@ function getData(id) {
   return savedState.forms[id];
 }
 
+function requestedSceneId() {
+  const params = new URLSearchParams(window.location.search);
+  const fromQuery = params.get("scene");
+  const fromHash = window.location.hash.replace(/^#/, "");
+  return fromQuery || fromHash;
+}
+
+function updateSceneUrl(sceneId) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("scene", sceneId);
+  url.hash = "";
+  window.history.replaceState({}, "", url);
+}
+
 function loadState() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORE_KEY));
@@ -257,6 +275,13 @@ function section(label, value) {
 function line(label, value) {
   if (!clean(value)) return "";
   return `${label}: ${clean(value)}`;
+}
+
+function blueDog(value) {
+  if (clean(value)) {
+    return `Angel-supplied note:\n\n${clean(value)}`;
+  }
+  return "[Blue Dog space - Angel to direct]";
 }
 
 function clean(value) {
