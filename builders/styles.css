@@ -317,6 +317,59 @@ h2 {
   grid-template-columns: 250px minmax(0, 1fr) minmax(360px, 0.9fr);
 }
 
+.recurring-builder-layout {
+  align-items: start;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 250px minmax(0, 1fr) minmax(360px, 0.9fr);
+}
+
+.recurring-picker-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px;
+}
+
+.recurring-picker {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.recurring-picker button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.recurring-picker button:hover,
+.recurring-picker button.active {
+  background: var(--surface-soft);
+  border-color: var(--line);
+  color: var(--text);
+}
+
+.recurring-picker button.active {
+  border-left: 4px solid var(--red);
+}
+
+.recurring-picker strong,
+.recurring-picker span {
+  display: block;
+}
+
+.recurring-picker span {
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
 .side-nav {
   display: grid;
   gap: 8px;
@@ -472,7 +525,8 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .builder-layout {
+  .builder-layout,
+  .recurring-builder-layout {
     grid-template-columns: 1fr;
   }
 

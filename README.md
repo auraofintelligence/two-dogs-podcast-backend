@@ -64,6 +64,8 @@ The standing scene menu is collected at [recurring-scenes.html](./recurring-scen
 
 Use it for repeatable bits such as News Flash, Comedy Minute, Bad Dog, Good Dog, UN World Day Of Whatever, Sports Desk, Weather Window, Music Drop, Film Club, Art Show, Games Table, Science Sniff Test, Life Hack, Onboarding, Merch Table and Dogs And Allies.
 
+Each recurring scene also has a concise strategic export form at [builders/recurring-scenes.html](./builders/recurring-scenes.html).
+
 ## Current Seed
 
 The first creative seed is the work-in-progress theme song [Two Dogs on Island Country](./docs/two-dogs-on-island-country.md). Use the episode or scene builder to turn song fragments into generated planning notes.

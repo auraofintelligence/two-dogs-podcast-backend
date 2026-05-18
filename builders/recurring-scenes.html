@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recurring Scene Builder | Two Dogs Podcast</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="Two Dogs builder home"><img class="poster-mark" src="../assets/two-dogs-podcast.webp" alt="Illustrated Two Dogs Podcast poster" width="1290" height="1892" /><span><span class="brand-kicker">Two Dogs Podcast</span><strong>Recurring scene builder</strong></span></a>
+      <nav class="site-nav" aria-label="Builder navigation"><a href="index.html">Home</a><a href="../episodes/index.html">Drafts</a><a href="../recurring-scenes.html">Recurring</a><a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a><a href="episode.html">Episode</a><a href="scene.html">Scene</a><a href="guest.html">Guest</a><a href="ad-sponsor.html">Ad/Sponsor</a><a href="segment.html">Segment</a><a class="active" href="recurring-scenes.html">Recurring Scenes</a><a href="source-reference.html">Source</a><a href="handoff.html">Handoff</a></nav>
+    </header>
+    <main class="app-shell">
+      <section class="page-intro">
+        <p class="kicker">Recurring scene builder</p>
+        <h1>Export concise `.md` plans for the regular show bits.</h1>
+        <p class="lede">Pick a recurring scene, answer the strategic fields, then download or copy the Markdown. Blue Dog remains Angel-directed and current-event material needs a fresh source check on recording day.</p>
+      </section>
+
+      <section class="recurring-builder-layout" aria-label="Recurring scene Markdown builders">
+        <aside class="recurring-picker-panel" aria-label="Recurring scene list">
+          <p class="side-nav-title">Recurring scenes</p>
+          <div id="recurringScenePicker" class="recurring-picker"></div>
+          <div class="side-note"><strong>Keep it sharp.</strong><br />One doorway, one source posture, one next move.</div>
+        </aside>
+
+        <section class="form-panel" aria-label="Recurring scene feedback form">
+          <div class="form-heading">
+            <div>
+              <p class="form-type" id="recurringType">Recurring scene</p>
+              <h2 id="recurringTitle">Scene form</h2>
+            </div>
+            <p class="destination">Save to segments/ or scenes/</p>
+          </div>
+          <form id="recurringForm" class="field-grid"></form>
+        </section>
+
+        <aside class="preview-panel" aria-label="Markdown preview">
+          <div class="preview-heading">
+            <div>
+              <p class="form-type">Output</p>
+              <h2>Generated Markdown</h2>
+            </div>
+            <p class="filename" id="recurringFilename"></p>
+          </div>
+          <textarea id="recurringPreview" class="markdown-preview" readonly spellcheck="false"></textarea>
+          <div class="actions" aria-label="Output actions">
+            <button class="button primary" type="button" id="recurringDownload">Download .md</button>
+            <button class="button" type="button" id="recurringCopy">Copy</button>
+            <button class="button quiet" type="button" id="recurringReset">Reset form</button>
+          </div>
+          <p class="status-line" id="recurringStatus" role="status" aria-live="polite">Autosaves in this browser.</p>
+        </aside>
+      </section>
+
+      <nav class="footer-nav" aria-label="Previous and next builder pages">
+        <a class="footer-nav-card" href="segment.html"><span>Previous</span><strong>Segment Builder</strong></a>
+        <a class="footer-nav-card next" href="source-reference.html"><span>Next</span><strong>Source Builder</strong></a>
+      </nav>
+    </main>
+    <script src="site-nav.js"></script>
+    <script src="recurring-scene-builder.js"></script>
+  </body>
+</html>
