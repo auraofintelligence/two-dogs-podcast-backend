@@ -31,7 +31,7 @@ Blue Dog is not filled in here. Angel directs that voice.
 17. [Strange Enough, True Enough: How do we hold big ideas and practical help together?](./episode-2026-05-17-strange-enough-true-enough.md)
 18. [AI-Native Indie Distribution: What happens when music releases grow their own memory layer?](./episode-2026-05-17-ai-native-indie-distribution.md)
 19. [Public Ledger Game Without Hype: Can visible contribution stay useful and non-investment?](./episode-2026-05-17-public-ledger-game-without-hype.md)
-20. [Field Library Reviewed Trails: How do public markdown files become a community evidence map?](./episode-2026-05-17-field-library-reviewed-trails.md)
+20. [Housing Simulations: Can many solutions beat one magic choice?](./episode-2026-05-18-housing-simulations-many-solutions.md)
 21. [Grey-Area Commons: Can two dogs talk about intimacy without making it weird?](./episode-2026-05-18-grey-area-commons-intimacy.md)
 
 ## Source References

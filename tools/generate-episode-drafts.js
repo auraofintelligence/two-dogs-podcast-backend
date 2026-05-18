@@ -18,7 +18,7 @@ const narrativeOrder = [
   "episode-2026-05-17-hyperlocal-media-local-story.md",
   "episode-2026-05-17-projector-in-the-wind.md",
   "episode-2026-05-17-bigger-local-picture-archipelago.md",
-  "episode-2026-05-17-field-library-reviewed-trails.md",
+  "episode-2026-05-18-housing-simulations-many-solutions.md",
   "episode-2026-05-17-profile-md-aura-md-boundaries.md",
   "episode-2026-05-17-legal-memory-facts-before-ai.md",
   "episode-2026-05-17-public-ledger-game-without-hype.md",
