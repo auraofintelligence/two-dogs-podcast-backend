@@ -17,7 +17,7 @@ First draft for Luke and Angel to discuss. Not complete, not locked, and not a B
 
 ## Purpose
 
-Give the Projector in the Wind episode a repeatable piece that can stand alone as a clip while still feeding the larger 45-minute yarn.
+Give the Projector in the Wind episode a repeatable piece that can stand alone as a clip while still feeding the larger yarn.
 
 ## Format
 

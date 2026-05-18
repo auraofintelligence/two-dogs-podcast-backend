@@ -4,7 +4,7 @@
 
 Public planning repo and GitHub Pages workbench for the Two Dogs Podcast.
 
-This is a public-facing planning bench where interactive feedback forms generate agent-ready Markdown files for episodes, scenes, guest notes, guest-chosen spirit animal characters, ad ideas, source references and simple handoffs.
+This is a public-facing planning bench where interactive builder forms generate agent-ready Markdown files for runsheets, episodes, scenes, guest onboarding, guest-chosen spirit animal characters, ad ideas, source references and simple handoffs.
 
 Public home: [Two Dogs Podcast Planning](https://auraofintelligence.github.io/two-dogs-podcast-backend/)
 
@@ -18,8 +18,7 @@ Backlink: [Film Club World](https://auraofintelligence.github.io/strange-but-tru
 
 Two animated CGI/AI dogs host the show.
 
-- Angel is Blue Dog / Blue Heeler.
-- Blue Dog is present as co-host, but Angel directs Blue Dog's voice, prompts, tone and decisions.
+- Angel is Blue Dog / Blue Heeler and directs that voice, prompts, tone and decisions.
 - Luke is Red Dog / Red Heeler.
 - Guests choose their own spirit animal character and nickname.
 - The show can turn real conversations into animated scenes, local set pieces, banter, music bits, sponsor reads and future film-club experiments.
@@ -32,7 +31,8 @@ This repo should help someone plan the next yarn, not force the show through a h
 
 ## Folders
 
-- [builders](./builders/) - local interactive feedback forms that export `.md` files.
+- [builders](./builders/) - local interactive builder forms that export `.md` files.
+- [runsheets](./runsheets/) - generated showrunner runsheets for structured or freestyle episodes.
 - [episodes](./episodes/) - generated episode plans, rough outlines and public first-draft discussion pages.
 - [scenes](./scenes/) - generated animated scene ideas, cold opens, transitions, micro-scenes and visual moments.
 - [guests](./guests/) - generated guest notes and guest-chosen spirit animal details.
@@ -47,7 +47,7 @@ This repo should help someone plan the next yarn, not force the show through a h
 
 1. Open [docs/premise-and-boundaries.md](./docs/premise-and-boundaries.md).
 2. Open [builders/index.html](./builders/index.html) in a browser.
-3. Use the builder navigation to open the right page: episode, scene, micro scene, guest, ad, segment, source or handoff.
+3. Use the builder navigation to open the right page: runsheet, episode, scene, micro scene, guest onboarding, ad, segment, source or handoff.
 4. Fill the feedback fields and export Markdown.
 5. Save the exported file into the matching folder.
 6. If deeper context is needed, use [docs/source-routing.md](./docs/source-routing.md) before opening any large source document.

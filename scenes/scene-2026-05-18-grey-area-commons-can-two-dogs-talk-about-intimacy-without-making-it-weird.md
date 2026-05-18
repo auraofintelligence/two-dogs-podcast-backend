@@ -73,7 +73,7 @@ Only fill this in after the guest has chosen their own animal and nickname.
 - Aura navigator topic: Ethical Transition in Intimacy.
 - Strange But True: privacy, contact and public/private boundary patterns.
 - Strange But True commons language from the public licence and profile/aura builder family.
-- Two Dogs boundary rule: Blue Dog remains Angel-directed; guests choose their own character and nickname.
+- Two Dogs boundary rule: Angel is Blue Dog and directs that voice; guests choose their own character and nickname.
 
 ## Next Useful Action
 

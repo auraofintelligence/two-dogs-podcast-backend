@@ -11,4 +11,4 @@ Agents should prefer the interactive builder output structure instead of inventi
 - [red-dog-research-agent.md](./red-dog-research-agent.md) - pulls source context for Red Dog without flooding the episode.
 - [episode-planning-agent.md](./episode-planning-agent.md) - helps prepare fields for the Episode builder.
 - [scene-breakdown-agent.md](./scene-breakdown-agent.md) - helps prepare fields for the Scene builder.
-- [guest-prep-agent.md](./guest-prep-agent.md) - helps prepare fields for the Guest builder while preserving guest choice.
+- [guest-prep-agent.md](./guest-prep-agent.md) - helps prepare fields for the Guest onboarding builder while preserving guest choice.

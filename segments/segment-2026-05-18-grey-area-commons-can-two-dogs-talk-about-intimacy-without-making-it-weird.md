@@ -17,7 +17,7 @@ First draft for Luke and Angel to discuss. Not complete, not locked, and not a B
 
 ## Purpose
 
-Give the Grey-Area Commons episode a repeatable piece that can stand alone as a clip while still feeding the larger 45-minute yarn.
+Give the Grey-Area Commons episode a repeatable piece that can stand alone as a clip while still feeding the larger yarn.
 
 ## Format
 
@@ -59,4 +59,4 @@ Only include guest animal, nickname or lived examples after the guest chooses an
 - Aura navigator topic: Ethical Transition in Intimacy.
 - Strange But True: privacy, contact and public/private boundary patterns.
 - Strange But True commons language from the public licence and profile/aura builder family.
-- Two Dogs boundary rule: Blue Dog remains Angel-directed; guests choose their own character and nickname.
+- Two Dogs boundary rule: Angel is Blue Dog and directs that voice; guests choose their own character and nickname.

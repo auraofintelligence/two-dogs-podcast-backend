@@ -86,15 +86,15 @@ const forms = {
     }
   },
   guest: {
-    tab: "Guest",
-    title: "Guest feedback form",
+    tab: "Guest Onboarding",
+    title: "Guest onboarding form",
     destination: "Save to guests/",
     prefix: "guest",
     fields: [
       field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-      field("guestName", "Guest name"),
-      field("episodeLink", "Episode link"),
-      field("whyGuest", "Why this guest", "textarea"),
+      field("guestName", "Guest or invitee name"),
+      field("episodeLink", "Episode or invitation link"),
+      field("whyGuest", "Why this guest / why they want to join", "textarea"),
       field("talkTopics", "What they might want to talk about", "textarea"),
       field("chosenAnimal", "Guest-chosen spirit animal"),
       field("chosenNickname", "Guest-chosen nickname"),
@@ -109,7 +109,7 @@ const forms = {
     ],
     render(data) {
       return doc([
-        heading("Guest Note", data.guestName),
+        heading("Guest Onboarding Note", data.guestName),
         meta(data),
         section("Episode Link", data.episodeLink),
         section("Core Boundaries", sharedBoundary),
@@ -261,10 +261,11 @@ const forms = {
 };
 
 const builderPages = [
+  { key: "runsheet", href: "runsheet.html", label: "Runsheet", note: "Full show plan and showrunner preview" },
   { key: "episode", href: "episode.html", label: "Episode", note: "Episode plans and rough arcs" },
   { key: "scene", href: "scene.html", label: "Scene", note: "Animated visual beats" },
   { key: "micro", href: "micro-scenes.html", label: "Micro Scenes", note: "Tiny cutaway pipelines" },
-  { key: "guest", href: "guest.html", label: "Guest", note: "Guest prep and chosen character notes" },
+  { key: "guest", href: "guest.html", label: "Guest Onboarding", note: "Apply or invite without choosing their animal" },
   { key: "ad", href: "ad-sponsor.html", label: "Ad/Sponsor", note: "Sponsor fit and ad reads" },
   { key: "segment", href: "segment.html", label: "Segment", note: "Recurring show bits" },
   { key: "recurring", href: "recurring-scenes.html", label: "Recurring Builder", note: "Strategic show-bit forms" },
@@ -319,7 +320,7 @@ function buildSideNav() {
 
   const note = document.createElement("div");
   note.className = "side-note";
-  note.innerHTML = "<strong>Boundaries stay on.</strong><br />Blue Dog is Angel-directed. Guests choose their own spirit animal and nickname.";
+  note.innerHTML = "<strong>Boundaries stay on.</strong><br />Angel is Blue Dog. Guests choose their own spirit animal and nickname.";
   sideNav.appendChild(note);
 }
 

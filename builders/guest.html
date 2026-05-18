@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guest Builder | Two Dogs Podcast</title>
+    <title>Guest Onboarding | Two Dogs Podcast</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="../assets/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
@@ -12,14 +12,18 @@
   </head>
   <body data-builder="guest">
     <header class="site-header">
-      <a class="brand-link" href="index.html" aria-label="Two Dogs builder home"><img class="poster-mark" src="../assets/two-dogs-podcast.webp" alt="Illustrated Two Dogs Podcast poster" width="1290" height="1892" /><span><span class="brand-kicker">Two Dogs Podcast</span><strong>Guest builder</strong></span></a>
-      <nav class="site-nav" aria-label="Builder navigation"><a href="index.html">Home</a><a href="../episodes/index.html">Drafts</a><a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a><a href="episode.html">Episode</a><a href="scene.html">Scene</a><a href="micro-scenes.html">Micro Scenes</a><a class="active" href="guest.html">Guest</a><a href="ad-sponsor.html">Ad/Sponsor</a><a href="segment.html">Segment</a><a href="recurring-scenes.html">Recurring Builder</a><a href="source-reference.html">Source</a><a href="handoff.html">Handoff</a></nav>
+      <a class="brand-link" href="index.html" aria-label="Two Dogs builder home"><img class="poster-mark" src="../assets/two-dogs-podcast.webp" alt="Illustrated Two Dogs Podcast poster" width="1290" height="1892" /><span><span class="brand-kicker">Two Dogs Podcast</span><strong>Guest onboarding</strong></span></a>
+      <nav class="site-nav" aria-label="Builder navigation"><a href="index.html">Home</a><a href="../episodes/index.html">Drafts</a><a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a><a href="runsheet.html">Runsheet</a><a href="episode.html">Episode</a><a href="scene.html">Scene</a><a href="micro-scenes.html">Micro Scenes</a><a class="active" href="guest.html">Guest Onboarding</a><a href="ad-sponsor.html">Ad/Sponsor</a><a href="segment.html">Segment</a><a href="recurring-scenes.html">Recurring Builder</a><a href="source-reference.html">Source</a><a href="handoff.html">Handoff</a></nav>
     </header>
     <main class="app-shell">
-      <section class="page-intro"><p class="kicker">Guest builder</p><h1>Prepare the guest without choosing their animal for them.</h1></section>
+      <section class="page-intro"><p class="kicker">Guest onboarding</p><h1>Apply, invite, or onboard a guest without choosing their animal for them.</h1><p class="lede">These spirit animal boards are speculative prompts to help people imagine their own character. They are a guide only, not an exclusive list.</p></section>
+      <section class="spirit-guide" aria-label="Speculative spirit animal guide">
+        <img src="../assets/two-dogs-spirit-animals-board-01.webp" alt="Speculative Two Dogs spirit animal guide board with kookaburra, dolphin, turtle, brush turkey, whipbird, goanna, wallaby, snake, sea eagle, bandicoot and cat options" width="1536" height="1024" />
+        <img src="../assets/two-dogs-spirit-animals-board-02.webp" alt="Speculative Two Dogs spirit animal guide board with grey curlew, dugong, grey kangaroo, sugar glider, plover, lorikeet, carpet python, ibis, pelican, koala and whale options" width="1536" height="1024" />
+      </section>
       <section class="builder-layout" aria-label="Guest Markdown builder">
         <aside class="side-nav" aria-label="Builder pages"></aside>
-        <section class="form-panel" aria-label="Feedback form"><div class="form-heading"><div><p class="form-type" id="formType"></p><h2 id="formTitle"></h2></div><p class="destination" id="destination"></p></div><form id="builderForm" class="field-grid"></form></section>
+        <section class="form-panel" aria-label="Guest onboarding form"><div class="form-heading"><div><p class="form-type" id="formType"></p><h2 id="formTitle"></h2></div><p class="destination" id="destination"></p></div><form id="builderForm" class="field-grid"></form></section>
         <aside class="preview-panel" aria-label="Markdown preview"><div class="preview-heading"><div><p class="form-type">Output</p><h2>Generated Markdown</h2></div><p class="filename" id="filename"></p></div><textarea id="markdownPreview" class="markdown-preview" readonly spellcheck="false" wrap="soft"></textarea><div class="actions" aria-label="Output actions"><button class="button primary" type="button" id="downloadButton">Download .md</button><button class="button" type="button" id="copyButton">Copy</button><button class="button quiet" type="button" id="clearButton">Reset form</button></div><p class="status-line" id="statusLine" role="status" aria-live="polite">Autosaves in this browser.</p></aside>
       </section>
       <nav class="footer-nav" aria-label="Previous and next builder pages"><a class="footer-nav-card" href="micro-scenes.html"><span>Previous</span><strong>Micro Scene Builder</strong></a><a class="footer-nav-card next" href="ad-sponsor.html"><span>Next</span><strong>Ad/Sponsor Builder</strong></a></nav>

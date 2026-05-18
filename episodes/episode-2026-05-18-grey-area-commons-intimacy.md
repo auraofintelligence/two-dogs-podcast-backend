@@ -20,7 +20,7 @@ The joke is that everyone pretends they know the rules, then half the room is qu
 
 ## Why This Episode
 
-A lot of the early topic seeds are really segment-sized. This one can hold a full 45-minute Two Dogs episode because it has enough layers: consent, awkwardness, AI companions, parasocial weirdness, dating apps, community gossip, public/private boundaries, emotional labour, alcohol, power, and the basic human need to be close without being careless.
+A lot of the early topic seeds are really segment-sized. This one can hold a full Two Dogs episode because it has enough layers: consent, awkwardness, AI companions, parasocial weirdness, dating apps, community gossip, public/private boundaries, emotional labour, alcohol, power, and the basic human need to be close without being careless.
 
 The grey-area-commons framing lets Red Dog be playful without being reckless. It turns intimacy into a social design problem: how do people make shared space for closeness, honesty and desire without turning the commons into a confusion factory?
 
@@ -110,7 +110,7 @@ No advice about manipulating people, pressuring people, testing people, trapping
 - Aura navigator topic: Ethical Transition in Intimacy.
 - Strange But True: privacy, contact and public/private boundary patterns.
 - Strange But True commons language from the public licence and profile/aura builder family.
-- Two Dogs boundary rule: Blue Dog remains Angel-directed; guests choose their own character and nickname.
+- Two Dogs boundary rule: Angel is Blue Dog and directs that voice; guests choose their own character and nickname.
 
 ## Questions To Carry Into Recording
 

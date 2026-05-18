@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Runsheet Builder | Two Dogs Podcast</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="Two Dogs builder home">
+        <img class="poster-mark" src="../assets/two-dogs-podcast.webp" alt="Illustrated Two Dogs Podcast poster" width="1290" height="1892" />
+        <span><span class="brand-kicker">Two Dogs Podcast</span><strong>Runsheet builder</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Builder navigation">
+        <a href="index.html">Home</a><a href="../episodes/index.html">Drafts</a><a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a><a class="active" href="runsheet.html">Runsheet</a><a href="episode.html">Episode</a><a href="scene.html">Scene</a><a href="micro-scenes.html">Micro Scenes</a><a href="guest.html">Guest Onboarding</a><a href="ad-sponsor.html">Ad/Sponsor</a><a href="segment.html">Segment</a><a href="recurring-scenes.html">Recurring Builder</a><a href="source-reference.html">Source</a><a href="handoff.html">Handoff</a>
+      </nav>
+    </header>
+    <main class="app-shell">
+      <section class="page-intro">
+        <p class="kicker">Showrunner runsheet</p>
+        <h1>Assemble a full show from prepared pieces, or freestyle with planned segues.</h1>
+        <p class="lede">Select the components you need, tune the rough pacing, then export a Markdown runsheet and use the preview as the working showrunner page. The show length is experimental for now.</p>
+      </section>
+
+      <section class="runsheet-layout" aria-label="Runsheet builder">
+        <aside class="recurring-picker-panel" aria-label="Runsheet component picker">
+          <p class="side-nav-title">Quick components</p>
+          <div class="component-tools" aria-label="Component selection tools">
+            <button class="button" type="button" id="selectCore">Core</button>
+            <button class="button" type="button" id="selectFreestyle">Freestyle</button>
+            <button class="button" type="button" id="selectAll">All</button>
+            <button class="button quiet" type="button" id="clearComponents">Clear</button>
+          </div>
+          <div id="componentList" class="component-list"></div>
+          <div class="side-note"><strong>Use this live.</strong><br />The preview is for the showrunner. The Markdown is the portable planning file.</div>
+        </aside>
+
+        <section class="form-panel" aria-label="Runsheet details form">
+          <div class="form-heading">
+            <div><p class="form-type">Runsheet</p><h2>Show setup</h2></div>
+            <p class="destination">Save to runsheets/</p>
+          </div>
+          <form id="runsheetForm" class="field-grid"></form>
+          <div class="actions" aria-label="Runsheet actions">
+            <button class="button primary" type="button" id="downloadRunsheet">Download .md</button>
+            <button class="button" type="button" id="copyRunsheet">Copy Markdown</button>
+            <button class="button quiet" type="button" id="resetRunsheet">Reset</button>
+          </div>
+          <p class="status-line" id="runsheetStatus" role="status" aria-live="polite">Autosaves in this browser.</p>
+        </section>
+
+        <aside class="preview-panel" aria-label="Runsheet Markdown export">
+          <div class="preview-heading">
+            <div><p class="form-type">Output</p><h2>Generated Markdown</h2></div>
+            <p class="filename" id="runsheetFilename"></p>
+          </div>
+          <textarea id="runsheetMarkdown" class="markdown-preview" readonly spellcheck="false" wrap="soft"></textarea>
+        </aside>
+      </section>
+
+      <section class="runsheet-preview-card" aria-label="Showrunner preview">
+        <div id="runsheetPreview"></div>
+      </section>
+
+      <nav class="footer-nav" aria-label="Previous and next builder pages">
+        <a class="footer-nav-card" href="index.html"><span>Previous</span><strong>Builder Home</strong></a>
+        <a class="footer-nav-card next" href="episode.html"><span>Next</span><strong>Episode Builder</strong></a>
+      </nav>
+    </main>
+    <script src="site-nav.js"></script>
+    <script src="runsheet-builder.js"></script>
+    <script src="../assets/back-to-top.js"></script>
+  </body>
+</html>

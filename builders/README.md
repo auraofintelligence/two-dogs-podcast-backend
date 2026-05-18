@@ -2,14 +2,15 @@
 
 Open [index.html](./index.html) in a browser.
 
-The builder area is a small multi-page workbench. It creates `.md` planning files from feedback forms. It does not publish anything, upload anything or store anything outside your browser unless you download or copy the generated Markdown.
+The builder area is a small multi-page workbench. It creates `.md` planning files from browser-based builder forms. It does not publish anything, upload anything or store anything outside your browser unless you download or copy the generated Markdown.
 
 ## Current Forms
 
+- [Runsheet](./runsheet.html)
 - [Episode](./episode.html)
 - [Scene](./scene.html)
 - [Micro Scenes](./micro-scenes.html)
-- [Guest](./guest.html)
+- [Guest Onboarding](./guest.html)
 - [Ad/Sponsor](./ad-sponsor.html)
 - [Segment](./segment.html)
 - [Recurring Builder](./recurring-scenes.html)

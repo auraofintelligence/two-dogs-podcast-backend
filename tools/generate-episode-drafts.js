@@ -184,7 +184,7 @@ function buildDraftSet(episode, index, total) {
   const segment = {
     file: segmentFile,
     name: firstSegment,
-    purpose: `Give the ${episode.shortTitle} episode a repeatable piece that can stand alone as a clip while still feeding the larger 45-minute yarn.`,
+    purpose: `Give the ${episode.shortTitle} episode a repeatable piece that can stand alone as a clip while still feeding the larger yarn.`,
     format: [
       "Red Dog names the question in one sentence.",
       "One concrete example is pulled from the episode seed.",
@@ -358,7 +358,7 @@ function episodePageHtml(data) {
         <div class="discussion-grid">
           ${discussionItem("Luke / Red Dog", "What is the plain-language doorway, and where should the deeper Strange But True, Aura or P4A material enter without taking over?")}
           ${discussionItem("Angel / Blue Dog", "Space for Angel to respond, redirect, add timing, or reject the bit. No Blue Dog lines are written here.")}
-          ${discussionItem("Episode or segment?", "Decide whether this deserves a full 45-minute yarn, belongs inside another episode, or should stay as a recurring short segment.")}
+          ${discussionItem("Episode or segment?", "Decide whether this deserves a full yarn, belongs inside another episode, or should stay as a recurring short segment.")}
           ${discussionItem("Before recording", "Check the source boundary, guest boundary, mock-sponsor status, and the one practical question the audience should be left with.")}
         </div>
       </section>

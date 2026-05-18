@@ -4,6 +4,7 @@ function enhanceBuilderMenu() {
 
   const builderFiles = new Set([
     "episode.html",
+    "runsheet.html",
     "scene.html",
     "micro-scenes.html",
     "guest.html",

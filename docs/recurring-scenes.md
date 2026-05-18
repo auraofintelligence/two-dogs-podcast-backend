@@ -7,7 +7,7 @@ Generated: 2026-05-18
 
 This is the repeatable scene menu for Two Dogs. Use it when an episode needs rhythm, topical energy, a quick laugh, a public-service beat, or a bridge between bigger yarns.
 
-These are recurring scene lanes, not locked scripts. Blue Dog stays open for Angel to direct. Red Dog can prep the doorway and source notes.
+These are recurring scene lanes, not locked scripts. Angel is Blue Dog and directs that voice. Red Dog can prep the doorway and source notes.
 
 ## Core Rules
 

@@ -5,13 +5,13 @@ Generated: 2026-05-18
 
 ## Purpose
 
-Micro scenes are tiny animated cutaways that keep a 45-minute conversation alive. They are not full scenes, episode arcs or recurring segments. They are quick visual bridges: a dog reaction, a source-check jump, a gate interruption, a walk, a treat, a stick, a ferry cue, then back to the yarn.
+Micro scenes are tiny animated cutaways that keep a longer conversation alive. They are not full scenes, episode arcs or recurring segments. They are quick visual bridges: a dog reaction, a source-check jump, a gate interruption, a walk, a treat, a stick, a ferry cue, then back to the yarn.
 
 Use [builders/micro-scenes.html](../builders/micro-scenes.html) to export a compact `.md` note for each beat.
 
 ## Core Boundaries
 
-- Blue Dog remains Angel-directed.
+- Angel is Blue Dog and directs that voice.
 - Red Dog can set up the gag, research jump, source check or return line.
 - Guests choose their own spirit animal character and nickname.
 - Keep the beat short enough that the conversation still owns the show.
