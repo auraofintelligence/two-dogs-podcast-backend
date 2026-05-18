@@ -263,6 +263,7 @@ const forms = {
 const builderPages = [
   { key: "episode", href: "episode.html", label: "Episode", note: "Episode plans and rough arcs" },
   { key: "scene", href: "scene.html", label: "Scene", note: "Animated visual beats" },
+  { key: "micro", href: "micro-scenes.html", label: "Micro Scenes", note: "Tiny cutaway pipelines" },
   { key: "guest", href: "guest.html", label: "Guest", note: "Guest prep and chosen character notes" },
   { key: "ad", href: "ad-sponsor.html", label: "Ad/Sponsor", note: "Sponsor fit and ad reads" },
   { key: "segment", href: "segment.html", label: "Segment", note: "Recurring show bits" },

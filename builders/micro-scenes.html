@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Micro Scene Builder | Two Dogs Podcast</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="Two Dogs builder home"><img class="poster-mark" src="../assets/two-dogs-podcast.webp" alt="Illustrated Two Dogs Podcast poster" width="1290" height="1892" /><span><span class="brand-kicker">Two Dogs Podcast</span><strong>Micro scene builder</strong></span></a>
+      <nav class="site-nav" aria-label="Builder navigation"><a href="index.html">Home</a><a href="../episodes/index.html">Drafts</a><a href="../recurring-scenes.html">Recurring</a><a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a><a href="episode.html">Episode</a><a href="scene.html">Scene</a><a class="active" href="micro-scenes.html">Micro Scenes</a><a href="guest.html">Guest</a><a href="ad-sponsor.html">Ad/Sponsor</a><a href="segment.html">Segment</a><a href="recurring-scenes.html">Recurring Scenes</a><a href="source-reference.html">Source</a><a href="handoff.html">Handoff</a></nav>
+    </header>
+    <main class="app-shell">
+      <section class="page-intro">
+        <p class="kicker">Micro scene pipeline</p>
+        <h1>Build tiny animated cutaways without losing the yarn.</h1>
+        <p class="lede">Pick a short dog-world beat, tune the timing and frames, then export a compact Markdown note. Blue Dog stays Angel-directed; Red Dog can set up the gag, research jump or return line.</p>
+      </section>
+
+      <section class="recurring-builder-layout" aria-label="Micro scene Markdown pipeline">
+        <aside class="recurring-picker-panel" aria-label="Micro scene list">
+          <p class="side-nav-title">Micro scenes</p>
+          <label class="micro-search" for="microSceneSearch"><span>Find a beat</span><input id="microSceneSearch" type="search" placeholder="postman, walk, stick..." /></label>
+          <div id="microScenePicker" class="recurring-picker"></div>
+          <div class="side-note"><strong>Keep it tiny.</strong><br />One trigger, three short frames, one clean return to the conversation.</div>
+        </aside>
+
+        <section class="form-panel" aria-label="Micro scene feedback form">
+          <div class="form-heading">
+            <div>
+              <p class="form-type" id="microType">Micro scene</p>
+              <h2 id="microTitle">Pipeline form</h2>
+            </div>
+            <p class="destination">Save to scenes/micro-scenes/</p>
+          </div>
+          <form id="microForm" class="field-grid"></form>
+        </section>
+
+        <aside class="preview-panel" aria-label="Markdown preview">
+          <div class="preview-heading">
+            <div>
+              <p class="form-type">Output</p>
+              <h2>Generated Markdown</h2>
+            </div>
+            <p class="filename" id="microFilename"></p>
+          </div>
+          <textarea id="microPreview" class="markdown-preview" readonly spellcheck="false" wrap="soft"></textarea>
+          <div class="actions" aria-label="Output actions">
+            <button class="button primary" type="button" id="microDownload">Download .md</button>
+            <button class="button" type="button" id="microCopy">Copy</button>
+            <button class="button quiet" type="button" id="microReset">Reset form</button>
+          </div>
+          <p class="status-line" id="microStatus" role="status" aria-live="polite">Autosaves in this browser.</p>
+        </aside>
+      </section>
+
+      <nav class="footer-nav" aria-label="Previous and next builder pages">
+        <a class="footer-nav-card" href="scene.html"><span>Previous</span><strong>Scene Builder</strong></a>
+        <a class="footer-nav-card next" href="guest.html"><span>Next</span><strong>Guest Builder</strong></a>
+      </nav>
+    </main>
+    <script src="site-nav.js"></script>
+    <script src="micro-scenes-builder.js"></script>
+    <script src="../assets/back-to-top.js"></script>
+  </body>
+</html>

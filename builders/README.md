@@ -8,9 +8,11 @@ The builder area is a small multi-page workbench. It creates `.md` planning file
 
 - [Episode](./episode.html)
 - [Scene](./scene.html)
+- [Micro Scenes](./micro-scenes.html)
 - [Guest](./guest.html)
 - [Ad/Sponsor](./ad-sponsor.html)
 - [Segment](./segment.html)
+- [Recurring Scenes](./recurring-scenes.html)
 - [Source Reference](./source-reference.html)
 - [Handoff](./handoff.html)
 

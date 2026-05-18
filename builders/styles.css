@@ -392,6 +392,29 @@ h2 {
   margin-top: 10px;
 }
 
+.micro-search {
+  display: grid;
+  gap: 6px;
+  margin: 6px 0 12px;
+}
+
+.micro-search span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 900;
+  padding: 0 4px;
+}
+
+.micro-search input {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--text);
+  min-height: 44px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
 .recurring-picker button {
   background: transparent;
   border: 1px solid transparent;

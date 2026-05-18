@@ -5,6 +5,7 @@ function enhanceBuilderMenu() {
   const builderFiles = new Set([
     "episode.html",
     "scene.html",
+    "micro-scenes.html",
     "guest.html",
     "ad-sponsor.html",
     "segment.html",

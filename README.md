@@ -10,6 +10,8 @@ Public home: [Two Dogs Podcast Planning](https://auraofintelligence.github.io/tw
 
 Recurring scenes: [Recurring Scenes](https://auraofintelligence.github.io/two-dogs-podcast-backend/recurring-scenes.html)
 
+Micro scene pipeline: [Micro Scenes Builder](https://auraofintelligence.github.io/two-dogs-podcast-backend/builders/micro-scenes.html)
+
 Backlink: [Film Club World](https://auraofintelligence.github.io/strange-but-true/film-club-world.html)
 
 ## Premise
@@ -32,7 +34,7 @@ This repo should help someone plan the next yarn, not force the show through a h
 
 - [builders](./builders/) - local interactive feedback forms that export `.md` files.
 - [episodes](./episodes/) - generated episode plans, rough outlines and public first-draft discussion pages.
-- [scenes](./scenes/) - generated animated scene ideas, cold opens, transitions and visual moments.
+- [scenes](./scenes/) - generated animated scene ideas, cold opens, transitions, micro-scenes and visual moments.
 - [guests](./guests/) - generated guest notes and guest-chosen spirit animal details.
 - [ads-sponsors](./ads-sponsors/) - generated ad reads, sponsor ideas and ethical fit notes.
 - [segments](./segments/) - generated recurring segment ideas.
@@ -45,7 +47,7 @@ This repo should help someone plan the next yarn, not force the show through a h
 
 1. Open [docs/premise-and-boundaries.md](./docs/premise-and-boundaries.md).
 2. Open [builders/index.html](./builders/index.html) in a browser.
-3. Use the builder navigation to open the right page: episode, scene, guest, ad, segment, source or handoff.
+3. Use the builder navigation to open the right page: episode, scene, micro scene, guest, ad, segment, source or handoff.
 4. Fill the feedback fields and export Markdown.
 5. Save the exported file into the matching folder.
 6. If deeper context is needed, use [docs/source-routing.md](./docs/source-routing.md) before opening any large source document.
@@ -65,6 +67,12 @@ The standing scene menu is collected at [recurring-scenes.html](./recurring-scen
 Use it for repeatable bits such as News Flash, Comedy Minute, Bad Dog, Good Dog, UN World Day Of Whatever, Sports Desk, Weather Window, Music Drop, Film Club, Art Show, Games Table, Science Sniff Test, Life Hack, Onboarding, Merch Table and Dogs And Allies.
 
 Each recurring scene also has a concise strategic export form at [builders/recurring-scenes.html](./builders/recurring-scenes.html). The [UN World Day builder](./builders/recurring-scenes.html?scene=un-world-day) includes a searchable calendar snapshot from the official United Nations observances list; refresh it with `node tools/build-un-observances.mjs`.
+
+## Micro Scenes
+
+The micro-scene pipeline is at [builders/micro-scenes.html](./builders/micro-scenes.html), with the working menu at [docs/micro-scenes.md](./docs/micro-scenes.md).
+
+Use it for tiny animated cutaways such as the postman arriving, Red Dog research time-lapses, someone at the gate, walk-and-talk resets, tree stops, fetch beats, dog treats, tail-sniff checks, grooming resets, beach zoomies, can cracks, ferry watches and guest-chosen animal reveals.
 
 ## Current Seed
 
