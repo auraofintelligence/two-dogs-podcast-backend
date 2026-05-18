@@ -104,7 +104,7 @@ let beatStartAt = 0;
 let beatAccumulatedMs = 0;
 let logEntries = [];
 let timerId = null;
-let durationTrimBaseMinutes = null;
+let durationTrimBaseSeconds = null;
 
 restoreSession();
 bindControls();
@@ -266,10 +266,10 @@ function parseRunsheet(markdown) {
 
 function parseTimelineLine(line) {
   const cleanLine = line.replace(/^\s*-\s+/, "").trim();
-  const match = cleanLine.match(/^(\d{1,2}:\d{2})\s+(.+?)\s+\(about\s+(\d+(?:\.\d+)?)\s+min\):\s*(.*)$/i);
+  const match = cleanLine.match(/^(\d{1,2}:\d{2})\s+(.+?)\s+\(about\s+(\d+(?:\.\d+)?\s*min|\d+:\d{2}(?::\d{2})?)\):\s*(.*)$/i);
   if (match) {
-    const [, start, title, minutes, note] = match;
-    return beat(start, title.trim(), Number(minutes), inferLane(title, note), note.trim());
+    const [, start, title, duration, note] = match;
+    return beat(start, title.trim(), durationLabelToMinutes(duration), inferLane(title, note), note.trim());
   }
   const fallbackTitle = cleanLine.replace(/\s*:\s*.*$/, "");
   return beat("00:00", fallbackTitle, 3, "Imported", cleanLine);
@@ -303,7 +303,7 @@ function renderBeats() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = `beat-item${index === currentBeat ? " active" : ""}`;
-    button.innerHTML = `<strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.start)} / about ${item.minutes} min / ${escapeHtml(item.lane)}</span>`;
+    button.innerHTML = `<strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.start)} / about ${formatBeatDuration(item)} / ${escapeHtml(item.lane)}</span>`;
     button.addEventListener("click", () => jumpToBeat(index));
     elements.beatList.appendChild(button);
   });
@@ -638,36 +638,36 @@ function moveBeat(direction) {
 function beginBeatTrim() {
   const item = beats[currentBeat];
   if (!item) return;
-  durationTrimBaseMinutes = Math.max(1, Math.round(Number(item.minutes) || 1));
+  durationTrimBaseSeconds = beatDurationSeconds(item);
 }
 
 function previewCurrentBeatTrim() {
   const item = beats[currentBeat];
   if (!item) return;
-  if (durationTrimBaseMinutes === null) beginBeatTrim();
-  const delta = Math.round(Number(elements.beatDurationSlider.value) || 0);
-  const base = durationTrimBaseMinutes || Math.round(Number(item.minutes) || 1);
-  const nextMinutes = Math.max(1, Math.min(240, base + delta));
-  item.minutes = nextMinutes;
-  updateDurationOutput(nextMinutes, delta);
+  if (durationTrimBaseSeconds === null) beginBeatTrim();
+  const deltaSeconds = trimSliderToSeconds(elements.beatDurationSlider.value);
+  const baseSeconds = durationTrimBaseSeconds || beatDurationSeconds(item);
+  const nextSeconds = Math.max(1, Math.min(3600, baseSeconds + deltaSeconds));
+  item.minutes = nextSeconds / 60;
+  updateDurationOutput(nextSeconds, nextSeconds - baseSeconds);
   updateClocks();
 }
 
 function commitCurrentBeatTrim() {
   const item = beats[currentBeat];
   if (!item) return;
-  const delta = Math.round(Number(elements.beatDurationSlider.value) || 0);
-  const base = durationTrimBaseMinutes || Math.round(Number(item.minutes) || 1);
-  const finalMinutes = Math.max(1, Math.min(240, base + delta));
-  const effectiveDelta = finalMinutes - base;
+  const deltaSeconds = trimSliderToSeconds(elements.beatDurationSlider.value);
+  const baseSeconds = durationTrimBaseSeconds || beatDurationSeconds(item);
+  const finalSeconds = Math.max(1, Math.min(3600, baseSeconds + deltaSeconds));
+  const effectiveDelta = finalSeconds - baseSeconds;
   const changed = effectiveDelta !== 0;
-  item.minutes = finalMinutes;
-  durationTrimBaseMinutes = null;
+  item.minutes = finalSeconds / 60;
+  durationTrimBaseSeconds = null;
   elements.beatDurationSlider.value = "0";
   renderBeats();
   updateClocks();
   if (changed) {
-    log("Beat Length", `${item.title} ${effectiveDelta > 0 ? "lengthened" : "shortened"} by ${Math.abs(effectiveDelta)} min to about ${finalMinutes} min.`, "marker");
+    log("Beat Length", `${item.title} ${effectiveDelta > 0 ? "lengthened" : "shortened"} by ${formatSecondsLabel(Math.abs(effectiveDelta))} to about ${formatBeatDuration(item)}.`, "marker");
   } else {
     persistSession();
   }
@@ -676,17 +676,54 @@ function commitCurrentBeatTrim() {
 function syncDurationControl() {
   if (!elements.beatDurationSlider || !elements.beatDurationValue) return;
   const item = beats[currentBeat] || fallbackBeats[0];
-  const minutes = Math.max(1, Math.round(Number(item.minutes) || 1));
-  elements.beatDurationSlider.min = "-20";
-  elements.beatDurationSlider.max = "20";
+  const seconds = beatDurationSeconds(item);
   elements.beatDurationSlider.value = "0";
-  updateDurationOutput(minutes, 0);
+  elements.beatDurationSlider.min = "-100";
+  elements.beatDurationSlider.max = "100";
+  updateDurationOutput(seconds, 0);
 }
 
-function updateDurationOutput(minutes, delta) {
+function updateDurationOutput(seconds, deltaSeconds) {
   if (!elements.beatDurationValue) return;
-  const deltaText = delta === 0 ? "set" : `${delta > 0 ? "+" : ""}${delta} min`;
-  elements.beatDurationValue.textContent = `${minutes} min ${deltaText}`;
+  const deltaText = deltaSeconds === 0 ? "set" : `${deltaSeconds > 0 ? "+" : "-"}${formatSecondsLabel(Math.abs(deltaSeconds))}`;
+  elements.beatDurationValue.textContent = `${formatSecondsLabel(seconds)} ${deltaText}`;
+}
+
+function trimSliderToSeconds(value) {
+  const raw = Math.max(-100, Math.min(100, Math.round(Number(value) || 0)));
+  if (raw === 0) return 0;
+  const sign = Math.sign(raw);
+  const amount = Math.abs(raw) / 100;
+  const curve = 5.2;
+  const scaled = (Math.exp(curve * amount) - 1) / (Math.exp(curve) - 1);
+  return sign * Math.max(1, Math.round(scaled * 3600));
+}
+
+function beatDurationSeconds(item) {
+  return Math.max(1, Math.round((Number(item.minutes) || 1) * 60));
+}
+
+function durationLabelToMinutes(label) {
+  const clean = String(label || "").trim().toLowerCase();
+  if (clean.endsWith("min")) return Number(clean.replace(/\s*min$/, "")) || 1;
+  const parts = clean.split(":").map((part) => Number(part));
+  if (parts.some((part) => Number.isNaN(part))) return 1;
+  if (parts.length === 3) return ((parts[0] * 3600) + (parts[1] * 60) + parts[2]) / 60;
+  if (parts.length === 2) return ((parts[0] * 60) + parts[1]) / 60;
+  return 1;
+}
+
+function formatBeatDuration(item) {
+  return formatSecondsLabel(beatDurationSeconds(item));
+}
+
+function formatSecondsLabel(seconds) {
+  const total = Math.max(0, Math.round(Number(seconds) || 0));
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const secs = total % 60;
+  if (hours > 0) return `${hours}:${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+  return `${minutes}:${String(secs).padStart(2, "0")}`;
 }
 
 function sceneCut() {
@@ -747,12 +784,12 @@ function currentBeatMs() {
 function updateClocks() {
   const item = beats[currentBeat] || fallbackBeats[0];
   const beatMs = currentBeatMs();
-  const totalBeatMs = Math.max(1, Number(item.minutes || 1) * 60 * 1000);
+  const totalBeatMs = Math.max(1000, beatDurationSeconds(item) * 1000);
   const remainingMs = Math.max(0, totalBeatMs - beatMs);
   const percent = Math.min(100, (beatMs / totalBeatMs) * 100);
 
   elements.elapsedClock.textContent = formatDuration(elapsedMs());
-  elements.currentBeatLane.textContent = `${item.lane} / ${item.start} / about ${item.minutes} min`;
+  elements.currentBeatLane.textContent = `${item.lane} / ${item.start} / about ${formatBeatDuration(item)}`;
   elements.currentBeatLabel.textContent = item.title;
   elements.beatClock.textContent = formatDuration(beatMs, true);
   elements.beatRemaining.textContent = remainingMs > 0 ? `${formatDuration(remainingMs, true)} remaining` : "Over planned beat time";
@@ -787,7 +824,7 @@ function logMarkdown() {
     .reverse()
     .map((entry) => `- ${entry.at} | ${entry.type} | ${entry.label} | beat: ${entry.beat}`)
     .join("\n");
-  const beatList = beats.map((item) => `- ${item.start} ${item.title} (about ${item.minutes} min): ${item.note}`).join("\n");
+  const beatList = beats.map((item) => `- ${item.start} ${item.title} (about ${formatBeatDuration(item)}): ${item.note}`).join("\n");
   const pads = customPads.map((item) => `- ${item.label} (${item.type}, ${item.colour})`).join("\n");
   return `# Two Dogs Recording Log
 

@@ -95,12 +95,12 @@
           <div class="duration-control cat-timing" aria-label="Current beat duration control">
             <div class="duration-readout">
               <span>Trim timer</span>
-              <output id="beatDurationValue" for="beatDurationSlider">2 min set</output>
+              <output id="beatDurationValue" for="beatDurationSlider">2:00 set</output>
             </div>
-            <input id="beatDurationSlider" type="range" min="-20" max="20" step="1" value="0" aria-label="Trim current beat length: left shorter, right longer" />
+            <input id="beatDurationSlider" type="range" min="-100" max="100" step="1" value="0" aria-label="Trim current beat length: small moves are seconds, far ends reach one hour" />
             <div class="duration-scale" aria-hidden="true">
               <span>Shorter</span>
-              <span>No change</span>
+              <span>Fine trim</span>
               <span>Longer</span>
             </div>
           </div>
