@@ -206,6 +206,30 @@ h3 {
   padding: 18px;
 }
 
+.episode-board {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin: 18px 0 0;
+  overflow: hidden;
+}
+
+.episode-board img {
+  aspect-ratio: 1536 / 1024;
+  background: #101310;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+.episode-board figcaption {
+  color: var(--muted);
+  font-weight: 800;
+  padding: 14px 16px 16px;
+}
+
 .discussion-panel > p {
   color: var(--muted);
   font-weight: 700;

@@ -103,10 +103,42 @@
         padding: 16px;
       }
 
+      .topic-board-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 18px;
+      }
+
+      .topic-board {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .topic-board img {
+        aspect-ratio: 1536 / 1024;
+        background: #101310;
+        display: block;
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      .topic-board figcaption {
+        color: var(--muted);
+        font-weight: 800;
+        padding: 14px 16px 16px;
+      }
+
       @media (max-width: 920px) {
         .recurring-hero,
         .scene-grid,
-        .run-grid {
+        .run-grid,
+        .topic-board-grid {
           grid-template-columns: 1fr;
         }
 
@@ -163,6 +195,23 @@
       <section class="source-note">
         <strong>Current material needs a fresh check.</strong>
         News, weather, sports, public claims and Bad Dog items should be verified on recording day. Use official or credible sources, and keep developing stories clearly labelled.
+      </section>
+
+      <section class="scene-section" aria-label="Special topic boards">
+        <div class="section-heading">
+          <p class="kicker">Topic boards</p>
+          <h2>Some recurring bits can become whole themed runs.</h2>
+        </div>
+        <div class="topic-board-grid">
+          <figure class="topic-board">
+            <img src="assets/two-dogs-history-flashbacks.webp" alt="Two Dogs history flashbacks topic board with historical moments as episode and recurring scene prompts" width="1536" height="1024" loading="lazy" decoding="async" />
+            <figcaption>History Flashbacks can work as source trails, comedy resets, or a regular doorway into old stories with new questions.</figcaption>
+          </figure>
+          <figure class="topic-board">
+            <img src="assets/two-dogs-robot-job-apocalypse.webp" alt="Two Dogs robot job apocalypse topic board for AI, automation, work and source-checkable future claims" width="1536" height="1024" loading="lazy" decoding="async" />
+            <figcaption>Robot Job Apocalypse is a useful Bad Dog / Good Dog test case: funny, current, but source-check before recording.</figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="scene-section" aria-label="Recurring scene menu">
