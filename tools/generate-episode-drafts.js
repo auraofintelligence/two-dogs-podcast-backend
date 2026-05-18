@@ -24,7 +24,7 @@ const narrativeOrder = [
   "episode-2026-05-17-public-ledger-game-without-hype.md",
   "episode-2026-05-17-p4a-joyful-responsible-abundance.md",
   "episode-2026-05-18-grey-area-commons-intimacy.md",
-  "episode-2026-05-17-mineral-moonshots-old-rocks-future-stories.md",
+  "episode-2026-05-17-mineral-moonshots-ancient-sands-future-stories.md",
   "episode-2026-05-17-gajra-earth-plain-language.md",
   "episode-2026-05-17-disaster-kiosks-when-internet-fails.md",
   "episode-2026-05-17-good-idea-to-fundable.md",

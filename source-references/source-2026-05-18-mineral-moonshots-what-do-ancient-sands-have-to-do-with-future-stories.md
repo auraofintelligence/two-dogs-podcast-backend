@@ -10,7 +10,7 @@ First draft for Luke and Angel to discuss. Not complete, not locked, and not a B
 
 ## Source
 
-Episode seed: ../episodes/episode-2026-05-17-mineral-moonshots-old-rocks-future-stories.md
+Episode seed: ../episodes/episode-2026-05-17-mineral-moonshots-ancient-sands-future-stories.md
 Strange But True Sample Worlds: Moonshots / Mineral Moonshots
 Public world: https://auraofintelligence.github.io/mineral-moonshots/
 

@@ -20,7 +20,7 @@ Blue Dog is not filled in here. Angel directs that voice.
 6. [Film Club World: Can a yarn become a scene?](./episode-2026-05-17-film-club-yarn-to-scene.md)
 7. [GAJRA Earth: How do two dogs talk about planetary intelligence without sounding ridiculous?](./episode-2026-05-17-gajra-earth-plain-language.md)
 8. [P4A Civic Lab: What would joyful responsible abundance look like in public?](./episode-2026-05-17-p4a-joyful-responsible-abundance.md)
-9. [Mineral Moonshots: What do ancient sands have to do with future stories?](./episode-2026-05-17-mineral-moonshots-old-rocks-future-stories.md)
+9. [Mineral Moonshots: What do ancient sands have to do with future stories?](./episode-2026-05-17-mineral-moonshots-ancient-sands-future-stories.md)
 10. [Legal Memory Workbench: How do we get our facts straight before asking AI?](./episode-2026-05-17-legal-memory-facts-before-ai.md)
 11. [Projector in the Wind: What makes a local event actually work?](./episode-2026-05-17-projector-in-the-wind.md)
 12. [Good Idea to Fundable: How does a rough idea become clear enough to back?](./episode-2026-05-17-good-idea-to-fundable.md)

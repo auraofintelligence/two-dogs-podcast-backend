@@ -1,4 +1,4 @@
-# Episode - Mineral Moonshots: What do old rocks have to do with future stories?
+# Episode - Mineral Moonshots: What do ancient sands have to do with future stories?
 
 Status: seed
 Generated: 2026-05-17
@@ -54,4 +54,3 @@ Red Dog can ask how a place remembers what was taken, what remains, and what kin
 ## Next Useful Action
 
 Use the Scene builder for a "mineral grain as memory projector" scene seed.
-

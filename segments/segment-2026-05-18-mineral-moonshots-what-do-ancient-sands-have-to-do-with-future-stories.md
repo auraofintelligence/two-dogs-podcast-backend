@@ -50,6 +50,6 @@ Only include guest animal, nickname or lived examples after the guest chooses an
 
 ## Source References
 
-- Episode seed: ../episodes/episode-2026-05-17-mineral-moonshots-old-rocks-future-stories.md
+- Episode seed: ../episodes/episode-2026-05-17-mineral-moonshots-ancient-sands-future-stories.md
 - Strange But True Sample Worlds: Moonshots / Mineral Moonshots
 - Public world: https://auraofintelligence.github.io/mineral-moonshots/
