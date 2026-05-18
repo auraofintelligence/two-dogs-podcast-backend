@@ -9,6 +9,39 @@ const adDir = path.join(root, "ads-sponsors");
 const segmentDir = path.join(root, "segments");
 const sourceDir = path.join(root, "source-references");
 
+const narrativeOrder = [
+  "episode-2026-05-17-strange-enough-true-enough.md",
+  "episode-2026-05-17-film-club-yarn-to-scene.md",
+  "episode-2026-05-17-local-thread-not-straight-line.md",
+  "episode-2026-05-17-ask-small-question-first.md",
+  "episode-2026-05-17-market-stall-soft-front-door.md",
+  "episode-2026-05-17-tech-help-without-shame.md",
+  "episode-2026-05-17-calm-ai-front-desk.md",
+  "episode-2026-05-17-plain-privacy-digital-help.md",
+  "episode-2026-05-17-what-got-easier-field-report.md",
+  "episode-2026-05-17-simple-terms-fair-deal.md",
+  "episode-2026-05-17-support-bundles-useful-work.md",
+  "episode-2026-05-17-careful-growth-after-support.md",
+  "episode-2026-05-17-shared-table-practical-generosity.md",
+  "episode-2026-05-17-health-and-culture-community-engine.md",
+  "episode-2026-05-17-hyperlocal-media-local-story.md",
+  "episode-2026-05-17-projector-in-the-wind.md",
+  "episode-2026-05-17-bigger-local-picture-archipelago.md",
+  "episode-2026-05-17-field-library-reviewed-trails.md",
+  "episode-2026-05-17-profile-md-aura-md-boundaries.md",
+  "episode-2026-05-17-legal-memory-facts-before-ai.md",
+  "episode-2026-05-17-public-ledger-game-without-hype.md",
+  "episode-2026-05-17-p4a-joyful-responsible-abundance.md",
+  "episode-2026-05-18-grey-area-commons-intimacy.md",
+  "episode-2026-05-17-mineral-moonshots-old-rocks-future-stories.md",
+  "episode-2026-05-17-gajra-earth-plain-language.md",
+  "episode-2026-05-17-disaster-kiosks-when-internet-fails.md",
+  "episode-2026-05-17-good-idea-to-fundable.md",
+  "episode-2026-05-17-honour-board-without-ego.md",
+  "episode-2026-05-17-music-archive-as-memory.md",
+  "episode-2026-05-17-ai-native-indie-distribution.md"
+];
+
 const sharedBoundary = [
   "- Luke is Red Dog / Red Heeler.",
   "- Angel is Blue Dog / Blue Heeler.",
@@ -24,7 +57,7 @@ for (const dir of [sceneDir, adDir, segmentDir, sourceDir]) {
 const episodeFiles = fs
   .readdirSync(episodeDir)
   .filter((file) => /^episode-\d{4}-\d{2}-\d{2}-.+\.md$/.test(file))
-  .sort();
+  .sort(compareEpisodeFiles);
 
 const drafts = episodeFiles.map((file, index) => {
   const sourcePath = path.join(episodeDir, file);
@@ -296,11 +329,12 @@ function episodePageHtml(data) {
   </head>
   <body>
     <header class="site-header">
-      <a class="brand-link" href="../builders/index.html">
+      <a class="brand-link" href="../index.html">
         <img src="../assets/two-dogs-podcast.webp" alt="Two Dogs Podcast artwork" width="1290" height="1892" />
         <span><strong>Two Dogs Podcast</strong><small>First draft discussion pages</small></span>
       </a>
       <nav aria-label="Episode pages">
+        <a href="../index.html">Home</a>
         <a href="index.html">All episodes</a>
         <a href="../builders/index.html">Builders</a>
         <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>
@@ -410,11 +444,12 @@ function buildEpisodeIndex(drafts) {
   </head>
   <body>
     <header class="site-header">
-      <a class="brand-link" href="../builders/index.html">
+      <a class="brand-link" href="../index.html">
         <img src="../assets/two-dogs-podcast.webp" alt="Two Dogs Podcast artwork" width="1290" height="1892" />
         <span><strong>Two Dogs Podcast</strong><small>First draft discussion pages</small></span>
       </a>
       <nav aria-label="Episode pages">
+        <a href="../index.html">Home</a>
         <a href="../builders/index.html">Builders</a>
         <a href="../builders/episode.html">Episode builder</a>
         <a href="https://auraofintelligence.github.io/strange-but-true/film-club-world.html">Film Club</a>
@@ -912,6 +947,17 @@ function listItems(value) {
     .map((line) => line.trim())
     .filter(Boolean)
     .map((line) => line.replace(/^-+\s*/, ""));
+}
+
+function compareEpisodeFiles(a, b) {
+  const aIndex = narrativeOrder.indexOf(a);
+  const bIndex = narrativeOrder.indexOf(b);
+  if (aIndex !== -1 || bIndex !== -1) {
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  }
+  return a.localeCompare(b);
 }
 
 function firstParagraph(value) {

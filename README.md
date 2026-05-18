@@ -6,6 +6,8 @@ Public planning repo and GitHub Pages workbench for the Two Dogs Podcast.
 
 This is a public-facing planning bench where interactive feedback forms generate agent-ready Markdown files for episodes, scenes, guest notes, guest-chosen spirit animal characters, ad ideas, source references and simple handoffs.
 
+Public home: [Two Dogs Podcast Planning](https://auraofintelligence.github.io/two-dogs-podcast-backend/)
+
 Backlink: [Film Club World](https://auraofintelligence.github.io/strange-but-true/film-club-world.html)
 
 ## Premise
@@ -51,6 +53,8 @@ This repo should help someone plan the next yarn, not force the show through a h
 The generated public discussion pages are collected at [episodes/index.html](./episodes/index.html).
 
 Each page clearly says `First draft discussion` and gathers the episode seed with its generated scene, ad/sponsor, segment and source-reference drafts so Luke and Angel can talk through what belongs in a full episode, what is only a segment, and what should stay parked. Guest and handoff forms are intentionally skipped in this pass.
+
+The public page order is narrative, not alphabetical. The opener is the broad Two Dogs / Strange But True premise, while music and distribution infrastructure now sit later in the run.
 
 ## Current Seed
 
