@@ -15,6 +15,133 @@ const fallbackBeats = [
   beat("39:00", "Outro Theme", 1, "Closing", "Theme reprise, waves, laugh, howl or clean ending.")
 ];
 
+const categoryLabels = {
+  recording: "Recording",
+  edit: "Edit",
+  cue: "Cue",
+  current: "Current",
+  scene: "Scene",
+  sound: "Sound",
+  comedy: "Comedy",
+  good: "Good",
+  risk: "Risk",
+  support: "Support"
+};
+
+const categoryTones = {
+  recording: "green",
+  edit: "ink",
+  cue: "blue",
+  current: "blue",
+  scene: "teal",
+  sound: "teal",
+  comedy: "gold",
+  good: "green",
+  risk: "red",
+  support: "gold"
+};
+
+const categoryOrder = ["recording", "edit", "cue", "current", "scene", "sound", "comedy", "good", "risk", "support"];
+
+const controlPriority = {
+  "Soft Mark": 10,
+  "Can Crack": 20,
+  "Dog Whistle": 30,
+  "Keep This": 40,
+  "Cut Later": 50,
+  "Source Check": 60,
+  "Blue Dog Cue": 70,
+  "Guest Cue": 80,
+  "Segue Ready": 90,
+  "Ad Break": 100,
+  "News Sting": 110,
+  "Weather Check": 120,
+  "Sports Check": 130,
+  "UN Day": 140,
+  "Good Dog": 150,
+  "Bad Dog": 160,
+  "Comedy Sting": 170,
+  "Big Laugh": 180,
+  "Gate Knock": 190,
+  "Postie Arrives": 200,
+  "Walk Scene": 210,
+  Waves: 220,
+  Kookaburra: 230,
+  "Treat Bag": 240,
+  "Ferry Horn": 250,
+  "Research Later": 260,
+  "Too Long": 270,
+  "Reset Energy": 280,
+  "Merch Cue": 290,
+  "Dogs And Allies": 300
+};
+
+const controlImages = {
+  "Soft Mark": "marker-pen.webp",
+  "Can Crack": "prod-can-crack.webp",
+  "Dog Whistle": "dog-whistle.webp",
+  "Keep This": "keep-this-thumb.webp",
+  "Cut Later": "prod-stop-cut.webp",
+  "Source Check": "research-detective.webp",
+  "Blue Dog Cue": "prod-producer-talk.webp",
+  "Guest Cue": "prod-top-of-show.webp",
+  "Segue Ready": "prod-segue.webp",
+  "Ad Break": "prod-commercial-break.webp",
+  "News Sting": "prod-news-flash.webp",
+  "Weather Check": "prod-rain-wind.webp",
+  "Sports Check": "sports-ball.webp",
+  "UN Day": "pirate-flag.webp",
+  "Good Dog": "prod-good-dog.webp",
+  "Bad Dog": "prod-bad-dog.webp",
+  "Comedy Sting": "prod-comedy-minute.webp",
+  "Big Laugh": "prod-laughter.webp",
+  "Gate Knock": "prod-at-gate.webp",
+  "Postie Arrives": "prod-door-knock.webp",
+  "Walk Scene": "prod-walk-talk.webp",
+  Waves: "prod-ocean-waves.webp",
+  Kookaburra: "prod-birds-chirp.webp",
+  "Treat Bag": "prod-dog-treats.webp",
+  "Ferry Horn": "prod-ferry-watch.webp",
+  "Research Later": "telescope-map.webp",
+  "Too Long": "prod-timer-30-sec.webp",
+  "Reset Energy": "prod-wisdom-moment.webp",
+  "Merch Cue": "prod-sponsor-read.webp",
+  "Dogs And Allies": "prod-applause.webp"
+};
+
+const controlImageRatios = {
+  "marker-pen.webp": "184 / 130",
+  "prod-can-crack.webp": "179 / 91",
+  "dog-whistle.webp": "184 / 130",
+  "keep-this-thumb.webp": "185 / 130",
+  "prod-stop-cut.webp": "179 / 108",
+  "research-detective.webp": "184 / 130",
+  "prod-producer-talk.webp": "178 / 108",
+  "prod-top-of-show.webp": "177 / 120",
+  "prod-segue.webp": "178 / 120",
+  "prod-commercial-break.webp": "176 / 120",
+  "prod-news-flash.webp": "178 / 91",
+  "prod-rain-wind.webp": "179 / 83",
+  "sports-ball.webp": "184 / 128",
+  "pirate-flag.webp": "185 / 127",
+  "prod-good-dog.webp": "179 / 91",
+  "prod-bad-dog.webp": "184 / 91",
+  "prod-comedy-minute.webp": "176 / 91",
+  "prod-laughter.webp": "179 / 108",
+  "prod-at-gate.webp": "177 / 101",
+  "prod-door-knock.webp": "179 / 83",
+  "prod-walk-talk.webp": "179 / 101",
+  "prod-ocean-waves.webp": "177 / 83",
+  "prod-birds-chirp.webp": "177 / 83",
+  "prod-dog-treats.webp": "179 / 101",
+  "prod-ferry-watch.webp": "177 / 91",
+  "telescope-map.webp": "184 / 128",
+  "prod-timer-30-sec.webp": "179 / 108",
+  "prod-wisdom-moment.webp": "179 / 91",
+  "prod-sponsor-read.webp": "179 / 120",
+  "prod-applause.webp": "177 / 108"
+};
+
 const defaultSfx = [
   sfx("Can Crack", "short", "can"),
   sfx("Dog Whistle", "sharp", "whistle"),
@@ -31,23 +158,23 @@ const defaultSfx = [
 ];
 
 const defaultPads = [
-  pad("Source Check", "green", "marker"),
+  pad("Source Check", "ink", "marker"),
   pad("Blue Dog Cue", "blue", "soft"),
-  pad("Guest Cue", "gold", "soft"),
-  pad("Ad Break", "red", "ding"),
-  pad("Segue Ready", "green", "marker"),
+  pad("Guest Cue", "blue", "soft"),
+  pad("Ad Break", "gold", "ding"),
+  pad("Segue Ready", "blue", "marker"),
   pad("Cut Later", "red", "cut"),
-  pad("Keep This", "gold", "ding"),
-  pad("Too Long", "ink", "buzz"),
+  pad("Keep This", "green", "ding"),
+  pad("Too Long", "red", "buzz"),
   pad("Big Laugh", "gold", "ding"),
-  pad("Reset Energy", "blue", "soft"),
-  pad("Postie Arrives", "blue", "knock"),
-  pad("Walk Scene", "green", "soft"),
+  pad("Reset Energy", "ink", "soft"),
+  pad("Postie Arrives", "teal", "knock"),
+  pad("Walk Scene", "teal", "soft"),
   pad("Research Later", "ink", "marker"),
   pad("Weather Check", "blue", "marker"),
-  pad("Sports Check", "green", "marker"),
-  pad("UN Day", "gold", "marker"),
-  pad("Merch Cue", "red", "ding"),
+  pad("Sports Check", "blue", "marker"),
+  pad("UN Day", "blue", "marker"),
+  pad("Merch Cue", "gold", "ding"),
   pad("Dogs And Allies", "green", "ding")
 ];
 
@@ -396,16 +523,24 @@ function buildControls() {
     index,
     category: categoryForPad(item)
   }));
-  return [...sfxControls, ...padControls];
+  return [...sfxControls, ...padControls]
+    .map((control) => enrichControl(control))
+    .sort(compareControls);
 }
 
 function createDeckButton(control) {
   const button = document.createElement("button");
   button.type = "button";
-  button.className = `deck-button ${control.kind} cat-${control.category}${control.colour ? ` ${control.colour}` : ""}`;
-  button.setAttribute("aria-label", `${control.label}: ${control.hint}`);
-  button.title = `${control.label}: ${control.hint}`;
-  button.innerHTML = `<span class="deck-icon">${escapeHtml(control.icon)}</span><span class="deck-abbr">${escapeHtml(control.abbr)}</span>`;
+  button.className = `deck-button ${control.kind} cat-${control.category} ${control.tone}${control.image ? " has-image" : ""}`;
+  button.setAttribute("aria-label", `${control.group}: ${control.label}: ${control.hint}`);
+  button.title = `${control.group}: ${control.label}: ${control.hint}`;
+  if (control.image) {
+    button.style.setProperty("--button-image", `url("../assets/cockpit-buttons/${control.image}")`);
+    button.style.setProperty("--button-ratio", control.imageRatio);
+    button.innerHTML = `<span class="deck-abbr">${escapeHtml(control.abbr)}</span>`;
+  } else {
+    button.innerHTML = `<span class="deck-icon">${escapeHtml(control.icon)}</span><span class="deck-abbr">${escapeHtml(control.abbr)}</span>`;
+  }
   if (control.kind === "sfx") {
     button.addEventListener("click", () => {
       flashDeckButton(button);
@@ -438,8 +573,13 @@ function renderControlKey() {
   elements.controlKeyList.innerHTML = "";
   controls.forEach((control) => {
     const item = document.createElement("div");
-    item.className = `key-item ${control.kind} cat-${control.category}${control.colour ? ` ${control.colour}` : ""}`;
-    item.innerHTML = `<span class="key-code"><b>${escapeHtml(control.icon)}</b><strong>${escapeHtml(control.abbr)}</strong></span><span><strong>${escapeHtml(control.label)}</strong><em>${escapeHtml(control.hint)}</em></span>`;
+    item.className = `key-item ${control.kind} cat-${control.category} ${control.tone}${control.image ? " has-image" : ""}`;
+    if (control.image) {
+      const imageUrl = `../assets/cockpit-buttons/${control.image}`;
+      item.innerHTML = `<span class="key-thumb" style="--button-image: url('${imageUrl}'); --button-ratio: ${control.imageRatio};"><strong>${escapeHtml(control.abbr)}</strong></span><span><strong>${escapeHtml(control.label)}</strong><em>${escapeHtml(control.group)} / ${escapeHtml(control.hint)}</em></span>`;
+    } else {
+      item.innerHTML = `<span class="key-code"><b>${escapeHtml(control.icon)}</b><strong>${escapeHtml(control.abbr)}</strong></span><span><strong>${escapeHtml(control.label)}</strong><em>${escapeHtml(control.group)} / ${escapeHtml(control.hint)}</em></span>`;
+    }
     elements.controlKeyList.appendChild(item);
   });
 }
@@ -523,6 +663,31 @@ function categoryForPad(item) {
   if (item.type === "ding") return "good";
   if (item.type === "soft") return "cue";
   return "edit";
+}
+
+function enrichControl(control) {
+  const category = control.category || "edit";
+  return {
+    ...control,
+    group: categoryLabels[category] || "Other",
+    image: controlImages[control.label] || "",
+    imageRatio: controlImageRatios[controlImages[control.label]] || "16 / 9",
+    priority: controlPriority[control.label] || 900 + categoryRank(category),
+    tone: categoryTones[category] || "ink"
+  };
+}
+
+function compareControls(left, right) {
+  return (
+    left.priority - right.priority ||
+    categoryRank(left.category) - categoryRank(right.category) ||
+    left.label.localeCompare(right.label)
+  );
+}
+
+function categoryRank(category) {
+  const rank = categoryOrder.indexOf(category);
+  return rank === -1 ? categoryOrder.length : rank;
 }
 
 function saveSelectedPad(event) {
