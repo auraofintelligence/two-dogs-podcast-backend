@@ -1107,33 +1107,44 @@ textarea {
 }
 
 .deck-track {
-  display: grid;
-  gap: 8px;
-  grid-auto-columns: 100%;
-  grid-auto-flow: column;
-  height: 100%;
+  --deck-button-height: 84px;
+  align-content: start;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: auto;
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-x: contain;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  scroll-snap-type: none;
+  scrollbar-color: rgba(215, 255, 245, 0.35) rgba(255, 255, 255, 0.08);
+  scrollbar-width: thin;
+  padding-bottom: 8px;
+}
+
+.deck-row {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  min-height: var(--deck-button-height);
+  min-width: max-content;
 }
 
 .deck-track::-webkit-scrollbar {
-  display: none;
+  display: block;
+  height: 8px;
 }
 
-.deck-page {
-  align-content: start;
-  align-items: start;
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-  grid-template-rows: repeat(2, auto);
-  min-width: 0;
-  padding: 2px;
-  scroll-snap-align: start;
+.deck-track::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+
+.deck-track::-webkit-scrollbar-thumb {
+  background: rgba(215, 255, 245, 0.35);
+  border-radius: 999px;
 }
 
 .deck-button {
@@ -1153,15 +1164,17 @@ textarea {
   cursor: pointer;
   display: grid;
   gap: 3px;
+  height: var(--deck-button-height);
   isolation: isolate;
   justify-items: center;
   aspect-ratio: var(--button-ratio, 16 / 9);
-  min-height: 68px;
+  min-height: 0;
   min-width: 0;
   overflow: hidden;
   padding: 4px;
   position: relative;
   text-align: center;
+  width: var(--button-width, 150px);
 }
 
 .deck-button.red {
@@ -1206,17 +1219,6 @@ textarea {
   background-size: 100% 100%, 100% 100%, contain;
   border-color: rgba(var(--cat-rgb, 34, 101, 168), 0.62);
   padding: 5px 6px;
-}
-
-.deck-button.has-image::after {
-  background: linear-gradient(90deg, transparent, rgba(var(--cat-rgb, 34, 101, 168), 0.34), transparent);
-  bottom: 0;
-  content: "";
-  height: 2px;
-  left: 8%;
-  position: absolute;
-  right: 8%;
-  z-index: 1;
 }
 
 .deck-button.selected {
@@ -2520,13 +2522,12 @@ textarea {
     overflow-x: clip;
   }
 
-  .deck-page {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(2, auto);
+  .deck-track {
+    --deck-button-height: 72px;
   }
 
   .deck-button {
-    min-height: 58px;
+    width: var(--button-width-mobile, 128px);
   }
 
   .panel {

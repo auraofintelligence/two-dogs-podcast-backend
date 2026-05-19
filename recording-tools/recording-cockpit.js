@@ -41,14 +41,14 @@ const categoryTones = {
   support: "gold"
 };
 
-const categoryOrder = ["recording", "edit", "cue", "current", "scene", "sound", "comedy", "good", "risk", "support"];
+const categoryOrder = ["recording", "edit", "cue", "current", "scene", "sound", "good", "comedy", "risk", "support"];
 
 const controlPriority = {
-  "Soft Mark": 10,
-  "Can Crack": 20,
-  "Dog Whistle": 30,
-  "Keep This": 40,
-  "Cut Later": 50,
+  "Can Crack": 10,
+  "Dog Whistle": 20,
+  "Keep This": 30,
+  "Cut Later": 40,
+  "Soft Mark": 50,
   "Source Check": 60,
   "Blue Dog Cue": 70,
   "Guest Cue": 80,
@@ -286,7 +286,6 @@ function bindControls() {
   document.querySelectorAll(".mobile-tabs button").forEach((button) => {
     button.addEventListener("click", () => activateTab(button.dataset.tab));
   });
-  window.addEventListener("resize", handleDeckResize);
 }
 
 function restoreSession() {
@@ -479,27 +478,13 @@ function selectPad(index) {
 
 function renderControlDeck() {
   if (!elements.controlDeck) return;
-  const controls = buildControls();
   elements.controlDeck.innerHTML = "";
-  chunkControls(controls, controlsPerDeckPage()).forEach((group) => {
-    const page = document.createElement("div");
-    page.className = "deck-page";
-    group.forEach((control) => page.appendChild(createDeckButton(control)));
-    elements.controlDeck.appendChild(page);
+  const rows = [document.createElement("div"), document.createElement("div")];
+  rows.forEach((row) => {
+    row.className = "deck-row";
+    elements.controlDeck.appendChild(row);
   });
-}
-
-function controlsPerDeckPage() {
-  return window.matchMedia("(min-width: 821px)").matches ? 16 : 8;
-}
-
-let lastDeckPageSize = controlsPerDeckPage();
-
-function handleDeckResize() {
-  const nextSize = controlsPerDeckPage();
-  if (nextSize === lastDeckPageSize) return;
-  lastDeckPageSize = nextSize;
-  renderControlDeck();
+  buildControls().forEach((control, index) => rows[index % rows.length].appendChild(createDeckButton(control)));
 }
 
 function buildControls() {
@@ -537,6 +522,8 @@ function createDeckButton(control) {
   if (control.image) {
     button.style.setProperty("--button-image", `url("../assets/cockpit-buttons/${control.image}")`);
     button.style.setProperty("--button-ratio", control.imageRatio);
+    button.style.setProperty("--button-width", `${Math.round(84 * control.imageRatioValue)}px`);
+    button.style.setProperty("--button-width-mobile", `${Math.round(72 * control.imageRatioValue)}px`);
     button.innerHTML = `<span class="deck-abbr">${escapeHtml(control.abbr)}</span>`;
   } else {
     button.innerHTML = `<span class="deck-icon">${escapeHtml(control.icon)}</span><span class="deck-abbr">${escapeHtml(control.abbr)}</span>`;
@@ -582,12 +569,6 @@ function renderControlKey() {
     }
     elements.controlKeyList.appendChild(item);
   });
-}
-
-function chunkControls(items, size) {
-  const chunks = [];
-  for (let index = 0; index < items.length; index += size) chunks.push(items.slice(index, index + size));
-  return chunks;
 }
 
 function abbreviationForLabel(label) {
@@ -636,7 +617,7 @@ function abbreviationForLabel(label) {
 function categoryForSound(sound) {
   const categories = {
     can: "recording",
-    whistle: "sound",
+    whistle: "recording",
     waves: "scene",
     kookaburra: "scene",
     news: "current",
@@ -672,6 +653,7 @@ function enrichControl(control) {
     group: categoryLabels[category] || "Other",
     image: controlImages[control.label] || "",
     imageRatio: controlImageRatios[controlImages[control.label]] || "16 / 9",
+    imageRatioValue: ratioValue(controlImageRatios[controlImages[control.label]] || "16 / 9"),
     priority: controlPriority[control.label] || 900 + categoryRank(category),
     tone: categoryTones[category] || "ink"
   };
@@ -679,8 +661,8 @@ function enrichControl(control) {
 
 function compareControls(left, right) {
   return (
-    left.priority - right.priority ||
     categoryRank(left.category) - categoryRank(right.category) ||
+    left.priority - right.priority ||
     left.label.localeCompare(right.label)
   );
 }
@@ -688,6 +670,12 @@ function compareControls(left, right) {
 function categoryRank(category) {
   const rank = categoryOrder.indexOf(category);
   return rank === -1 ? categoryOrder.length : rank;
+}
+
+function ratioValue(ratio) {
+  const [width, height] = String(ratio).split("/").map((part) => Number(part.trim()));
+  if (!width || !height) return 16 / 9;
+  return width / height;
 }
 
 function saveSelectedPad(event) {
