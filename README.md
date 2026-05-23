@@ -10,6 +10,8 @@ Public home: [Two Dogs Podcast Planning](https://auraofintelligence.github.io/tw
 
 Show rhythm menu: [Regular Show Bits](https://auraofintelligence.github.io/two-dogs-podcast-backend/recurring-scenes.html)
 
+Famous dog cue bank: [Famous Dog Segues](https://auraofintelligence.github.io/two-dogs-podcast-backend/famous-dogs.html)
+
 Micro scene pipeline: [Micro Scenes Builder](https://auraofintelligence.github.io/two-dogs-podcast-backend/builders/micro-scenes.html)
 
 Backlink: [Film Club World](https://auraofintelligence.github.io/strange-but-true/film-club-world.html)
@@ -69,6 +71,8 @@ The public page order is narrative, not alphabetical. The opener is the broad Tw
 The standing scene menu is collected at [recurring-scenes.html](./recurring-scenes.html), with the Markdown version at [docs/recurring-scenes.md](./docs/recurring-scenes.md).
 
 Use it for repeatable bits such as News Flash, Comedy Minute, Bad Dog, Good Dog, UN World Day Of Whatever, Sports Desk, Weather Window, Music Drop, Film Club, Art Show, Games Table, Science Sniff Test, Life Hack, Onboarding, Merch Table and Dogs And Allies.
+
+The famous dog segue bank is collected at [famous-dogs.html](./famous-dogs.html), with the Markdown version at [segments/famous-dog-segues.md](./segments/famous-dog-segues.md). Use it for references and highlights, not forced jokes.
 
 Each regular show bit also has a concise strategic export form at [builders/recurring-scenes.html](./builders/recurring-scenes.html). The [UN World Day builder](./builders/recurring-scenes.html?scene=un-world-day) includes a searchable calendar snapshot from the official United Nations observances list; refresh it with `node tools/build-un-observances.mjs`.
 

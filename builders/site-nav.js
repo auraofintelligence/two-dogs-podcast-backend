@@ -66,6 +66,43 @@ function enhanceBuilderMenu() {
   siteNav.dataset.builderMenuReady = "true";
 }
 
+function ensureDogCueLink() {
+  const siteNav = document.querySelector(".site-nav");
+  if (!siteNav || siteNav.dataset.dogCueReady === "true") return;
+
+  const currentUrl = new URL(window.location.href);
+  const existing = Array.from(siteNav.querySelectorAll("a")).find((link) => {
+    return fileName(link.href) === "famous-dogs.html";
+  });
+
+  if (existing) {
+    if (samePage(new URL(existing.href, window.location.href), currentUrl)) {
+      existing.classList.add("active");
+    }
+    siteNav.dataset.dogCueReady = "true";
+    return;
+  }
+
+  const link = document.createElement("a");
+  link.href = `${rootPrefix(currentUrl.pathname)}famous-dogs.html`;
+  link.textContent = "Dog Cues";
+  if (samePage(new URL(link.href, window.location.href), currentUrl)) {
+    link.classList.add("active");
+  }
+
+  const showRhythmLink = Array.from(siteNav.querySelectorAll("a")).find((item) => {
+    return item.textContent.trim() === "Show Rhythm";
+  });
+
+  if (showRhythmLink) {
+    showRhythmLink.after(link);
+  } else {
+    siteNav.appendChild(link);
+  }
+
+  siteNav.dataset.dogCueReady = "true";
+}
+
 function enhanceMobilePageMenu() {
   const siteNav = document.querySelector(".site-nav");
   if (!siteNav || document.querySelector(".mobile-page-menu")) return;
@@ -130,5 +167,13 @@ function isBuilderLink(href, builderFiles) {
   return url.pathname.includes("/builders/") && builderFiles.has(fileName(href));
 }
 
+function rootPrefix(pathname) {
+  const parts = pathname.split("/").filter(Boolean);
+  const lastPart = parts[parts.length - 1] || "";
+  const currentFolder = lastPart.includes(".") ? parts[parts.length - 2] : lastPart;
+  return ["builders", "episodes", "recording-tools"].includes(currentFolder) ? "../" : "";
+}
+
+ensureDogCueLink();
 enhanceBuilderMenu();
 enhanceMobilePageMenu();
