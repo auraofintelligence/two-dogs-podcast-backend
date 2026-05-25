@@ -200,6 +200,7 @@ const elements = {
   beatNote: document.getElementById("beatNote"),
   beatDurationSlider: document.getElementById("beatDurationSlider"),
   beatDurationValue: document.getElementById("beatDurationValue"),
+  untimedToggle: document.getElementById("untimedToggle"),
   startPause: document.getElementById("startPauseButton"),
   resetTimer: document.getElementById("resetTimerButton"),
   prevBeat: document.getElementById("prevBeatButton"),
@@ -233,6 +234,7 @@ let beatAccumulatedMs = 0;
 let logEntries = [];
 let timerId = null;
 let durationTrimBaseSeconds = null;
+let isUntimedPractice = false;
 
 restoreSession();
 bindControls();
@@ -241,6 +243,7 @@ renderCustomPads();
 renderBeats();
 renderLog();
 loadLatestRunsheet(false);
+syncPracticeModeUi();
 updateClocks();
 document.body.dataset.activeTab = "live";
 
@@ -265,6 +268,7 @@ function bindControls() {
   elements.resetBeats.addEventListener("click", resetBeats);
   elements.startPause.addEventListener("click", toggleRunning);
   elements.resetTimer.addEventListener("click", resetTimers);
+  elements.untimedToggle.addEventListener("click", toggleUntimedPractice);
   elements.beatDurationSlider.addEventListener("pointerdown", beginBeatTrim);
   elements.beatDurationSlider.addEventListener("focus", beginBeatTrim);
   elements.beatDurationSlider.addEventListener("input", previewCurrentBeatTrim);
@@ -298,6 +302,7 @@ function restoreSession() {
     if (saved.sourceLabel) sourceLabel = saved.sourceLabel;
     accumulatedMs = Number(saved.accumulatedMs) || 0;
     beatAccumulatedMs = Number(saved.beatAccumulatedMs) || 0;
+    isUntimedPractice = Boolean(saved.isUntimedPractice);
   } catch (error) {
     console.warn("Could not restore recording cockpit session", error);
   }
@@ -310,7 +315,8 @@ function persistSession() {
     logEntries,
     sourceLabel,
     accumulatedMs: elapsedMs(),
-    beatAccumulatedMs: currentBeatMs()
+    beatAccumulatedMs: currentBeatMs(),
+    isUntimedPractice
   };
   localStorage.setItem(SESSION_KEY, JSON.stringify(payload));
 }
@@ -790,12 +796,14 @@ function moveBeat(direction) {
 }
 
 function beginBeatTrim() {
+  if (isUntimedPractice) return;
   const item = beats[currentBeat];
   if (!item) return;
   durationTrimBaseSeconds = beatDurationSeconds(item);
 }
 
 function previewCurrentBeatTrim() {
+  if (isUntimedPractice) return;
   const item = beats[currentBeat];
   if (!item) return;
   if (durationTrimBaseSeconds === null) beginBeatTrim();
@@ -808,6 +816,7 @@ function previewCurrentBeatTrim() {
 }
 
 function commitCurrentBeatTrim() {
+  if (isUntimedPractice) return;
   const item = beats[currentBeat];
   if (!item) return;
   const deltaSeconds = trimSliderToSeconds(elements.beatDurationSlider.value);
@@ -834,7 +843,36 @@ function syncDurationControl() {
   elements.beatDurationSlider.value = "0";
   elements.beatDurationSlider.min = "-100";
   elements.beatDurationSlider.max = "100";
+  elements.beatDurationSlider.disabled = isUntimedPractice;
+  elements.beatDurationSlider.setAttribute("aria-disabled", String(isUntimedPractice));
+  if (isUntimedPractice) {
+    updateDurationOutput(seconds, 0);
+    elements.beatDurationValue.textContent = "No limit";
+    return;
+  }
   updateDurationOutput(seconds, 0);
+}
+
+function toggleUntimedPractice() {
+  isUntimedPractice = !isUntimedPractice;
+  durationTrimBaseSeconds = null;
+  if (elements.beatDurationSlider) elements.beatDurationSlider.value = "0";
+  syncPracticeModeUi();
+  updateClocks();
+  log("Practice Mode", isUntimedPractice ? "No-limit freestyle on." : "Timed beats on.", "marker");
+}
+
+function syncPracticeModeUi() {
+  document.body.classList.toggle("untimed-practice", isUntimedPractice);
+  if (!elements.untimedToggle) return;
+  elements.untimedToggle.classList.toggle("active", isUntimedPractice);
+  elements.untimedToggle.setAttribute("aria-pressed", String(isUntimedPractice));
+  elements.untimedToggle.textContent = isUntimedPractice ? "Live" : "Free";
+  elements.untimedToggle.setAttribute(
+    "aria-label",
+    isUntimedPractice ? "Turn off no-limit freestyle practice mode" : "Turn on no-limit freestyle practice mode"
+  );
+  syncDurationControl();
 }
 
 function updateDurationOutput(seconds, deltaSeconds) {
@@ -939,16 +977,22 @@ function updateClocks() {
   const item = beats[currentBeat] || fallbackBeats[0];
   const beatMs = currentBeatMs();
   const totalBeatMs = Math.max(1000, beatDurationSeconds(item) * 1000);
-  const remainingMs = Math.max(0, totalBeatMs - beatMs);
-  const percent = Math.min(100, (beatMs / totalBeatMs) * 100);
+  const remainingMs = isUntimedPractice ? 0 : Math.max(0, totalBeatMs - beatMs);
+  const percent = isUntimedPractice ? 100 : Math.min(100, (beatMs / totalBeatMs) * 100);
 
   elements.elapsedClock.textContent = formatDuration(elapsedMs());
-  elements.currentBeatLane.textContent = `${item.lane} / ${item.start} / about ${formatBeatDuration(item)}`;
+  elements.currentBeatLane.textContent = isUntimedPractice
+    ? `Practice / no limit / ${item.lane}`
+    : `${item.lane} / ${item.start} / about ${formatBeatDuration(item)}`;
   elements.currentBeatLabel.textContent = item.title;
   elements.beatClock.textContent = formatDuration(beatMs, true);
-  elements.beatRemaining.textContent = remainingMs > 0 ? `${formatDuration(remainingMs, true)} remaining` : "Over planned beat time";
+  elements.beatRemaining.textContent = isUntimedPractice
+    ? "No limit practice"
+    : remainingMs > 0 ? `${formatDuration(remainingMs, true)} remaining` : "Over planned beat time";
   elements.beatProgress.style.width = `${percent}%`;
-  elements.beatNote.textContent = item.note;
+  elements.beatNote.textContent = isUntimedPractice
+    ? "Freestyle banter is open-ended. Use CUT, markers and notes whenever something needs to stand out in post."
+    : item.note;
 }
 
 function copyLog() {
@@ -1018,6 +1062,7 @@ function logMarkdown() {
   return `# Two Dogs Recording Log
 
 Source runsheet: ${sourceLabel}
+Mode: ${isUntimedPractice ? "No-limit freestyle practice" : "Timed beats"}
 Exported: ${new Date().toISOString()}
 Elapsed: ${formatDuration(elapsedMs())}
 Active beat: ${active.title || "No beat"}
@@ -1048,6 +1093,7 @@ function logText() {
   return `Two Dogs Recording Log
 
 Source runsheet: ${sourceLabel}
+Mode: ${isUntimedPractice ? "No-limit freestyle practice" : "Timed beats"}
 Exported: ${new Date().toISOString()}
 Elapsed: ${formatDuration(elapsedMs())}
 Active beat: ${active.title || "No beat"}

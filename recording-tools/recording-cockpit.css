@@ -255,6 +255,7 @@ a {
 .transport,
 .duration-button,
 .scene-cut-button,
+.untimed-toggle,
 .sfx-button,
 .custom-pad-button {
   border: 1px solid rgba(17, 28, 23, 0.12);
@@ -280,6 +281,14 @@ a {
   align-items: center;
   display: inline-flex;
   gap: 7px;
+  justify-content: center;
+  line-height: 1;
+}
+
+.untimed-toggle {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
   justify-content: center;
   line-height: 1;
 }
@@ -1767,6 +1776,13 @@ textarea {
   justify-content: space-between;
 }
 
+.duration-tools {
+  align-items: center;
+  display: inline-flex;
+  gap: 8px;
+  min-width: 0;
+}
+
 .duration-readout span {
   color: var(--muted);
   font-size: 0.76rem;
@@ -1782,6 +1798,31 @@ textarea {
   white-space: nowrap;
 }
 
+.untimed-toggle {
+  background:
+    radial-gradient(circle at 20% 16%, rgba(255, 247, 235, 0.24), transparent 38%),
+    linear-gradient(180deg, rgba(39, 124, 88, 0.86), rgba(9, 35, 28, 0.94));
+  border-color: rgba(83, 217, 148, 0.46);
+  color: #fff7eb;
+  font-size: 0.74rem;
+  font-weight: 950;
+  min-height: 32px;
+  padding: 6px 9px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.untimed-toggle.active {
+  background:
+    radial-gradient(circle at 22% 14%, rgba(255, 247, 235, 0.3), transparent 40%),
+    linear-gradient(180deg, rgba(54, 181, 242, 0.82), rgba(32, 103, 151, 0.92));
+  border-color: rgba(119, 212, 255, 0.66);
+  box-shadow:
+    0 0 0 1px rgba(119, 212, 255, 0.12),
+    0 0 24px rgba(54, 181, 242, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
 input[type="range"] {
   accent-color: var(--cat);
 }
@@ -1792,6 +1833,30 @@ input[type="range"] {
   border: 0;
   min-height: 30px;
   padding: 0;
+}
+
+.duration-control input[type="range"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+body.untimed-practice .duration-control {
+  border-color: rgba(54, 181, 242, 0.52);
+}
+
+body.untimed-practice .timer-console {
+  box-shadow:
+    0 0 0 1px rgba(54, 181, 242, 0.16),
+    0 0 34px rgba(54, 181, 242, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+body.untimed-practice .beat-remaining {
+  color: #8ee9ff;
+}
+
+body.untimed-practice .beat-progress span {
+  background: linear-gradient(90deg, #39bf73, #28d6c9, #36b5f2);
 }
 
 .duration-control input[type="range"]::-webkit-slider-runnable-track {

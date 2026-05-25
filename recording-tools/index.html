@@ -104,7 +104,10 @@
           <div class="duration-control cat-timing" aria-label="Current beat duration control">
             <div class="duration-readout">
               <span>Trim timer</span>
-              <output id="beatDurationValue" for="beatDurationSlider">2:00 set</output>
+              <div class="duration-tools">
+                <output id="beatDurationValue" for="beatDurationSlider">2:00 set</output>
+                <button class="untimed-toggle" type="button" id="untimedToggle" data-icon="∞" aria-pressed="false" aria-label="Toggle no-limit freestyle practice mode">Free</button>
+              </div>
             </div>
             <input id="beatDurationSlider" type="range" min="-100" max="100" step="1" value="0" aria-label="Trim current beat length: small moves are seconds, far ends reach one hour" />
             <div class="duration-scale" aria-hidden="true">
