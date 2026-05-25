@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Recording Cockpit | Two Dogs Podcast</title>
-    <link rel="stylesheet" href="recording-cockpit.css" />
+    <link rel="stylesheet" href="recording-cockpit.css?v=20260525-freestyle2" />
     <link rel="icon" href="../assets/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png" />
@@ -85,7 +85,10 @@
 
       <section class="cockpit-grid">
         <aside class="panel runsheet-panel" data-panel="runsheet">
-          <button class="small-button floating-action cat-edit" type="button" id="resetBeats" data-icon="R" aria-label="Reset beats">RST</button>
+          <div class="runsheet-actions" aria-label="Runsheet mode controls">
+            <button class="small-button cat-recording" type="button" id="freestyleBeats" data-icon="NL" aria-label="Switch runsheet to no-limit freestyle practice">FREE</button>
+            <button class="small-button cat-edit" type="button" id="resetBeats" data-icon="R" aria-label="Reset beats">RST</button>
+          </div>
           <div class="runsheet-source" id="runsheetSource">No imported runsheet yet. Use the builder or load a Markdown file.</div>
           <div class="beat-list" id="beatList" aria-label="Imported runsheet beats"></div>
           <div class="next-card" id="nextCard"></div>
@@ -106,7 +109,7 @@
               <span>Trim timer</span>
               <div class="duration-tools">
                 <output id="beatDurationValue" for="beatDurationSlider">2:00 set</output>
-                <button class="untimed-toggle" type="button" id="untimedToggle" data-icon="∞" aria-pressed="false" aria-label="Toggle no-limit freestyle practice mode">Free</button>
+                <button class="untimed-toggle" type="button" id="untimedToggle" data-icon="NL" aria-pressed="false" aria-label="Toggle no-limit freestyle practice mode">Free</button>
               </div>
             </div>
             <input id="beatDurationSlider" type="range" min="-100" max="100" step="1" value="0" aria-label="Trim current beat length: small moves are seconds, far ends reach one hour" />
@@ -200,7 +203,7 @@
     </section>
 
     <script src="../builders/site-nav.js"></script>
-    <script src="recording-cockpit.js"></script>
+    <script src="recording-cockpit.js?v=20260525-freestyle2"></script>
     <script src="../assets/back-to-top.js"></script>
   </body>
 </html>

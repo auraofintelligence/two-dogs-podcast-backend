@@ -1,6 +1,7 @@
 const LATEST_RUNSHEET_KEY = "two-dogs-latest-runsheet-md-v1";
 const SESSION_KEY = "two-dogs-recording-cockpit-session-v1";
 const CUSTOM_PAD_KEY = "two-dogs-recording-custom-pads-v1";
+const FREESTYLE_SOURCE_LABEL = "Freestyle unlimited practice";
 
 const fallbackBeats = [
   beat("00:00", "Opening Theme", 2, "Opening", "Theme sting, waves, title card and first line."),
@@ -187,6 +188,7 @@ const elements = {
   exportFormat: document.getElementById("exportFormat"),
   exportLog: document.getElementById("exportLog"),
   fullscreen: document.getElementById("fullscreenButton"),
+  freestyleBeats: document.getElementById("freestyleBeats"),
   resetBeats: document.getElementById("resetBeats"),
   runsheetSource: document.getElementById("runsheetSource"),
   topbarSource: document.getElementById("topbarSource"),
@@ -265,6 +267,7 @@ function bindControls() {
   elements.copyLog.addEventListener("click", copyLog);
   elements.exportLog.addEventListener("click", exportLog);
   elements.fullscreen.addEventListener("click", toggleFullscreen);
+  elements.freestyleBeats.addEventListener("click", activateFreestyleUnlimited);
   elements.resetBeats.addEventListener("click", resetBeats);
   elements.startPause.addEventListener("click", toggleRunning);
   elements.resetTimer.addEventListener("click", resetTimers);
@@ -359,6 +362,7 @@ function applyRunsheet(markdown, label) {
   sourceLabel = parsed.title ? `${parsed.title} (${label})` : label;
   currentBeat = 0;
   beatAccumulatedMs = 0;
+  isUntimedPractice = false;
   if (isRunning) beatStartAt = Date.now();
   log("Runsheet", `Loaded ${sourceLabel}.`, "marker");
   renderBeats();
@@ -432,11 +436,15 @@ function renderBeats() {
   elements.runsheetSource.textContent = sourceLabel;
   if (elements.topbarSource) elements.topbarSource.textContent = sourceLabel;
   elements.beatList.innerHTML = "";
+  const freestyleOnly = isFreestyleUnlimited();
+  elements.freestyleBeats.classList.toggle("active", freestyleOnly);
+  elements.freestyleBeats.setAttribute("aria-pressed", String(freestyleOnly));
   beats.forEach((item, index) => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = `beat-item${index === currentBeat ? " active" : ""}`;
-    button.innerHTML = `<strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.start)} / about ${formatBeatDuration(item)} / ${escapeHtml(item.lane)}</span>`;
+    const durationLabel = freestyleOnly ? "no limit" : `about ${formatBeatDuration(item)}`;
+    button.innerHTML = `<strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.start)} / ${durationLabel} / ${escapeHtml(item.lane)}</span>`;
     button.addEventListener("click", () => jumpToBeat(index));
     elements.beatList.appendChild(button);
   });
@@ -445,6 +453,12 @@ function renderBeats() {
 }
 
 function renderNextCard() {
+  if (isFreestyleUnlimited()) {
+    elements.nextCard.hidden = true;
+    elements.nextCard.innerHTML = "";
+    return;
+  }
+  elements.nextCard.hidden = false;
   const next = beats[currentBeat + 1];
   elements.nextCard.innerHTML = next
     ? `<strong>Next:</strong> ${escapeHtml(next.title)}<br><span>${escapeHtml(next.note)}</span>`
@@ -868,11 +882,40 @@ function syncPracticeModeUi() {
   elements.untimedToggle.classList.toggle("active", isUntimedPractice);
   elements.untimedToggle.setAttribute("aria-pressed", String(isUntimedPractice));
   elements.untimedToggle.textContent = isUntimedPractice ? "Live" : "Free";
+  elements.untimedToggle.dataset.icon = isUntimedPractice ? "ON" : "NL";
   elements.untimedToggle.setAttribute(
     "aria-label",
     isUntimedPractice ? "Turn off no-limit freestyle practice mode" : "Turn on no-limit freestyle practice mode"
   );
   syncDurationControl();
+}
+
+function activateFreestyleUnlimited() {
+  beats = [freestyleUnlimitedBeat()];
+  sourceLabel = FREESTYLE_SOURCE_LABEL;
+  currentBeat = 0;
+  beatAccumulatedMs = 0;
+  durationTrimBaseSeconds = null;
+  isUntimedPractice = true;
+  if (isRunning) beatStartAt = Date.now();
+  renderBeats();
+  syncPracticeModeUi();
+  updateClocks();
+  log("Runsheet", "Switched to freestyle unlimited practice.", "marker");
+}
+
+function freestyleUnlimitedBeat() {
+  return beat(
+    "00:00",
+    "Freestyle Banter Practice",
+    60,
+    "Practice",
+    "No planned endpoint. Keep the yarn moving and use CUT, markers and notes for anything useful in post."
+  );
+}
+
+function isFreestyleUnlimited() {
+  return sourceLabel === FREESTYLE_SOURCE_LABEL && beats.length === 1;
 }
 
 function updateDurationOutput(seconds, deltaSeconds) {
@@ -1146,7 +1189,9 @@ function resetBeats() {
   sourceLabel = "Freestyle fallback beats";
   currentBeat = 0;
   beatAccumulatedMs = 0;
+  isUntimedPractice = false;
   renderBeats();
+  syncPracticeModeUi();
   updateClocks();
   log("Runsheet", "Reset to fallback beats.", "marker");
 }

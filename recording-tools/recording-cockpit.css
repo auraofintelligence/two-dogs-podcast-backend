@@ -470,13 +470,40 @@ a {
   z-index: 3;
 }
 
+.runsheet-actions {
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 3;
+}
+
+.runsheet-actions .small-button {
+  font-size: 0.72rem;
+  min-height: 30px;
+  padding: 5px 8px;
+}
+
+.runsheet-actions .small-button.active {
+  background:
+    radial-gradient(circle at 28% 12%, rgba(255, 247, 235, 0.26), transparent 42%),
+    linear-gradient(180deg, rgba(54, 181, 242, 0.86), rgba(18, 80, 113, 0.94));
+  border-color: rgba(119, 212, 255, 0.66);
+  color: #fff7eb;
+  box-shadow:
+    0 0 0 1px rgba(119, 212, 255, 0.12),
+    0 0 22px rgba(54, 181, 242, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
 .log-panel .floating-action {
   right: 12px;
   top: 12px;
 }
 
 .runsheet-panel .runsheet-source {
-  padding-right: 74px;
+  padding-right: 154px;
 }
 
 .log-panel .session-log {
@@ -1560,6 +1587,15 @@ textarea {
   background: linear-gradient(180deg, var(--cat-fill, #ffffff) 0%, var(--cat-soft, #edf4f1) 100%);
   border-color: var(--cat-line, rgba(17, 28, 23, 0.12));
   border-top: 3px solid var(--cat, rgba(17, 28, 23, 0.1));
+}
+
+.runsheet-actions .small-button.active {
+  background:
+    radial-gradient(circle at 28% 12%, rgba(255, 247, 235, 0.26), transparent 42%),
+    linear-gradient(180deg, rgba(54, 181, 242, 0.86), rgba(18, 80, 113, 0.94));
+  border-color: rgba(119, 212, 255, 0.66);
+  border-top-color: rgba(119, 212, 255, 0.9);
+  color: #fff7eb;
 }
 
 .cockpit-topbar .top-button,
