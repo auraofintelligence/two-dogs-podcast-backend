@@ -2,6 +2,27 @@ const LATEST_RUNSHEET_KEY = "two-dogs-latest-runsheet-md-v1";
 const SESSION_KEY = "two-dogs-recording-cockpit-session-v1";
 const CUSTOM_PAD_KEY = "two-dogs-recording-custom-pads-v1";
 const FREESTYLE_SOURCE_LABEL = "Freestyle unlimited practice";
+const SOUND_ASSET_BASE = "../assets/audio/production-buttons/";
+const soundAssets = {
+  marker: "dog-bark-single.mp3",
+  cut: "dog-yelp-alert.mp3",
+  soft: "dog-bark-single.mp3",
+  ding: "dog-bark-short.mp3",
+  buzz: "dog-growl-warning.mp3",
+  whistle: "dog-whistle-real.mp3",
+  news: "dog-bark-pack.mp3",
+  comedy: "dog-yelp-alert.mp3",
+  success: "dog-bark-pack.mp3",
+  knock: "dog-bark-pack.mp3",
+  treat: "dog-toy-squeak.mp3",
+  dogBark: "dog-bark-short.mp3",
+  dogPack: "dog-bark-pack.mp3",
+  dogHowl: "dog-howl-short.mp3",
+  dogGrowl: "dog-growl-warning.mp3",
+  dogYelp: "dog-yelp-alert.mp3",
+  dogWhistle: "dog-whistle-real.mp3",
+  dogToy: "dog-toy-squeak.mp3"
+};
 
 const fallbackBeats = [
   beat("00:00", "Opening Theme", 2, "Opening", "Theme sting, waves, title card and first line."),
@@ -47,6 +68,11 @@ const categoryOrder = ["recording", "edit", "cue", "current", "scene", "sound", 
 const controlPriority = {
   "Can Crack": 10,
   "Dog Whistle": 20,
+  Bark: 22,
+  "Pack Bark": 24,
+  Howl: 26,
+  Growl: 28,
+  Yelp: 29,
   "Keep This": 30,
   "Cut Later": 40,
   "Soft Mark": 50,
@@ -81,6 +107,11 @@ const controlImages = {
   "Soft Mark": "marker-pen.webp",
   "Can Crack": "prod-can-crack.webp",
   "Dog Whistle": "dog-whistle.webp",
+  Bark: "prod-good-dog.webp",
+  "Pack Bark": "prod-applause.webp",
+  Howl: "prod-wisdom-moment.webp",
+  Growl: "prod-bad-dog.webp",
+  Yelp: "prod-stop-cut.webp",
   "Keep This": "keep-this-thumb.webp",
   "Cut Later": "prod-stop-cut.webp",
   "Source Check": "research-detective.webp",
@@ -146,6 +177,11 @@ const controlImageRatios = {
 const defaultSfx = [
   sfx("Can Crack", "short", "can"),
   sfx("Dog Whistle", "sharp", "whistle"),
+  sfx("Bark", "short dog", "dogBark"),
+  sfx("Pack Bark", "dogs", "dogPack"),
+  sfx("Howl", "long dog", "dogHowl"),
+  sfx("Growl", "warning", "dogGrowl"),
+  sfx("Yelp", "alert", "dogYelp"),
   sfx("Waves", "soft", "waves"),
   sfx("Kookaburra", "comic", "kookaburra"),
   sfx("News Sting", "current", "news"),
@@ -223,6 +259,7 @@ const elements = {
 };
 
 let audioContext = null;
+const soundPlayers = new Map();
 let beats = [...fallbackBeats];
 let customPads = loadCustomPads();
 let selectedPadIndex = 0;
@@ -247,6 +284,7 @@ renderLog();
 loadLatestRunsheet(false);
 syncPracticeModeUi();
 updateClocks();
+preloadSoundAssets();
 document.body.dataset.activeTab = "live";
 
 function beat(start, title, minutes, lane, note) {
@@ -595,6 +633,11 @@ function abbreviationForLabel(label) {
   const fixed = {
     "Can Crack": "CAN",
     "Dog Whistle": "WSL",
+    Bark: "BARK",
+    "Pack Bark": "PACK",
+    Howl: "HOWL",
+    Growl: "GRWL",
+    Yelp: "YELP",
     Waves: "WAV",
     Kookaburra: "KOO",
     "News Sting": "NEWS",
@@ -638,6 +681,13 @@ function categoryForSound(sound) {
   const categories = {
     can: "recording",
     whistle: "recording",
+    dogBark: "sound",
+    dogPack: "sound",
+    dogHowl: "sound",
+    dogGrowl: "sound",
+    dogYelp: "sound",
+    dogWhistle: "sound",
+    dogToy: "sound",
     waves: "scene",
     kookaburra: "scene",
     news: "current",
@@ -654,6 +704,7 @@ function categoryForSound(sound) {
 
 function categoryForPad(item) {
   const label = item.label.toLowerCase();
+  if (/^dog/.test(item.type)) return "sound";
   if (item.type === "cut" || item.type === "buzz" || label.includes("too long")) return "risk";
   if (label.includes("blue") || label.includes("guest") || label.includes("segue")) return "cue";
   if (label.includes("ad") || label.includes("merch")) return "support";
@@ -756,6 +807,13 @@ function iconForSound(sound) {
   const icons = {
     can: "CAN",
     whistle: "~",
+    dogBark: "B",
+    dogPack: "PK",
+    dogHowl: "AW",
+    dogGrowl: "GR",
+    dogYelp: "YP",
+    dogWhistle: "DW",
+    dogToy: "SQ",
     waves: "~",
     kookaburra: "!",
     news: "N",
@@ -777,6 +835,11 @@ function iconForPadType(type) {
     soft: ".",
     ding: "+",
     buzz: "!",
+    dogBark: "B",
+    dogPack: "PK",
+    dogHowl: "AW",
+    dogGrowl: "GR",
+    dogYelp: "YP",
     knock: "G",
     treat: "T",
     horn: "H"
@@ -1212,6 +1275,39 @@ function activateTab(tabName) {
 }
 
 function playSound(name) {
+  if (playSoundAsset(name)) return;
+  playGeneratedSound(name);
+}
+
+function preloadSoundAssets() {
+  Object.values(soundAssets).forEach((file) => {
+    if (!file || soundPlayers.has(file)) return;
+    const audio = new Audio(`${SOUND_ASSET_BASE}${file}`);
+    audio.preload = "auto";
+    audio.volume = 0.92;
+    soundPlayers.set(file, audio);
+  });
+}
+
+function playSoundAsset(name) {
+  const file = soundAssets[name];
+  if (!file) return false;
+  const base = soundPlayers.get(file) || new Audio(`${SOUND_ASSET_BASE}${file}`);
+  base.preload = "auto";
+  soundPlayers.set(file, base);
+  const audio = base.cloneNode(true);
+  audio.volume = 0.92;
+  const playAttempt = audio.play();
+  if (playAttempt?.catch) {
+    playAttempt.catch((error) => {
+      if (error?.name === "NotAllowedError") return;
+      playGeneratedSound(name);
+    });
+  }
+  return true;
+}
+
+function playGeneratedSound(name) {
   if (name === "marker") return;
   const context = getAudioContext();
   const now = context.currentTime;
