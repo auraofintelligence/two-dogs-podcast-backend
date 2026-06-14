@@ -387,6 +387,120 @@ h2 {
   text-align: right;
 }
 
+.site-flow-nav {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 36px auto 0;
+  max-width: 1440px;
+  padding: 0 24px 24px;
+}
+
+.home-shell > .site-flow-nav,
+.app-shell > .site-flow-nav,
+.recurring-shell > .site-flow-nav,
+.dog-cues-shell > .site-flow-nav,
+.site-map-shell > .site-flow-nav {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.site-flow-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 5px;
+  min-height: 96px;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.site-flow-card:hover {
+  border-color: var(--blue);
+}
+
+.site-flow-card span {
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.site-flow-card strong {
+  font-size: 1.12rem;
+  line-height: 1.18;
+}
+
+.site-flow-card small {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.site-flow-card.next {
+  text-align: right;
+}
+
+.site-flow-index {
+  background: var(--surface-soft);
+}
+
+.site-map-shell {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 24px;
+}
+
+.site-map-section {
+  margin-top: 30px;
+}
+
+.site-map-section h2 {
+  margin-bottom: 14px;
+}
+
+.site-map-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.site-map-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.site-map-card:hover {
+  border-color: var(--blue);
+}
+
+.site-map-card strong {
+  font-size: 1.08rem;
+  line-height: 1.18;
+}
+
+.site-map-card span {
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.site-map-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
 .page-intro {
   margin: 8px 0 22px;
 }
@@ -1067,13 +1181,16 @@ h2 {
   .builder-grid,
   .boundary-strip,
   .footer-nav,
+  .site-flow-nav,
+  .site-map-grid,
   .spirit-guide,
   .side-nav {
     grid-template-columns: 1fr;
   }
 
   .footer-nav-card,
-  .footer-nav-card.next {
+  .footer-nav-card.next,
+  .site-flow-card.next {
     text-align: left;
   }
 

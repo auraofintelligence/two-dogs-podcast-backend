@@ -339,6 +339,57 @@ ul {
   font-weight: 900;
 }
 
+.site-flow-nav {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 28px auto 0;
+  max-width: 1180px;
+}
+
+.site-flow-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 5px;
+  min-height: 96px;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.site-flow-card:hover {
+  border-color: var(--blue);
+}
+
+.site-flow-card span {
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.site-flow-card strong {
+  font-size: 1.12rem;
+  line-height: 1.18;
+}
+
+.site-flow-card small {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.site-flow-card.next {
+  text-align: right;
+}
+
+.site-flow-index {
+  background: var(--surface-soft);
+}
+
 .back-to-top {
   background: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.24);
@@ -415,7 +466,8 @@ ul {
   .discussion-grid,
   .episode-grid,
   .index-hero,
-  .pager {
+  .pager,
+  .site-flow-nav {
     grid-template-columns: 1fr;
   }
 
@@ -428,7 +480,8 @@ ul {
     grid-column: auto;
   }
 
-  .pager a:last-child {
+  .pager a:last-child,
+  .site-flow-card.next {
     text-align: left;
   }
 }
