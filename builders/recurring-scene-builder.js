@@ -9,23 +9,91 @@ const sharedBoundary = [
 ].join("\n");
 
 const recurringScenes = [
-  scene("news-flash", "News Flash", "Current", "Headline, source, date, place and current status.", "Check date, place, source, and whether this is confirmed or still developing."),
-  scene("comedy-minute", "Comedy Minute", "Comedy", "One quick joke, visual gag or absurd plain-English translation before the dense idea returns.", "Check the joke is punching up, not down."),
-  scene("bad-dog", "Bad Dog", "Accountability", "Risk, poor process, documented choices, avoidable mess or public-interest failure.", "Careful wording helps here. Corruption claims need a reliable source, official finding, court record or admission."),
-  scene("good-dog", "Good Dog", "Wins", "What useful effort, achievement or community win deserves a quick salute?", "Verify the win and avoid turning it into hype."),
-  scene("un-world-day", "UN World Day Of Whatever", "Calendar", "What official observance creates a useful doorway into the episode?", "Check the official UN observances list before calling it a UN day."),
-  scene("sports-desk", "Sports Desk", "Sport", "What did the game, club, rivalry or sporting moment teach us about people?", "Verify date, league, teams, score and whether the match has finished."),
-  scene("weather-window", "Weather Window", "Island", "What does the weather, tide, ferry mood or outdoor risk change about the day?", "Check the relevant forecast close to recording."),
-  scene("music-drop", "Music Drop", "Sound", "What feeling, cue, lyric or track carries this moment?", "Check rights, credit and public/private source status before using actual music."),
-  scene("film-club", "Film Club", "Screen", "What would this idea look like as a scene, short, screening or animation test?", "Do not imply footage or references are cleared unless they are."),
-  scene("art-show", "Art Show", "Visual", "What image, prop, exhibition, poster or artwork makes the idea easier to feel?", "Credit artists and avoid living-artist mimicry unless permission exists."),
-  scene("games-table", "Games Table", "Play", "Can this system be made small enough to play, test or simulate?", "Keep game language away from gambling, money hype or policy oversimplification."),
-  scene("dogs-and-aliens", "Dogs And Aliens", "Odd skies", "Sci-fi creatures, UAP headlines, space news and intergalactic dog-ally jokes.", "Current-event or public-claim items can use a source check before recording."),
-  scene("science-sniff-test", "Science Sniff Test", "Evidence", "Claim, evidence, uncertainty and source trail.", "Primary research, official reports or credible science reporting are useful here."),
-  scene("life-hack", "Life Hack", "Useful", "What is one practical tip in words we understand?", "Avoid medical, legal or financial advice unless it is general and sourced."),
-  scene("onboarding", "Onboarding", "Front door", "What does a listener, guest or ally need to know to enter without feeling silly?", "Keep the doorway short. Do not explain the whole backend on air."),
-  scene("merch-table", "Merch Table", "Support", "Would this product, support bundle or joke object be funny, useful or just clutter?", "Keep support language grounded and avoid guilt-jar energy."),
-  scene("dogs-and-allies", "Dogs And Allies", "Community", "Who helped, what did they actually do, and what door did it open?", "Ask before naming people or attributing motives.")
+  scene("news-flash", "News Flash", "Current", "Headline, source, date, place and current status.", "Check date, place, source, and whether this is confirmed or still developing.", [
+    "What happened, and what is only headline heat?",
+    "Where is the dog angle, if there is one?",
+    "Could this become Good Dog, Bad Dog, source check, or just a quick mention?"
+  ]),
+  scene("comedy-minute", "Comedy Minute", "Comedy", "One quick joke, visual gag or absurd plain-English translation before the dense idea returns.", "Check the joke is punching up, not down.", [
+    "What is the smallest funny version of this idea?",
+    "What would a dog misunderstand in a useful way?",
+    "Where does the laugh hand back to the actual yarn?"
+  ]),
+  scene("bad-dog", "Bad Dog", "Accountability", "Risk, poor process, documented choices, avoidable mess or public-interest failure.", "Careful wording helps here. Corruption claims need a reliable source, official finding, court record or admission.", [
+    "What went wrong in plain language?",
+    "What is sourced, and what still needs care?",
+    "Is this a person problem, a system problem, or a gate left open?"
+  ]),
+  scene("good-dog", "Good Dog", "Wins", "What useful effort, achievement or community win deserves a quick salute?", "Verify the win and avoid turning it into hype.", [
+    "Who did something worth noticing?",
+    "What got easier, kinder or more useful because of it?",
+    "What is the tiny trophy moment?"
+  ]),
+  scene("un-world-day", "UN World Day Of Whatever", "Calendar", "What official observance creates a useful doorway into the episode?", "Check the official UN observances list before calling it a UN day.", [
+    "What is today's official doorway?",
+    "What everyday ritual hides inside this global observance?",
+    "How would the dogs make it local without pretending to solve the UN?"
+  ]),
+  scene("sports-desk", "Sports Desk", "Sport", "What did the game, club, rivalry or sporting moment teach us about people?", "Verify date, league, teams, score and whether the match has finished.", [
+    "What was the actual sporting moment?",
+    "What human ritual showed up around it: tribe, rule, grievance, glory or excuse?",
+    "Where is the clean handoff back to the main yarn?"
+  ]),
+  scene("weather-window", "Weather Window", "Island", "What does the weather, tide, ferry mood or outdoor risk change about the day?", "Check the relevant forecast close to recording.", [
+    "What is the sky doing to the mood of the show?",
+    "Does the weather explain a delay, a mood swing, a ferry story or a dog decision?",
+    "What one detail makes the place feel real?"
+  ]),
+  scene("music-drop", "Music Drop", "Sound", "What feeling, cue, lyric or track carries this moment?", "Check rights, credit and public/private source status before using actual music.", [
+    "What sound would shift the room without stealing the scene?",
+    "Is this a real track, a theme-song callback, or just a mood note?",
+    "What memory or feeling does it open?"
+  ]),
+  scene("film-club", "Film Club", "Screen", "What would this idea look like as a scene, short, screening or animation test?", "Do not imply footage or references are cleared unless they are.", [
+    "What film, scene or genre helps the idea become visible?",
+    "What would the dogs notice that humans miss?",
+    "Does this become a proper Film Club note or just a quick comparison?"
+  ]),
+  scene("art-show", "Art Show", "Visual", "What image, prop, exhibition, poster or artwork makes the idea easier to feel?", "Credit artists and avoid living-artist mimicry unless permission exists.", [
+    "What image makes the abstract thing easier to feel?",
+    "Is this a gallery moment, a prop, a poster, a local art cue or a visual joke?",
+    "What should be credited before it goes public?"
+  ]),
+  scene("games-table", "Games Table", "Play", "Can this system be made small enough to play, test or simulate?", "Keep game language away from gambling, money hype or policy oversimplification.", [
+    "Could this problem become a little game or tabletop test?",
+    "What are the pieces, turns, rules or unfair starting positions?",
+    "What does play reveal that argument misses?"
+  ]),
+  scene("dogs-and-aliens", "Dogs And Aliens", "Odd skies", "Sci-fi creatures, UAP headlines, space news and intergalactic dog-ally jokes.", "Current-event or public-claim items can use a source check before recording.", [
+    "Which species, culture, story or headline is in the bowl today?",
+    "Could dogs and humans share space with them without everyone losing the plot?",
+    "What manners, smells, doors or treaty problems would show up first?"
+  ]),
+  scene("science-sniff-test", "Science Sniff Test", "Evidence", "Claim, evidence, uncertainty and source trail.", "Primary research, official reports or credible science reporting are useful here.", [
+    "What is the claim?",
+    "What does the evidence actually say?",
+    "Where is the honest uncertainty?"
+  ]),
+  scene("life-hack", "Life Hack", "Useful", "What is one practical tip in words we understand?", "Avoid medical, legal or financial advice unless it is general and sourced.", [
+    "What tiny habit might make life easier?",
+    "Can a normal person try it without needing a course, gadget or lecture?",
+    "Where does useful advice become overclaim?"
+  ]),
+  scene("onboarding", "Onboarding", "Front door", "What does a listener, guest or ally need to know to enter without feeling silly?", "Keep the doorway short. Do not explain the whole backend on air.", [
+    "What would help someone join the yarn without a long preamble?",
+    "What can wait until later?",
+    "What phrase makes the door feel open rather than managed?"
+  ]),
+  scene("merch-table", "Merch Table", "Support", "Would this product, support bundle or joke object be funny, useful or just clutter?", "Keep support language grounded and avoid guilt-jar energy.", [
+    "Would this be useful, funny, wearable, collectible or just noise?",
+    "What would make it feel like part of the show world?",
+    "How can support stay light and voluntary?"
+  ]),
+  scene("dogs-and-allies", "Dogs And Allies", "Community", "Who helped, what did they actually do, and what door did it open?", "Ask before naming people or attributing motives.", [
+    "Who helped, showed up, shared something or made the day easier?",
+    "What actually happened, without turning it into a trophy speech?",
+    "Is there a thanks, callback or future invitation here?"
+  ])
 ];
 
 const alienSourceLanes = [
@@ -100,8 +168,8 @@ document.getElementById("recurringReset").addEventListener("click", resetActiveF
 renderPicker();
 renderForm();
 
-function scene(id, name, lane, purpose, sourceCheck) {
-  return { id, name, lane, purpose, sourceCheck };
+function scene(id, name, lane, purpose, sourceCheck, prompts = []) {
+  return { id, name, lane, purpose, sourceCheck, prompts };
 }
 
 function renderPicker() {
@@ -186,12 +254,13 @@ function fieldsForScene(item) {
   return [
     field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
     field("episodeLink", "Episode or recording link", "text", null, "Optional. Link the episode, date or recording this bit belongs inside."),
-    field("whyNow", "Why this bit now", "textarea", null, "One strategic reason this scene belongs today."),
+    field("whyNow", "Why this bit now", "textarea", null, "What makes this bit useful for this yarn, this week, or this recording mood?"),
+    field("sceneQuestions", "Questions worth trying", "textarea", null, "Edit these freely. They are starting sparks, not decisions.", true),
     field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-    field("redDogSetup", "Red Dog setup", "textarea", null, "The plain-language doorway. Keep it short."),
-    field("sourceCheck", "Source check", "textarea", null, "What could be checked before recording?"),
-    field("visualCue", "Visual or sound cue", "textarea", null, "One animation, prop, SFX or edit note."),
-    field("nextMove", "Possible next move", "textarea", null, "A nearby segment, cutaway, source check or park-it note.")
+    field("redDogSetup", "Red Dog setup", "textarea", null, "What short entry point helps Luke land the bit without taking over?"),
+    field("sourceCheck", "Source check", "textarea", null, "What date, name, link, claim or current detail could use a quick look?"),
+    field("visualCue", "Visual or sound cue", "textarea", null, "What one animation, prop, SFX or edit cue would make the bit readable?"),
+    field("nextMove", "Possible next move", "textarea", null, "Does this become a segment, micro-scene, source check, cue button, or park-it note?")
   ];
 }
 
@@ -229,6 +298,7 @@ function field(id, label, type = "text", options = null, hint = "", wide = false
 }
 
 function defaultValue(item, id) {
+  if (id === "sceneQuestions") return item.prompts.join("\n");
   if (id === "sourceCheck") return item.sourceCheck;
   if (id === "nextMove") return "Quick recurring scene, segment file, one-off cutaway, or park it.";
   return "";
@@ -263,6 +333,7 @@ function renderMarkdown(item, data) {
     section("Core Boundaries", sharedBoundary),
     section("Episode Or Recording Link", data.episodeLink),
     section("Why This Bit Now", data.whyNow),
+    listSection("Questions Worth Trying", data.sceneQuestions || item.prompts.join("\n")),
     section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
     section("Red Dog Setup", data.redDogSetup),
     section("Guest Or Ally Boundary", "Only name people, allies, animals or nicknames after consent or guest choice."),
@@ -382,6 +453,15 @@ function meta(data) {
 function section(label, value) {
   if (!clean(value)) return "";
   return `## ${label}\n\n${clean(value)}`;
+}
+
+function listSection(label, value) {
+  const items = clean(value)
+    .split(/\r?\n/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+  if (!items.length) return "";
+  return `## ${label}\n\n${items.map((item) => `- ${item.replace(/^-+\s*/, "")}`).join("\n")}`;
 }
 
 function line(label, value) {
