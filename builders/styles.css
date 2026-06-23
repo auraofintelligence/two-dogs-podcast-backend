@@ -24,6 +24,7 @@ body {
   color: var(--text);
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 button,
@@ -42,9 +43,9 @@ a {
   background: #ffffff;
   border-bottom: 1px solid var(--line);
   display: flex;
-  gap: 18px;
+  gap: 12px;
   justify-content: space-between;
-  padding: 12px 24px;
+  padding: 12px 18px;
   position: relative;
   z-index: 1;
 }
@@ -52,8 +53,9 @@ a {
 .brand-link {
   align-items: center;
   display: flex;
-  gap: 14px;
-  min-width: 220px;
+  flex: 0 0 auto;
+  gap: 10px;
+  min-width: 190px;
   text-decoration: none;
 }
 
@@ -93,17 +95,20 @@ a {
 .site-nav {
   align-items: center;
   display: flex;
+  flex: 1 1 auto;
   flex-wrap: nowrap;
   gap: 8px;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .site-nav-links {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 4px;
   justify-content: flex-end;
+  max-width: 100%;
 }
 
 .site-nav-select {
@@ -127,7 +132,9 @@ a {
 .builder-menu summary {
   color: var(--muted);
   cursor: pointer;
-  padding: 9px 11px;
+  font-size: 0.95rem;
+  padding: 8px 8px;
+  white-space: nowrap;
 }
 
 .site-nav a:hover,
@@ -193,16 +200,18 @@ a {
 .home-shell,
 .app-shell {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1360px;
   padding: 24px;
+  width: 100%;
 }
 
 .home-hero {
   align-items: center;
   display: grid;
   gap: 28px;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
-  min-height: calc(100vh - 150px);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 390px);
+  min-height: 0;
+  padding: 24px 0 8px;
 }
 
 .hero-poster {
@@ -212,9 +221,9 @@ a {
   box-shadow: 0 24px 62px rgba(23, 32, 27, 0.24);
   display: block;
   height: auto;
-  max-height: 680px;
-  object-fit: cover;
-  width: 100%;
+  max-height: min(680px, calc(100vh - 170px));
+  object-fit: contain;
+  width: min(100%, 390px);
 }
 
 .landscape-hero-image {
@@ -223,8 +232,13 @@ a {
   object-fit: contain;
 }
 
+.home-poster-image {
+  background: #101310;
+  justify-self: end;
+}
+
 .show-world-hero {
-  min-height: calc(100vh - 120px);
+  min-height: 0;
 }
 
 .show-compass,
@@ -300,6 +314,8 @@ a {
   display: grid;
   gap: 8px;
   min-height: 190px;
+  min-width: 0;
+  overflow: hidden;
   padding: 18px;
   text-decoration: none;
 }
@@ -316,6 +332,7 @@ a {
   display: block;
   height: auto;
   margin-bottom: 4px;
+  max-height: 360px;
   object-fit: contain;
   width: 100%;
 }
@@ -340,6 +357,10 @@ a {
 .feature-door {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.feature-door img {
+  max-height: 420px;
 }
 
 .friendship-frame {
@@ -403,6 +424,10 @@ h2 {
 h1 {
   font-size: clamp(2.35rem, 6vw, 5.6rem);
   max-width: 920px;
+}
+
+.home-page h1 {
+  font-size: clamp(2.4rem, 5.2vw, 4.95rem);
 }
 
 h2 {
@@ -1335,6 +1360,7 @@ h2 {
 
   .site-nav {
     justify-content: stretch;
+    width: 100%;
   }
 
   .site-nav-links {
@@ -1409,6 +1435,7 @@ h2 {
   .home-hero {
     grid-template-columns: 1fr;
     min-height: 0;
+    padding-top: 8px;
   }
 
   .hero-poster {
@@ -1417,6 +1444,10 @@ h2 {
     object-fit: contain;
     object-position: center;
     width: min(100%, 430px);
+  }
+
+  .home-poster-image {
+    justify-self: center;
   }
 
   .builder-grid,
