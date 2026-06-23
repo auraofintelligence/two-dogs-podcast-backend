@@ -1,19 +1,16 @@
-# Episodes
+# Parked Topic Notes
 
-Use this folder for generated episode plans, rough arcs and recording prompts.
+This folder holds older Markdown topic notes. They are not the current public episode lane.
 
-Create these files through [../builders/index.html](../builders/index.html), using the Episode form.
+The public planning flow now starts with [Show Rhythm](../recurring-scenes.html), [Dog News](../dog-news.html), [Famous Dogs](../famous-dogs.html), [Dog Rituals](../dog-rituals.html), and the [Runsheet Builder](../builders/runsheet.html).
 
-Public first-draft discussion pages are collected at [index.html](./index.html).
+The old public draft index now redirects to Show Rhythm.
 
-Each generated page gathers the episode seed with its scene, ad/sponsor, segment and source-reference drafts so Luke and Angel can discuss whether the idea belongs as a full episode, a smaller segment, or a parked seed. Guest and handoff forms are intentionally skipped for this pass.
+The notes here can still be raided later for a topic lane, a source check, a throwaway segue, or a future builder pass. They do not need to pretend to be finished plans.
 
-Good episode notes answer:
+Useful questions when raiding an old note:
 
-- What is the yarn?
-- Why now?
-- What is Red Dog bringing?
-- What space is left for Blue Dog?
-- Who is the guest, if any?
-- What scenes might the animation turn into?
-- What sources should an agent pull later?
+- Is there a human ritual hiding inside this?
+- Is there a dog-level way into it?
+- Is it a proper yarn, a segment, a Good Dog / Bad Dog beat, or just a funny aside?
+- What source trail would make the conversation less hand-wavy?

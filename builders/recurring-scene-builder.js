@@ -5,13 +5,13 @@ const sharedBoundary = [
   "- Blue Dog material is Angel-directed only.",
   "- Luke is Red Dog / Red Heeler.",
   "- Guests choose their own spirit animal character and nickname.",
-  "- Current events, weather, sports and public claims need fresh source checks on recording day."
+  "- Current events, weather, sports and public claims can use fresh source checks on recording day."
 ].join("\n");
 
 const recurringScenes = [
-  scene("news-flash", "News Flash", "Current", "What happened, why it matters, and what a normal person should watch next.", "Verify date, place, source, and whether this is confirmed or still developing."),
+  scene("news-flash", "News Flash", "Current", "Headline, source, date, place and current status.", "Check date, place, source, and whether this is confirmed or still developing."),
   scene("comedy-minute", "Comedy Minute", "Comedy", "One quick joke, visual gag or absurd plain-English translation before the dense idea returns.", "Check the joke is punching up, not down."),
-  scene("bad-dog", "Bad Dog", "Accountability", "What went wrong, who got put at risk, and what would a better system have caught earlier?", "Use careful wording. Do not call something corruption unless a reliable source, official finding, court record or admission supports it."),
+  scene("bad-dog", "Bad Dog", "Accountability", "Risk, poor process, documented choices, avoidable mess or public-interest failure.", "Careful wording helps here. Corruption claims need a reliable source, official finding, court record or admission."),
   scene("good-dog", "Good Dog", "Wins", "What useful effort, achievement or community win deserves a quick salute?", "Verify the win and avoid turning it into hype."),
   scene("un-world-day", "UN World Day Of Whatever", "Calendar", "What official observance creates a useful doorway into the episode?", "Check the official UN observances list before calling it a UN day."),
   scene("sports-desk", "Sports Desk", "Sport", "What did the game, club, rivalry or sporting moment teach us about people?", "Verify date, league, teams, score and whether the match has finished."),
@@ -20,11 +20,64 @@ const recurringScenes = [
   scene("film-club", "Film Club", "Screen", "What would this idea look like as a scene, short, screening or animation test?", "Do not imply footage or references are cleared unless they are."),
   scene("art-show", "Art Show", "Visual", "What image, prop, exhibition, poster or artwork makes the idea easier to feel?", "Credit artists and avoid living-artist mimicry unless permission exists."),
   scene("games-table", "Games Table", "Play", "Can this system be made small enough to play, test or simulate?", "Keep game language away from gambling, money hype or policy oversimplification."),
-  scene("science-sniff-test", "Science Sniff Test", "Evidence", "What is the claim, what is the evidence, and what are we not allowed to say yet?", "Prefer primary research, official reports or credible science reporting."),
+  scene("dogs-and-aliens", "Dogs And Aliens", "Odd skies", "Sci-fi creatures, UAP headlines, space news and intergalactic dog-ally jokes.", "Current-event or public-claim items can use a source check before recording."),
+  scene("science-sniff-test", "Science Sniff Test", "Evidence", "Claim, evidence, uncertainty and source trail.", "Primary research, official reports or credible science reporting are useful here."),
   scene("life-hack", "Life Hack", "Useful", "What is one practical tip in words we understand?", "Avoid medical, legal or financial advice unless it is general and sourced."),
   scene("onboarding", "Onboarding", "Front door", "What does a listener, guest or ally need to know to enter without feeling silly?", "Keep the doorway short. Do not explain the whole backend on air."),
   scene("merch-table", "Merch Table", "Support", "Would this product, support bundle or joke object be funny, useful or just clutter?", "Keep support language grounded and avoid guilt-jar energy."),
   scene("dogs-and-allies", "Dogs And Allies", "Community", "Who helped, what did they actually do, and what door did it open?", "Ask before naming people or attributing motives.")
+];
+
+const alienSourceLanes = [
+  "Sci-fi book",
+  "Sci-fi film",
+  "Sci-fi TV",
+  "UAP disclosure headline",
+  "Space news",
+  "Custom possibility"
+];
+
+const alienCultureOptions = [
+  "Choose one",
+  "Vulcans",
+  "Klingons",
+  "Romulans",
+  "Ferengi",
+  "Borg Collective",
+  "Trill",
+  "Bajorans",
+  "Time Lords",
+  "Daleks",
+  "Cybermen",
+  "Wookiees",
+  "Ewoks",
+  "Yoda's species",
+  "Jawas",
+  "Xenomorphs",
+  "Yautja / Predators",
+  "Heptapods",
+  "Na'vi",
+  "Minbari",
+  "Narn",
+  "Centauri",
+  "The Culture / Minds",
+  "Trisolarans / San-Ti",
+  "Martians",
+  "Greys",
+  "Reptilians",
+  "Nordics",
+  "Unknown UAP operators",
+  "Other / custom"
+];
+
+const allyPossibilities = [
+  "Worth a yarn",
+  "Likely dog allies",
+  "Likely human allies",
+  "Could be both",
+  "Case by case",
+  "Probably complicated",
+  "Probably not"
 ];
 
 let savedState = loadState();
@@ -80,20 +133,11 @@ function renderForm() {
   syncUnObservancePanel();
   form.innerHTML = "";
 
-  const fields = [
-    field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-    field("episodeLink", "Episode or recording link", "text", null, "Optional. Link the episode, date or recording this bit belongs inside."),
-    field("whyNow", "Why this bit now", "textarea", null, "One strategic reason this scene belongs today."),
-    field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-    field("redDogSetup", "Red Dog setup", "textarea", null, "The plain-language doorway. Keep it short."),
-    field("sourceCheck", "Source check", "textarea", null, "What must be verified before recording?"),
-    field("visualCue", "Visual or sound cue", "textarea", null, "One animation, prop, SFX or edit note."),
-    field("nextMove", "Next useful move", "textarea", null, "What should happen after the bit lands?")
-  ];
+  const fields = fieldsForScene(item);
 
   fields.forEach((fieldConfig) => {
     const wrapper = document.createElement("div");
-    wrapper.className = "field";
+    wrapper.className = fieldConfig.wide ? "field field-wide" : "field";
 
     const label = document.createElement("label");
     label.htmlFor = fieldConfig.id;
@@ -116,6 +160,39 @@ function renderForm() {
   });
 
   updatePreview();
+}
+
+function fieldsForScene(item) {
+  if (item.id === "dogs-and-aliens") {
+    return [
+      field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
+      field("episodeLink", "Episode or recording link", "text", null, "Optional. Link the episode, date or recording this bit belongs inside."),
+      field("alienSourceLane", "Source lane", "select", alienSourceLanes),
+      field("alienCulture", "Species / culture", "select", alienCultureOptions),
+      field("customAlienCulture", "Other species or culture", "text", null, "For a custom creature, civilisation, UAP claim or made-up label."),
+      field("sourceReference", "Book, movie, TV, headline or source link", "textarea", null, "Title, episode, article, hearing, report, clip or note.", true),
+      field("dogAllyPossibility", "Dog ally possibility", "select", allyPossibilities),
+      field("humanAllyPossibility", "Human ally possibility", "select", allyPossibilities),
+      field("openSocietyFit", "Open-society fit", "textarea", null, "Could dogs, humans and this culture share space without everyone losing the plot?", true),
+      field("mannersAndRisks", "Manners, risks or translation problems", "textarea", null, "Treaties, smells, doors, food bowls, telepathy, bureaucracy, grooming standards, etc.", true),
+      field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note.", true),
+      field("redDogSetup", "Red Dog setup", "textarea", null, "A short entry point for Luke / Red Dog.", true),
+      field("sourceCheck", "Source check", "textarea", null, "Current-event or public-claim items can be checked before recording.", true),
+      field("visualCue", "Visual or sound cue", "textarea", null, "One animation, prop, SFX or edit note.", true),
+      field("nextMove", "Possible next move", "textarea", null, "A nearby segment, cutaway, source check or park-it note.", true)
+    ];
+  }
+
+  return [
+    field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
+    field("episodeLink", "Episode or recording link", "text", null, "Optional. Link the episode, date or recording this bit belongs inside."),
+    field("whyNow", "Why this bit now", "textarea", null, "One strategic reason this scene belongs today."),
+    field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
+    field("redDogSetup", "Red Dog setup", "textarea", null, "The plain-language doorway. Keep it short."),
+    field("sourceCheck", "Source check", "textarea", null, "What could be checked before recording?"),
+    field("visualCue", "Visual or sound cue", "textarea", null, "One animation, prop, SFX or edit note."),
+    field("nextMove", "Possible next move", "textarea", null, "A nearby segment, cutaway, source check or park-it note.")
+  ];
 }
 
 function createInput(fieldConfig, value) {
@@ -147,13 +224,13 @@ function createInput(fieldConfig, value) {
   return input;
 }
 
-function field(id, label, type = "text", options = null, hint = "") {
-  return { id, label, type, options, hint };
+function field(id, label, type = "text", options = null, hint = "", wide = false) {
+  return { id, label, type, options, hint, wide };
 }
 
 function defaultValue(item, id) {
   if (id === "sourceCheck") return item.sourceCheck;
-  if (id === "nextMove") return "Decide whether this becomes a quick recurring scene, a segment file, or a one-off cutaway.";
+  if (id === "nextMove") return "Quick recurring scene, segment file, one-off cutaway, or park it.";
   return "";
 }
 
@@ -174,6 +251,10 @@ function updatePreview() {
 }
 
 function renderMarkdown(item, data) {
+  if (item.id === "dogs-and-aliens") {
+    return renderAlienMarkdown(item, data);
+  }
+
   return doc([
     heading("Recurring Scene", item.name),
     meta(data),
@@ -185,6 +266,30 @@ function renderMarkdown(item, data) {
     section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
     section("Red Dog Setup", data.redDogSetup),
     section("Guest Or Ally Boundary", "Only name people, allies, animals or nicknames after consent or guest choice."),
+    section("Source Check", data.sourceCheck || item.sourceCheck),
+    section("Visual Or Sound Cue", data.visualCue),
+    section("Next Useful Move", data.nextMove)
+  ]);
+}
+
+function renderAlienMarkdown(item, data) {
+  const culture = clean(data.customAlienCulture) || clean(data.alienCulture);
+  return doc([
+    heading("Recurring Scene", item.name),
+    meta(data),
+    section("Scene Lane", item.lane),
+    section("Purpose", item.purpose),
+    section("Core Boundaries", sharedBoundary),
+    section("Episode Or Recording Link", data.episodeLink),
+    section("Source Lane", data.alienSourceLane),
+    section("Species Or Culture", culture === "Choose one" ? "" : culture),
+    section("Reference", data.sourceReference),
+    section("Dog Ally Possibility", data.dogAllyPossibility),
+    section("Human Ally Possibility", data.humanAllyPossibility),
+    section("Open Society Fit", data.openSocietyFit),
+    section("Manners, Risks Or Translation Problems", data.mannersAndRisks),
+    section("Blue Dog Space", blueDog(data.angelSuppliedBlueDog)),
+    section("Red Dog Setup", data.redDogSetup),
     section("Source Check", data.sourceCheck || item.sourceCheck),
     section("Visual Or Sound Cue", data.visualCue),
     section("Next Useful Move", data.nextMove)

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dog Rituals | Two Dogs Podcast</title>
+    <link rel="stylesheet" href="builders/styles.css" />
+    <style>
+      .ritual-shell {
+        margin: 0 auto;
+        max-width: 1320px;
+        padding: 24px;
+      }
+
+      .ritual-hero {
+        align-items: center;
+        display: grid;
+        gap: 28px;
+        grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+      }
+
+      .ritual-hero img,
+      .ritual-board img {
+        aspect-ratio: 1536 / 1024;
+        background: #101310;
+        border: 1px solid rgba(23, 32, 27, 0.18);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        display: block;
+        height: auto;
+        object-fit: contain;
+        width: 100%;
+      }
+
+      .ritual-note {
+        background: #fffaf0;
+        border: 1px solid #e7cf9c;
+        border-left: 6px solid var(--gold);
+        border-radius: 8px;
+        margin-top: 22px;
+        padding: 16px;
+      }
+
+      .ritual-note p {
+        color: var(--muted);
+        margin: 6px 0 0;
+      }
+
+      .ritual-section {
+        margin-top: 34px;
+      }
+
+      .ritual-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 18px;
+      }
+
+      .ritual-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 10px;
+        min-width: 0;
+        padding: 18px;
+      }
+
+      .ritual-card span {
+        color: var(--red);
+        font-size: 0.78rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .ritual-card h3 {
+        font-size: 1.24rem;
+        line-height: 1.12;
+        margin: 0;
+      }
+
+      .ritual-card p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .ritual-card strong {
+        color: var(--text);
+      }
+
+      .ritual-board {
+        margin-top: 22px;
+      }
+
+      @media (max-width: 980px) {
+        .ritual-hero,
+        .ritual-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .ritual-shell {
+          padding: 16px 14px 32px;
+        }
+      }
+    </style>
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="Two Dogs Podcast home">
+        <img class="poster-mark" src="assets/two-dogs-podcast.webp" alt="Illustrated Two Dogs Podcast poster" width="1290" height="1892" />
+        <span>
+          <span class="brand-kicker">Two Dogs Podcast</span>
+          <strong>Dog rituals</strong>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Two Dogs navigation"></nav>
+    </header>
+
+    <main class="ritual-shell">
+      <section class="ritual-hero">
+        <div>
+          <p class="kicker">Riff bank</p>
+          <h1>Dog rituals, human rituals and other suspicious habits.</h1>
+          <p class="lede">This page is for small observations that can turn into bigger questions. Dogs sniff, circle, guard, fetch, wait, bark, nap, share, steal, forgive and inspect the world with total confidence.</p>
+          <p class="lede">Humans do the same things with forms, flags, passwords, meetings, shopping centres, applause, contracts, queues and tiny glowing screens. That is usually where the conversation gets interesting.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="builders/micro-scenes.html">Build a micro scene</a>
+            <a class="button" href="famous-dogs.html">Famous dogs</a>
+            <a class="button" href="recurring-scenes.html">Show rhythm</a>
+            <a class="button" href="recording-tools/index.html">Recording cockpit</a>
+          </div>
+        </div>
+        <img src="assets/two-dogs-micro-scenes.webp" alt="Two Dogs micro scenes board with gate, walk, tree stop, fetch, treats, grooming and beach zoomies" width="1536" height="1024" />
+      </section>
+
+      <section class="ritual-note">
+        <strong>Useful shape:</strong>
+        <p>Start with the dog behaviour, notice the human version, then leave room for guests to bring their own animal logic if they want to. The best version feels like an invitation to look again, not a verdict.</p>
+      </section>
+
+      <section class="ritual-section">
+        <div class="section-heading">
+          <p class="kicker">Riff shelf</p>
+          <h2>Small dog moments that can open big human questions.</h2>
+        </div>
+        <div class="ritual-grid">
+          <article class="ritual-card"><span>First sniff</span><h3>The greeting audit</h3><p><strong>Dog version:</strong> sniff first, decide later.</p><p><strong>Human echo:</strong> job interviews, small talk, profile photos and first impressions pretending to be evidence.</p></article>
+          <article class="ritual-card"><span>Gate watch</span><h3>Every boundary wants a guard</h3><p><strong>Dog version:</strong> the gate is news until proven otherwise.</p><p><strong>Human echo:</strong> borders, passwords, reception desks, terms of entry and the strange theatre of permission.</p></article>
+          <article class="ritual-card"><span>Fetch logic</span><h3>The returning object mystery</h3><p><strong>Dog version:</strong> bringing the thing back keeps the game alive.</p><p><strong>Human echo:</strong> emails, invoices, feedback loops, project management and why everyone keeps throwing the same stick.</p></article>
+          <article class="ritual-card"><span>Zoomies</span><h3>Stored energy finds daylight</h3><p><strong>Dog version:</strong> sudden movement solves a problem the room did not know it had.</p><p><strong>Human echo:</strong> festivals, sport, dance floors, election nights and the emotional release valve of crowds.</p></article>
+          <article class="ritual-card"><span>Treat economy</span><h3>Payment, praise and suspicious biscuits</h3><p><strong>Dog version:</strong> the treat is never just the treat.</p><p><strong>Human echo:</strong> bonuses, loyalty cards, grants, tips, trophies, badges and the soft power of snacks.</p></article>
+          <article class="ritual-card"><span>Territory</span><h3>Maps made by habit</h3><p><strong>Dog version:</strong> every walk updates the world map.</p><p><strong>Human echo:</strong> suburbs, parking spots, desk ownership, national stories and why a favourite seat becomes sacred.</p></article>
+          <article class="ritual-card"><span>Pack politics</span><h3>Who moves first?</h3><p><strong>Dog version:</strong> leadership can look like pace, confidence, patience or snacks.</p><p><strong>Human echo:</strong> meetings, queues, committees, group chats and the person who somehow becomes organiser.</p></article>
+          <article class="ritual-card"><span>Sleep circle</span><h3>Security before rest</h3><p><strong>Dog version:</strong> circle the bed, test the ground, then trust the night.</p><p><strong>Human echo:</strong> bedtime routines, locks, calendar checks, inbox sweeps and the rituals people do before letting go.</p></article>
+          <article class="ritual-card"><span>Barking</span><h3>Important noise, uncertain message</h3><p><strong>Dog version:</strong> sound can hold a problem in place until someone notices.</p><p><strong>Human echo:</strong> press conferences, alarms, social media storms, parliamentary shouting and local Facebook groups.</p></article>
+          <article class="ritual-card"><span>Grooming reset</span><h3>Becoming presentable again</h3><p><strong>Dog version:</strong> a shake can reset the whole body.</p><p><strong>Human echo:</strong> uniforms, haircuts, rebrands, apologies, clean shirts and the hope that presentation can change the mood.</p></article>
+          <article class="ritual-card"><span>Old dog / young dog</span><h3>Tradition meets update</h3><p><strong>Dog version:</strong> old tracks and new tricks both have uses.</p><p><strong>Human echo:</strong> elders, kids, tech help, scam warnings, tool upgrades and learning without making anyone feel silly.</p></article>
+          <article class="ritual-card"><span>Shared bowl</span><h3>Food as social contract</h3><p><strong>Dog version:</strong> the bowl is survival, status and trust.</p><p><strong>Human echo:</strong> barbecues, pub tables, food banks, hospitality, treaty meals and the politics of who gets fed first.</p></article>
+        </div>
+      </section>
+
+      <footer data-site-flow-footer></footer>
+    </main>
+    <script src="builders/site-nav.js"></script>
+    <script src="assets/back-to-top.js"></script>
+  </body>
+</html>

@@ -123,4 +123,4 @@ Example:
 
 This is a bit of a Togo moment: the useful work is not always the famous final delivery. Sometimes the hard bit is the long middle stretch, in bad weather, before anyone knows whether the story will work.
 
-Next useful action: use this bank as a source for a future builder or cockpit button called `Dog Cues`.
+Next useful action: use this bank as a source for the Famous Dogs page, a runsheet segue, or a cockpit button that drops in a grounded dog reference.

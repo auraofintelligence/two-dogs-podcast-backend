@@ -1,0 +1,206 @@
+[
+  {
+    "name": "ABC Australia dogs",
+    "category": "Australian dog news",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Aabc.net.au%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "SBS Australia dogs",
+    "category": "Australian dog news",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Asbs.com.au%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Guardian Australia dogs",
+    "category": "Australian dog news",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Atheguardian.com%2Faustralia-news&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Brisbane Times dogs",
+    "category": "Australian dog news",
+    "region": "Queensland",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Abrisbanetimes.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Sydney Morning Herald dogs",
+    "category": "Australian dog news",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Asmh.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "The Age dogs",
+    "category": "Australian dog news",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Atheage.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Courier-Mail dogs",
+    "category": "Australian dog news",
+    "region": "Queensland",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Acouriermail.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Queensland council dogs",
+    "category": "Queensland / local council dog weirdness",
+    "region": "Queensland",
+    "url": "https://news.google.com/rss/search?q=dog%20dogs%20council%20Queensland%20park%20registration%20fine&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Australian dog shows and contests",
+    "category": "Dog contests, shows and trials",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=%22dog%20show%22%20OR%20%22best%20in%20show%22%20OR%20%22kennel%20club%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Queensland dog shows and trials",
+    "category": "Dog contests, shows and trials",
+    "region": "Queensland",
+    "url": "https://news.google.com/rss/search?q=%22dog%20show%22%20OR%20%22obedience%20trial%22%20OR%20%22agility%20trial%22%20Queensland&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Working dog trials Australia",
+    "category": "Dog contests, shows and trials",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=%22sheepdog%20trial%22%20OR%20%22working%20dog%20trial%22%20OR%20%22yard%20dog%20trial%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Dog agility obedience flyball",
+    "category": "Dog contests, shows and trials",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=dog%20agility%20OR%20%22obedience%20trial%22%20OR%20flyball%20competition&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Dogs Australia and member bodies",
+    "category": "Dog societies, breed clubs and events",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=%22Dogs%20Australia%22%20OR%20%22Dogs%20Queensland%22%20OR%20%22canine%20council%22%20event&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Breed clubs and dog societies Australia",
+    "category": "Dog societies, breed clubs and events",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=%22breed%20club%22%20dog%20event%20Australia%20OR%20%22dog%20society%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Major international dog shows",
+    "category": "Dog contests, shows and trials",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=Crufts%20OR%20%22Westminster%20Kennel%20Club%22%20OR%20%22National%20Dog%20Show%22&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "International kennel societies",
+    "category": "Dog societies, breed clubs and events",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=%22American%20Kennel%20Club%22%20OR%20%22The%20Kennel%20Club%22%20OR%20%22Federation%20Cynologique%20Internationale%22&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Australian local council dogs",
+    "category": "Dog law, parks, councils and bureaucracy",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20council%20park%20registration%20leash%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "NT News headlines",
+    "category": "NT News best headlines",
+    "region": "Northern Territory",
+    "url": "https://news.google.com/rss/search?q=site%3Antnews.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "NT News odd headlines",
+    "category": "NT News best headlines",
+    "region": "Northern Territory",
+    "url": "https://news.google.com/rss/search?q=%22NT%20News%22%20weird%20OR%20bizarre%20OR%20croc%20OR%20Darwin%20OR%20Territory&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Australian UAP and UFO headlines",
+    "category": "Dogs, aliens and odd skies",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=UAP%20OR%20UFO%20OR%20alien%20OR%20extraterrestrial%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "World UAP and UFO headlines",
+    "category": "Dogs, aliens and odd skies",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=UAP%20OR%20UFO%20OR%20alien%20OR%20extraterrestrial%20disclosure&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Sci-fi alien culture headlines",
+    "category": "Dogs, aliens and odd skies",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=%22science%20fiction%22%20alien%20OR%20aliens%20film%20television&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Working dogs Australia",
+    "category": "Working dogs and farm dogs",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=%22working%20dog%22%20OR%20%22farm%20dog%22%20OR%20%22sheepdog%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Farm dogs and cattle dogs",
+    "category": "Working dogs and farm dogs",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=%22cattle%20dog%22%20OR%20kelpie%20OR%20%22border%20collie%22%20farm%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Dog science behaviour",
+    "category": "Dog science and behaviour",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=dog%20science%20behaviour%20study%20research&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Animal welfare Australia",
+    "category": "Good Dog stories",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20rescue%20award%20community%20Australia%20animal%20welfare&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Bad dog bureaucracy",
+    "category": "Bad Dog stories",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20fine%20attack%20ban%20court%20council%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Humans strange near dogs",
+    "category": "Humans being strange near dogs",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=dog%20weird%20bizarre%20strange%20owner%20neighbour%20park&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "NT News-style dog absurdity",
+    "category": "Absurd headlines / pun headlines / NT News-style comedy",
+    "region": "Australia",
+    "url": "https://news.google.com/rss/search?q=dog%20dogs%20bizarre%20weird%20funny%20%22NT%20News%22%20OR%20pun&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Famous and celebrity dogs",
+    "category": "Famous dogs / celebrity dogs",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=famous%20dog%20celebrity%20dog%20film%20dog%20royal%20dog&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "BBC dogs",
+    "category": "World dog news",
+    "region": "UK",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Abbc.com%2Fnews&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "Reuters dogs",
+    "category": "World dog news",
+    "region": "World",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Areuters.com&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "AP dogs",
+    "category": "World dog news",
+    "region": "US / World",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Aapnews.com&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  },
+  {
+    "name": "European dog news",
+    "category": "World dog news",
+    "region": "Europe",
+    "url": "https://news.google.com/rss/search?q=dog%20OR%20dogs%20Europe%20council%20park%20science&hl=en-AU&gl=AU&ceid=AU%3Aen"
+  }
+]
