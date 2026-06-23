@@ -15,19 +15,19 @@ const forms = {
     prefix: "episode",
     fields: [
       field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-      field("workingTitle", "Working title", "text", null, "What would Luke and Angel call this before it becomes official?"),
-      field("hook", "One-line yarn", "textarea", null, "What small doorway makes the topic feel worth a first sniff?"),
-      field("whyNow", "Why this episode", "textarea", null, "Why might this belong soon rather than someday?"),
+      field("workingTitle", "Working title"),
+      field("hook", "One-line yarn", "textarea"),
+      field("whyNow", "Why this episode", "textarea"),
       field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-      field("redDogAngle", "Red Dog angle", "textarea", null, "What can Luke notice, source-check, or land after Blue Dog has had a run?"),
-      field("guestName", "Guest name", "text", null, "Who might enjoy joining this yarn, if anyone?"),
+      field("redDogAngle", "Red Dog angle", "textarea", null, "What can Luke / Red Dog bring from lived context, humour or deeper datasets?"),
+      field("guestName", "Guest name"),
       field("guestChoice", "Guest-chosen animal and nickname", "textarea", null, "Only record what the guest chooses."),
-      field("mainBeats", "Main beats", "textarea", null, "Obvious story, hidden story, ritual, contradiction, local example, bigger question."),
-      field("sceneSeeds", "Scene seeds", "textarea", null, "What little visual moment keeps this feeling like two dogs, not a panel show?"),
-      field("segmentSeeds", "Segment seeds", "textarea", null, "Could this use Good Dog, Bad Dog, News Flash, Dog Cues, Weather, Music or Aliens?"),
-      field("adIdeas", "Ad or sponsor possibilities", "textarea", null, "Is there a support read, fake sponsor, merch joke or local plug that fits naturally?"),
-      field("sourceRefs", "Source references", "textarea", null, "What sources are worth keeping nearby without turning the show into homework?"),
-      field("nextAction", "Next useful action", "textarea", null, "What would make this easier to talk through next time?")
+      field("mainBeats", "Main beats", "textarea", null, "One per line is fine."),
+      field("sceneSeeds", "Scene seeds", "textarea"),
+      field("segmentSeeds", "Segment seeds", "textarea"),
+      field("adIdeas", "Ad or sponsor possibilities", "textarea"),
+      field("sourceRefs", "Source references", "textarea"),
+      field("nextAction", "Next useful action", "textarea")
     ],
     render(data) {
       return doc([
@@ -55,17 +55,17 @@ const forms = {
     prefix: "scene",
     fields: [
       field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-      field("sceneTitle", "Scene title", "text", null, "What would this moment be called on a storyboard card?"),
-      field("linkedEpisode", "Linked episode", "text", null, "Which yarn, run sheet or loose topic does this scene sit beside?"),
-      field("visualBeat", "Visual beat", "textarea", null, "Where are the dogs, what moves, and what prop or gesture carries the idea?"),
-      field("conversationBeat", "Conversation beat", "textarea", null, "What line, pause or exchange moves from the gag back to a real question?"),
+      field("sceneTitle", "Scene title"),
+      field("linkedEpisode", "Linked episode"),
+      field("visualBeat", "Visual beat", "textarea"),
+      field("conversationBeat", "Conversation beat", "textarea"),
       field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-      field("redDogBeat", "Red Dog beat", "textarea", null, "What short Luke / Red Dog line, look or prepared thought lands the meaning?"),
-      field("guestChoice", "Guest-chosen animal and nickname", "textarea", null, "Only add this if the guest has chosen it themselves."),
-      field("animationNotes", "Animation notes", "textarea", null, "South-Park-ish staging, beach table, gate, ferry, pub, cans, paws, props, timing."),
-      field("soundNotes", "Sound or music notes", "textarea", null, "What cue tells the editor where the scene starts, turns or snaps back?"),
-      field("sourceTrail", "Source trail", "textarea", null, "What detail might need checking before this scene leans on it?"),
-      field("nextAction", "Next useful action", "textarea", null, "Sketch, park, attach to a runsheet, or turn into a reusable micro-scene?")
+      field("redDogBeat", "Red Dog beat", "textarea"),
+      field("guestChoice", "Guest-chosen animal and nickname", "textarea"),
+      field("animationNotes", "Animation notes", "textarea"),
+      field("soundNotes", "Sound or music notes", "textarea"),
+      field("sourceTrail", "Source trail", "textarea"),
+      field("nextAction", "Next useful action", "textarea")
     ],
     render(data) {
       return doc([
@@ -92,20 +92,20 @@ const forms = {
     prefix: "guest",
     fields: [
       field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-      field("guestName", "Guest or invitee name", "text", null, "Who is joining the table?"),
-      field("episodeLink", "Episode or invitation link", "text", null, "Which yarn, date, invitation or rough run does this relate to?"),
-      field("whyGuest", "Why this guest / why they want to join", "textarea", null, "What makes this person a good yarn ally right now?"),
-      field("talkTopics", "What they might want to talk about", "textarea", null, "What could be fun to ask without trapping them in a brief?"),
-      field("chosenAnimal", "Guest-chosen spirit animal", "text", null, "What animal or creature did they choose for themselves?"),
-      field("chosenNickname", "Guest-chosen nickname", "text", null, "What nickname did they choose, if they want one?"),
-      field("choiceReason", "Meaning in their words", "textarea", null, "What meaning do they give the choice, if they feel like saying?"),
-      field("visualFeel", "Visual feel they want", "textarea", null, "What style, energy or small visual details would help them feel represented?"),
-      field("avoid", "Things to avoid", "textarea", null, "What would they rather not have turned into a bit?"),
-      field("publicPrivate", "Public/private notes", "textarea", null, "What is fine on mic, and what stays out of the show?"),
+      field("guestName", "Guest or invitee name"),
+      field("episodeLink", "Episode or invitation link"),
+      field("whyGuest", "Why this guest / why they want to join", "textarea"),
+      field("talkTopics", "What they might want to talk about", "textarea"),
+      field("chosenAnimal", "Guest-chosen spirit animal"),
+      field("chosenNickname", "Guest-chosen nickname"),
+      field("choiceReason", "Meaning in their words", "textarea"),
+      field("visualFeel", "Visual feel they want", "textarea"),
+      field("avoid", "Things to avoid", "textarea"),
+      field("publicPrivate", "Public/private notes", "textarea"),
       field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-      field("redDogPrep", "Red Dog prep", "textarea", null, "What can Luke quietly prepare so the guest has room to talk?"),
-      field("sourceRefs", "Source references", "textarea", null, "What links, bio notes or claims might be useful to check before recording?"),
-      field("nextAction", "Next useful action", "textarea", null, "Invite, ask for animal choice, send sample questions, or park for later?")
+      field("redDogPrep", "Red Dog prep", "textarea"),
+      field("sourceRefs", "Source references", "textarea"),
+      field("nextAction", "Next useful action", "textarea")
     ],
     render(data) {
       return doc([
@@ -137,15 +137,15 @@ const forms = {
     prefix: "ad-sponsor",
     fields: [
       field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-      field("sponsorName", "Sponsor or idea name", "text", null, "Real sponsor, fake sponsor, local plug, support bundle or merch doorway?"),
-      field("episodeLink", "Episode link", "text", null, "Which yarn does this read belong beside?"),
-      field("fit", "Why it fits", "textarea", null, "Why would this feel like it belongs at the pub table rather than a hard sell?"),
-      field("offer", "Plain-English offer", "textarea", null, "What is actually being offered, in normal words?"),
+      field("sponsorName", "Sponsor or idea name"),
+      field("episodeLink", "Episode link"),
+      field("fit", "Why it fits", "textarea"),
+      field("offer", "Plain-English offer", "textarea"),
       field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-      field("redDogRead", "Red Dog read", "textarea", null, "What can Luke say without sounding like an ad robot?"),
-      field("scenePossibility", "Scene possibility", "textarea", null, "Could this become a can crack, shop counter, fake sponsor, ferry read or dog-world sketch?"),
-      field("claimsToAvoid", "Claims or wording to avoid", "textarea", null, "What needs checking, softening, or leaving out?"),
-      field("nextAction", "Next useful action", "textarea", null, "Ask, mock it up, attach to a runsheet, or keep as a joke?")
+      field("redDogRead", "Red Dog read", "textarea"),
+      field("scenePossibility", "Scene possibility", "textarea"),
+      field("claimsToAvoid", "Claims or wording to avoid", "textarea"),
+      field("nextAction", "Next useful action", "textarea")
     ],
     render(data) {
       return doc([
@@ -169,14 +169,14 @@ const forms = {
     prefix: "segment",
     fields: [
       field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-      field("segmentName", "Segment name", "text", null, "What would the dogs call this recurring bit?"),
-      field("purpose", "Purpose", "textarea", null, "What job does it do: reset, proof, laugh, warning, win, bridge, source check, or open gate?"),
-      field("format", "Format", "textarea", null, "How does it open, how long might it run, and how does it get out?"),
+      field("segmentName", "Segment name"),
+      field("purpose", "Purpose", "textarea"),
+      field("format", "Format", "textarea"),
       field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-      field("redDogRole", "Red Dog role", "textarea", null, "Where does Luke enter: source check, landing line, callback, practical meaning, or quiet side-eye?"),
+      field("redDogRole", "Red Dog role", "textarea"),
       field("guestRole", "Guest role", "textarea", null, "Only include animal/nickname details if the guest has chosen them."),
-      field("exampleUses", "Example uses", "textarea", null, "What topics would this bit rescue, sharpen or make stranger?"),
-      field("sourceRefs", "Source references", "textarea", null, "What kinds of sources, dates or links would this bit usually need?")
+      field("exampleUses", "Example uses", "textarea"),
+      field("sourceRefs", "Source references", "textarea")
     ],
     render(data) {
       return doc([
@@ -199,16 +199,16 @@ const forms = {
     prefix: "source",
     fields: [
       field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-      field("sourceTitle", "Source title", "text", null, "What would Luke call this source in a working note?"),
-      field("sourcePath", "Source path or URL", "text", null, "Paste the link or local path that someone can actually open."),
+      field("sourceTitle", "Source title"),
+      field("sourcePath", "Source path or URL"),
       field("visibility", "Public / private / mixed", "select", ["mixed", "private", "public"]),
-      field("whyMatters", "Why it matters", "textarea", null, "What question does this source help keep honest?"),
+      field("whyMatters", "Why it matters", "textarea"),
       field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-      field("redDogUse", "Red Dog use", "textarea", null, "What can Luke say in one clear line before the yarn keeps moving?"),
-      field("usefulFor", "Useful for", "textarea", null, "Episode, show bit, Dog News, Good Dog, Bad Dog, background, or source check?"),
-      field("plainTakeaway", "Plain-English takeaway", "textarea", null, "If this became one sentence on air, what might it be?"),
-      field("notOverclaim", "What not to overclaim", "textarea", null, "Where does the source stop?"),
-      field("deeperReading", "Deeper reading needed", "textarea", null, "What would be worth checking before anyone leans on it?")
+      field("redDogUse", "Red Dog use", "textarea", null, "How Red Dog might use or explain this source."),
+      field("usefulFor", "Useful for", "textarea"),
+      field("plainTakeaway", "Plain-English takeaway", "textarea"),
+      field("notOverclaim", "What not to overclaim", "textarea"),
+      field("deeperReading", "Deeper reading needed", "textarea")
     ],
     render(data) {
       return doc([
@@ -233,15 +233,15 @@ const forms = {
     prefix: "handoff",
     fields: [
       field("status", "Status", "select", ["seed", "ready", "done", "parked"]),
-      field("handoffTitle", "Handoff title", "text", null, "What should the next helper recognise at a glance?"),
-      field("task", "Exact task", "textarea", null, "What small job can another helper do without guessing the vibe?"),
+      field("handoffTitle", "Handoff title"),
+      field("task", "Exact task", "textarea"),
       field("angelSuppliedBlueDog", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-      field("redDogContext", "Red Dog context", "textarea", null, "What is Luke trying to keep intact: tone, source trail, design, nav, rhythm, or draft shape?"),
-      field("workFrom", "File to work from", "textarea", null, "Which exact files, pages or drafts are the starting point?"),
-      field("allowedSources", "Allowed sources", "textarea", null, "Which source paths, repos or URLs are fair game?"),
-      field("doNotTouch", "What not to touch", "textarea", null, "What would create a mess if changed?"),
-      field("output", "Expected output", "textarea", null, "What would be useful to receive back: patch, list, Markdown, page, notes, or archive?"),
-      field("nextAction", "Next useful action", "textarea", null, "What will Luke or Angel probably want to do after this?")
+      field("redDogContext", "Red Dog context", "textarea", null, "What Red Dog is trying to get done or keep intact."),
+      field("workFrom", "File to work from", "textarea"),
+      field("allowedSources", "Allowed sources", "textarea"),
+      field("doNotTouch", "What not to touch", "textarea"),
+      field("output", "Expected output", "textarea"),
+      field("nextAction", "Next useful action", "textarea")
     ],
     render(data) {
       return doc([
@@ -439,7 +439,7 @@ function loadState() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORE_KEY));
     if (parsed && parsed.forms) {
-      parsed.activeForm = parsed.activeForm || "episode";
+      activeForm = parsed.activeForm || "episode";
       return parsed;
     }
   } catch (error) {

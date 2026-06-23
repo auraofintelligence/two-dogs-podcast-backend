@@ -141,19 +141,19 @@ function renderForm() {
 
   const fields = [
     field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-    field("episodeLink", "Episode, scene or segment link", "text", null, "Which bigger yarn does this little interruption belong to?"),
-    field("duration", "Target screen time", "text", null, "How short can this be while still landing?"),
-    field("trigger", "Entry trigger", "textarea", null, "What tiny sound, line, prop or movement makes the dogs forget civilisation for a second?"),
-    field("frames", "Three short frames", "textarea", null, "What are the beats: spot it, overreact, recover?"),
-    field("timeCard", "Optional time card", "text", null, "Would a quick card like '(three minutes later)' help the joke or research jump?"),
+    field("episodeLink", "Episode, scene or segment link", "text", null, "Optional. Keep this attached to the bigger yarn."),
+    field("duration", "Target screen time", "text", null, "Short is the point."),
+    field("trigger", "Entry trigger", "textarea", null, "Sound, line, prop or interruption that starts the beat."),
+    field("frames", "Three short frames", "textarea", null, "One frame per line works best."),
+    field("timeCard", "Optional time card", "text", null, "Example: (three minutes later). Useful for research jumps."),
     field("blueDogSpace", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-    field("redDogBeat", "Red Dog beat", "textarea", null, "What can Luke do in one look, line or source-check move?"),
+    field("redDogBeat", "Red Dog beat", "textarea", null, "One Red Dog line, look, action or research move."),
     field("guestAnimalBoundary", "Guest or ally animal boundary", "textarea", null, "Only use guest animal or nickname details after they choose them."),
-    field("returnLine", "Return to conversation", "textarea", null, "How does the bit hand the mic back without explaining itself?"),
-    field("sfxEditNotes", "SFX, camera or edit notes", "textarea", null, "What would the editor need to recognise the beat quickly?"),
-    field("reuseTag", "Reuse tag", "text", null, "What short tag helps find this later: interrupt, research, walk, play, guest-intro?"),
-    field("boundary", "Keep it usable", "textarea", null, "What keeps this funny and brief instead of becoming the whole scene?"),
-    field("nextAction", "Next useful action", "textarea", null, "One-off cutaway, reusable button, storyboard, or park it?")
+    field("returnLine", "Return to conversation", "textarea", null, "How the gag or cutaway hands back to the topic."),
+    field("sfxEditNotes", "SFX, camera or edit notes", "textarea", null, "Keep this practical: one or two cues."),
+    field("reuseTag", "Reuse tag", "text", null, "Example: interrupt, research, walk, play, guest-intro."),
+    field("boundary", "Do not overdo", "textarea", null, "The line that keeps the beat funny, brief and usable."),
+    field("nextAction", "Next useful action", "textarea")
   ];
 
   fields.forEach((fieldConfig) => {
@@ -277,7 +277,7 @@ function renderMarkdown(item, data) {
     section("Return To Conversation", data.returnLine),
     listSection("SFX Camera Or Edit Notes", data.sfxEditNotes),
     section("Reuse Tag", data.reuseTag),
-    section("Keep It Usable", data.boundary),
+    section("Do Not Overdo", data.boundary),
     section("Next Useful Action", data.nextAction)
   ]);
 }

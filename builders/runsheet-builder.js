@@ -142,24 +142,24 @@ function renderForm() {
   form.innerHTML = "";
   const fields = [
     field("status", "Status", "select", ["seed", "draft", "ready for review", "parked"]),
-    field("showTitle", "Show title", "text", null, "What would the showrunner call this run before it has a proper episode name?"),
-    field("episodeCode", "Episode code or date", "text", null, "Date, test run, guest name, or loose working code."),
-    field("mode", "Run mode", "select", ["structured experiment", "freestyle with prepared segues", "guest episode", "current events episode", "recording test"], "What kind of energy are Luke and Angel trying today?"),
-    field("targetLength", "Working length", "text", null, "Open-ended is fine. This is a rough feel, not a hard stop."),
-    field("recordingContext", "Recording context", "textarea", null, "Where are the dogs, who is around, what needs a fresh check, and what is only practice?"),
-    field("openingLine", "Opening line", "textarea", null, "What first line gets the dogs into the world without over-explaining the show?"),
-    field("leadStory", "Lead story", "textarea", null, "What is the main thing on the table if the episode finds its shape?"),
-    field("mainHook", "Hook for main story", "textarea", null, "What small question makes the bigger idea easier to enter?"),
-    field("mainQuestion", "Main question", "textarea", null, "What are the dogs trying to understand, not settle forever?"),
+    field("showTitle", "Show title"),
+    field("episodeCode", "Episode code or date"),
+    field("mode", "Run mode", "select", ["structured experiment", "freestyle with prepared segues", "guest episode", "current events episode", "recording test"]),
+    field("targetLength", "Working length"),
+    field("recordingContext", "Recording context", "textarea", null, "Location, guests, live/recorded, source freshness, or production notes."),
+    field("openingLine", "Opening line", "textarea"),
+    field("leadStory", "Lead story", "textarea"),
+    field("mainHook", "Hook for main story", "textarea"),
+    field("mainQuestion", "Main question", "textarea"),
     field("blueDogSpace", "Blue Dog space", "textarea", null, "Angel-directed. Leave blank unless Angel supplies the note."),
-    field("redDogFrame", "Luke / Red Dog frame", "textarea", null, "What short prepared doorway helps Luke enter cleanly without becoming a chatterbox?"),
+    field("redDogFrame", "Luke / Red Dog frame", "textarea", null, "One plain setup for the showrunner. Avoid loading the intro with backend detail."),
     field("guestPlan", "Guest or invitee plan", "textarea", null, "Include chosen animal and nickname only after the guest chooses them."),
-    field("adNotes", "Ads, sponsor or support notes", "textarea", null, "What support read, fake sponsor, local plug or merch moment could sit naturally in the run?"),
-    field("recurringChoices", "Recurring show bits to use", "textarea", null, "Which bits might help: News Flash, Good Dog, Bad Dog, Dog News, Weather, Music, Aliens?"),
-    field("microChoices", "Micro scenes to use", "textarea", null, "Which tiny cutaways could reset the room: postie, ferry, gate, walk, can crack, research jump?"),
-    field("sourceChecks", "Source checks before recording", "textarea", null, "Which dates, claims, headlines, scores, weather or public facts deserve a quick check?"),
-    field("preparedSegues", "Prepared segues", "textarea", null, "What short lines help the dogs move if the yarn wanders?"),
-    field("closingNotes", "Closing and next action", "textarea", null, "What can stay open, what felt useful, and what might be worth another run?")
+    field("adNotes", "Ads, sponsor or support notes", "textarea"),
+    field("recurringChoices", "Recurring show bits to use", "textarea", null, "Example: News Flash, Good Dog, Weather Window."),
+    field("microChoices", "Micro scenes to use", "textarea", null, "Example: postie arrives, research time-lapse, walk and talk."),
+    field("sourceChecks", "Source checks before recording", "textarea"),
+    field("preparedSegues", "Prepared segues", "textarea", null, "Short transition lines for freestyle runs or if the yarn changes direction."),
+    field("closingNotes", "Closing and next action", "textarea")
   ];
 
   fields.forEach((item) => {
