@@ -1,10 +1,10 @@
 {
-  "lastSearched": "2026-08-31T07:27:24.559608+10:00",
-  "lastSearchedLabel": "31 Aug 2026, 07:27 AM AEST",
-  "weekCommencing": "2026-08-24",
-  "searchWindowStart": "2026-08-24",
-  "searchWindowEnd": "2026-08-30",
-  "searchWindowLabel": "24 Aug 2026 to 30 Aug 2026",
+  "lastSearched": "2026-09-07T07:27:21.795228+10:00",
+  "lastSearchedLabel": "07 Sep 2026, 07:27 AM AEST",
+  "weekCommencing": "2026-08-31",
+  "searchWindowStart": "2026-08-31",
+  "searchWindowEnd": "2026-09-06",
+  "searchWindowLabel": "31 Aug 2026 to 06 Sep 2026",
   "summary": "Headlines from the previous week.",
   "categories": [
     "Australian dog news",
@@ -232,223 +232,250 @@
   "groups": {
     "Australian dog news": [
       {
-        "headline": "Dogs goalkicker responds to taunts",
-        "source": "SMH.com.au",
-        "region": "Australia",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORW5FVWZBblJMNXJOWTJqSlRqaFFBc25RNFZRdU1aWEZ5Z2E5S2pubkFZbGE1NDhHUDdURDZ1U0hXaXdGVlRzcGE5Mkkzcm9CNFBjaWthOHR0SFNTUlRhR3VIWWtsUU4wcEVfUUxIOEk3N29lY2M5akFFLVpJTVRpd3FvVFFaOGRFcENaNFE3V21KZw?oc=5",
-        "publisherUrl": "https://www.smh.com.au",
-        "sourceFeed": "Sydney Morning Herald dogs"
-      },
-      {
-        "headline": "Dogs survive missed free kick",
-        "source": "Brisbane Times",
-        "region": "Queensland",
-        "date": "2026-08-29",
-        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNbm1QdkJKdHVMdEJ1d21XWnFfYVFoQ0JJRk9IbEVxdG1ZaEU2ZDdPWDdNZU9CQnkyTXA5YVdlVU1jUTJLMVRJSWdkb0o3c1FSRHZNYmlDUERjaTlROWtIeGZ0cmY1eWJQUnV2dy1ZSTFudU5MRFAyaW9yTWRhSllEZ3FxaG5BNkF4U18xQThKMzUxT3FBUVB3Yg?oc=5",
-        "publisherUrl": "https://www.brisbanetimes.com.au",
-        "sourceFeed": "Brisbane Times dogs"
-      },
-      {
-        "headline": "Dogs skipper speaks after heartbreaking loss",
-        "source": "Brisbane Times",
-        "region": "Queensland",
-        "date": "2026-08-28",
-        "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPcmNJaHBaNVdkRXVXOUVTTEIwZUNHSjVBRmpLblY1cmJzcmRyT1oxN0I1YVdiU3oxRVlOenRucVVlTnR6VUFGaFA3d2g0TmJCRVBQTHFuejJrTUhGOUpKcFVhWURFNlFveUFHOHBSczltMlhNU1BseHY0eHZ5aFhzZGRtUTltVV92UTloeHBSWGxsSXU4Z25fZEhMbmlIUXlzTlIzanpjNlJVSEZt?oc=5",
-        "publisherUrl": "https://www.brisbanetimes.com.au",
-        "sourceFeed": "Brisbane Times dogs"
-      },
-      {
-        "headline": "Fetching performances: Hollywood's best canine stars",
-        "source": "SMH.com.au",
-        "region": "Australia",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOa0Z6WnRPN1lOdlp5Z21BNl96TEl4VURqZGhtVEJCX1BjMFRHbHd1emVOQ3JjbTRNYWJSRkowZE10M3BfNGZ5eDZBdC10ak5hVEdzQU42ejRSd295OTIxWDgyNDhMeG4xZDBCNXZVU1RzMFhZdlNqVm5leVVNbEFjNG5YY3E4RXZXckNUNjVpSzM0TU93bFhVZEo4SngyemJyWWg3TFhSTzZnODZMMm84?oc=5",
-        "publisherUrl": "https://www.smh.com.au",
-        "sourceFeed": "Sydney Morning Herald dogs"
-      },
-      {
-        "headline": "'Money for jam': The forgetful witness, frustrated ICAC lawyer and advice on dogs",
-        "source": "SMH.com.au",
-        "region": "Australia",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSG0zeW9zVEE2MnNoVmE3c3d5eUlFMFlJOWs5TVBCMWNjVXZsSGxkQWlzMkJLTUY1NE9YcC1Gd1Q5d3VoNXROY1l5bVBnMXBneFViOS1kRXB6S3FSRjdmTkN5LTdsMzM2VEEwZV8yNElwN2NRYjdsTEFtWU51eWhLckoteTF2TzlhTHhnbXpzWmUyS0lxaThtckVxWjNZdzg3c0pnT0U4ZVlSOGFxZmpYTWpwRFkxUkFnUEo3QjVMRENIMnNyQ0g2eC1CY0hJVlU?oc=5",
-        "publisherUrl": "https://www.smh.com.au",
-        "sourceFeed": "Sydney Morning Herald dogs"
-      },
-      {
-        "headline": "Stalking claims, vehicle trackers and dog poison dominate another week of CFMEU inquiry - ABC News & Headlines",
+        "headline": "Old working dogs refuse to be put out to pasture - ABC News & Headlines",
         "source": "ABC News & Headlines - Australian Broadcasting Corporation",
         "region": "Australia",
-        "date": "2026-08-29",
-        "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb01RN190NEVjUWJEbExNQ21BUkprZ282Y2UtaHo0RXREZjRKeU82ZWxnaS1fOWFfWGxaWU90VmFlRU5tY1F1OWhVaFJjUmFwNXVQclFiZHhfUjVyZUtCSVlEV3psMUZjWWFnaTNKQTFpTDRHa2xDc0w0cEFiWG5YeWtEVXRFd3lNRzVsNEFMcGlzQXdkRldtM1E3WW9BSDE1R0dSR1BCbVpBY283WXc?oc=5",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNbm53ZDE3TFVuZ1BWbDE4eEVEbmRqMVZGMG9ENXdSNjJJNWZCY2tQdnh3elpsMTVFcm1hMFZPeGdxbWRsbUpvcFRJWGd2cGltdGdJWmd2Nnh3T0JTTmV6YkUyVDZlbEwwZEYySEY4Mnp0UHFGc05sYXI4cDI0d1JiS3hYUQ?oc=5",
         "publisherUrl": "https://www.abc.net.au",
+        "sourceFeed": "ABC Australia dogs"
+      },
+      {
+        "headline": "'We want accountability': Dog owners fight 110% council fee hike",
+        "source": "The Courier Mail",
+        "region": "Queensland",
+        "date": "2026-09-04",
+        "link": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPWFg2UXZvNVpCWk1oTUJ4X3haLXBJV0xnV2Q0aDZOOUEyeEI4emJ5Sk5ueGR6NmJsYk50R2hUTkxjZW1Ta3JwVHAySTlQNURoSnE3SkQxZ2lTdWhQQ21VYmpQZVlhVEM4cEJpMHhLQzFUUTVwUkRIekNFMlhfeTV3V2JPZE5ZRUNtdTl0MDJDV3BwZC1aTmNDU0w5alBCUjg5enRwVGk1QmdUVkZHT2Nsd0dyYUlpUVIzOXpEUmlteHlzNVZyQzMwVlVvUHBLekNuTTFmNWVfSzhTUVh1T3VQLS1hSktuektPdzhKV2RzeU1WV2wtcHhnWWdzWmtCLWxMS19zMVJtLVZmQmc1YVkyV25LbUZxWndySWJzUVZ5TFlhcDd4UXowWlpRbDhOMzgxcFZ0cWpQQmJzOTcyTEgw?oc=5",
+        "publisherUrl": "https://www.couriermail.com.au",
+        "sourceFeed": "Courier-Mail dogs"
+      },
+      {
+        "headline": "'It's a bitter pill': The key fourth-quarter moment that cost the Dogs dearly in knockout final thriller",
+        "source": "The Age",
+        "region": "Australia",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxObExiemFlcVE2ZkZzQnRoemRON1hBVjRoMFN4dWVZQVZBMEpvVXU3a05Yd3M3aV9BQnhRRHFBaXRKNVNyWkpEY3MwZGUxT3ZvckN3TkFFLVZNZGRxM0hBYVRSLXB1ZGI3QVZKMW5MbmIxVWt6aGZtNS13UVNISlZBQ1ltSTI2MFdjWkhWdlFoTEJPQ3BYZHJINV95ZnpRM3ZCWTZWa0VtSGtQVDNmeEJuaklUSHlXbnhUX3piNS1zcFhCdkFVeXhBYksxNFZkLTJ3MklVYkVWVGw4VnBRdDcwQ29fbG5rY2ZWSXV0ZF9LNA?oc=5",
+        "publisherUrl": "https://www.theage.com.au",
+        "sourceFeed": "The Age dogs"
+      },
+      {
+        "headline": "Metro apologises after guide dog dragged by train along Flinders Street Station platform - ABC News & Headlines",
+        "source": "ABC News & Headlines - Australian Broadcasting Corporation",
+        "region": "Australia",
+        "date": "2026-09-03",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNcDJLTFdJYmt0TF9SWHdTR2RWVEtnb01QQWpJSzVUdUxRU3E5Q1ZGZGJyRjVWX1I4a3BhMDYxcGtELVpsaUV0ME1FdnJTS3pMeFRMeUlhaVE0cjZQMEM3Q25LaFhDdGZnaVFwUzJIOVJtalRsNWg3djlrUEZzUUZqRVQ0V0JrajhlajY2NHhjNnE0YXo1aklsOFU4YldreGEtWnpaSQ?oc=5",
+        "publisherUrl": "https://www.abc.net.au",
+        "sourceFeed": "ABC Australia dogs"
+      },
+      {
+        "headline": "Donor doggos and humming Earth - ABC News & Headlines",
+        "source": "ABC News & Headlines - Australian Broadcasting Corporation",
+        "region": "Australia",
+        "date": "2026-09-04",
+        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQzdoekhXb2M3N0ZKeE40R2JqeGhlVHZrNmxQRUdSREdvZ1RiUVlhMEttNzc2OG9sY3poM3pkZUFUN0lMNWxaNS1WWjdIV3VERzBqZmU3M3RwbmowQTBsYy1zcll5Ym9GamV0TDUyVTEtSDV4UlZUWjRmUTZGUGc0eS1aODdlQkI1VzlWb1Zjbzk0bE5kMjRrbA?oc=5",
+        "publisherUrl": "https://www.abc.net.au",
+        "sourceFeed": "ABC Australia dogs"
+      },
+      {
+        "headline": "Fantus And The Animals: Fantus and the Dog",
+        "source": "ABC iview",
+        "region": "Australia",
+        "date": "2026-09-01",
+        "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeWRoRkdkN25xYWszcUVaeDlESlJQcnhwdFNucXU5YXcwUngzYV9mQmgwQjJGa3pPVndhdVBMel9fTkdyN045MnRxOU5yU05tU3B4Y09HQUM0VklaSmk3X1lWUEMwUFlQZklQbVpSY1BpUWFxTU13b0xmQWJfMmtyLVd2aFdUd0RM?oc=5",
+        "publisherUrl": "https://iview.abc.net.au",
         "sourceFeed": "ABC Australia dogs"
       }
     ],
     "Queensland / local council dog weirdness": [],
     "Dog contests, shows and trials": [
       {
-        "headline": "National dog show cancelled after concerns raised over stadium surface",
-        "source": "Stuff",
+        "headline": "Teenage Crufts winner 'incredibly excited' to open first dog grooming salon",
+        "source": "Kidderminster Shuttle",
         "region": "World",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOHJ4WE1KVVIydEcyWE5TcjZCT3hDWGR2bjZnZUsyXzB0bXJQRGNzWnhDcnhrMW91aXJnN0ZESm1EaTFCWmFOdVRrNXkyMDU0UUNKYnUtVHNFWHBvQ2hpb3BVSVRhX2J3NTF2RUE4c0FYdy00RzcydmRBQVBCNHNSNlQzVkFIQ29EUzBwYi1iRVJ0OGNJeU82S0xfcjlrd0FYdFdaMDY2WnQ3dkhfZEU1Q0Nn?oc=5",
-        "publisherUrl": "https://www.stuff.co.nz",
+        "date": "2026-09-04",
+        "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMnZ2dXRCeDd2R2tUMW5EWVZOcEpYcC1NWk5EdXNDR01vNWdyRWpxZ0xlVUJWUjIxUC1QQmdGTnhUaG5yWGdaOGs2UFVnWV9ZbWVidVRTYzZjVWRRNktGTnJRVHdieE84Ry1HdnNwaXp2TXhVaDY1c2hTTU1oUmVLM240eGhDeVd4MVNHUVotNTFyZWtoZDFKZnRIc3d6MDVWVjlMR1MyQjM?oc=5",
+        "publisherUrl": "https://www.kidderminstershuttle.co.uk",
         "sourceFeed": "Major international dog shows"
       },
       {
-        "headline": "Essex Police rallies around Hero Crufts dog Baloo after losing her sight",
-        "source": "Colchester Gazette",
-        "region": "World",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPV3pUbWRjUXNfUnNFU3FZZ2RiOUFjTEtBSjFadGdZYUxpN2lTbnRQajR6X0xMeDE2WlF1TXRoRUpUalFaMFBIRWw1UFlwZE5BVE1BSERTTXlSblNwX1BQSnA0VUQxVzRQX1FmTXF2ZTFVeXh1YkJFS2VvQkRPejhnTHI3YUNYc19tWW45OXVOWjcwX0ZSamZJ?oc=5",
-        "publisherUrl": "https://www.gazette-news.co.uk",
-        "sourceFeed": "Major international dog shows"
-      },
-      {
-        "headline": "Dasher Australia showcases Levoit range at Cat & Dog Show",
-        "source": "Appliance Retailer",
+        "headline": "Team WA wins premier interstate sheepdog trial",
+        "source": "countryman.com.au",
         "region": "Australia",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRXVVREtPaTN0NUlfR2RqSGVOZFhhaG9QLU9qTVNMdmdVQnpFWF9jMXJjTVN2cDBBcm81Z2lGeHU3bEMtQlJ5bHFBTFZjRnB3ZFBUaGhidUVVNDFvWnRrSEJXZ25KNXdDc1cwdEV4d2VvdV9vaGF0cVRxX3RKQVpPWFVYMUt6R0hrcDZUYXdtRGc3NmZmQm9lLQ?oc=5",
-        "publisherUrl": "https://www.applianceretailer.com.au",
-        "sourceFeed": "Australian dog shows and contests"
+        "date": "2026-09-02",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYUpXNlE0T3pUZmk1ZURDbjFDM0pvV0REelZWZUFGa2t1Mk9EVzBTdVU4YnBhLUxBeV95c1JOX0JUc3o1eEx0cVZvV0ltUWdQNG5KcDBhSUI1WElPSGJNQVpTNThRZmw3YUd6WjNrb3dlZDV0WlcxMGNsR2ZVdWNQOWFsNkE2R0tOVE9rRV9BUkRjajVzbU9IZzZXdmRBWUVYTjVyQU9n?oc=5",
+        "publisherUrl": "https://www.countryman.com.au",
+        "sourceFeed": "Working dog trials Australia"
+      },
+      {
+        "headline": "Doggone it: National Dog Show canned due to Manfeild surface concerns",
+        "source": "1News",
+        "region": "World",
+        "date": "2026-09-01",
+        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdFc3akhHQlA1NjhtelVoUm1BcW1UejFJMHRuR3F0bTB2d0RnNUFROVV3VkgyMVEzMUxiS0swQ3dlNFhsNnUtSzFiT1B5NU5QUU16UTJHc0Z0WnFIRVlJWEVnZU5sTTlncFVDSU1qVnZMc0hxV0FvUC1qWnBNMEp0RDduSURnN0xrM0RycExqaGJoNU5yc0J2M2k1WTc3RlJaaEEyQVZrNA?oc=5",
+        "publisherUrl": "https://www.1news.co.nz",
+        "sourceFeed": "Major international dog shows"
+      },
+      {
+        "headline": "Crufts volunteer vet team donates £1k to Ukrainian colleagues",
+        "source": "Vet Times",
+        "region": "World",
+        "date": "2026-09-04",
+        "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSkFFOF9vZUdUSlk4Zlo3XzRXNnV2b2oteU1SbmR1aEV2aVdXSkhFejVROGVMS0hYWF80WnJVdGRRVFY4ZXZZMkU5Y0JpYUh3N3FlYVVNVk9VTld4eWk2MnJHMGlLNkZVM3FGd1ktZVczSUlrYktoV3ppTDlaUXdTbEN0RGxISkYtNTFDaUlObW5jRVBuNGdJWjcybVFseW9ZUDdyblZ6c1VPaGltTHlyeGs4dw?oc=5",
+        "publisherUrl": "https://www.vettimes.com",
+        "sourceFeed": "Major international dog shows"
+      },
+      {
+        "headline": "Watch: Incredible Dog Challenge 2026: Large Dog Agility Competition Western Regional",
+        "source": "Yardbarker",
+        "region": "World",
+        "date": "2026-08-31",
+        "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQeV96Vjd2OGFPYUhELXVvYTZGRGJUQ3BpcU11SFNhUVJIVE1aNzFZZ3ZwZW9DVFF3VmFSRkIxd0pleFRuZlc0OTY3VEVKcDJSM19oS1lYeW1PLWQ5R3FtLW5SbUpEWnp0RUliVWxzWFpXX0E2WFByVHRabmM4dmlFWFNPbFpBX2VDTGFhWUNMYlQ5YkVvWHVvVjExYldJNlRXajQzcGNRWGU5VDZvRElEOXZ4TlEwdEkwcW1kSVJtMHNZekctS1BRQ09ocnAxRXB3ZHNOLVFNeUtRSk85bTZFY2o5alUwZw?oc=5",
+        "publisherUrl": "https://www.yardbarker.com",
+        "sourceFeed": "Dog agility obedience flyball"
+      },
+      {
+        "headline": "2026 IDC Large Dog Agility Western Regional",
+        "source": "NBC Sports",
+        "region": "World",
+        "date": "2026-08-31",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdTM5UjBMNUhwOUJVcHJTWEh0ZkxEUzZXcEFsRHhSc0dDYThpTUZSYjR5bDMxTjFybTktVnNmOUVVenFXQkhTUFVLRmtDRWU5S0h2TnBBWlNlV3BVUm43aE5RUHJ3M0VVNzVTVTE1bWhOSjFIU1FxQ0FIanl2UWRMaEZQVmpra05GcDhZMlgzazM2RDZ5SnNYWFVzbVBHdFdvVGZzSUlB?oc=5",
+        "publisherUrl": "https://www.nbcsports.com",
+        "sourceFeed": "Dog agility obedience flyball"
       }
     ],
     "Dog societies, breed clubs and events": [],
-    "Working dogs and farm dogs": [],
-    "Dog science and behaviour": [
+    "Working dogs and farm dogs": [
       {
-        "headline": "Dogs blink more often when they see owners blinking, study finds",
-        "source": "The Guardian",
-        "region": "World",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSmRxOXQ5R3ZmUm5TYUJBMGRaN1BSQnlOSDJsX3lDT2VKSmgxekNjeWE4WEYyb2ktSVNTZTBHZTd3dEtKMzY0Z2tnQ2ZQVHJlX3RJWklzNlAxT0tsYWFBNzhDcFNPY2tfMmkzWWhyc3d3MVhWcVZXcGV5c3plSUdJbHd1WWtTekdFdndjZGRabmZ6Y2J5b2c?oc=5",
-        "publisherUrl": "https://www.theguardian.com",
-        "sourceFeed": "Dog science behaviour"
+        "headline": "A champion's 'superpower': Queensland handler wins at sheepdog championship",
+        "source": "Queensland Country Life",
+        "region": "Australia",
+        "date": "2026-09-01",
+        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeVJENnJBUG16VFpBWVB4bUdtRkZWaEdZZEktLVRwWldmYVRGd1c4bmRjTGpfWHVQc0hjZ2JLZVNLYjE4d2pvNnRidTE0TFEtWWc0NExhMUZqUTJSanh5VnRRdkIybW1FTTliTU5OQmRUcml4X2p1SnlPNEhFVlU5VjZtTDNuNW1jT1p3dFFmRWpWUWloTWlKTENKLXBxOEk4cThSaWdROENBWVVFWERaa0xia0pGM3lvcGRMWE1ZWjlCdw?oc=5",
+        "publisherUrl": "https://www.queenslandcountrylife.com.au",
+        "sourceFeed": "Working dogs Australia"
       }
     ],
+    "Dog science and behaviour": [],
     "Dog law, parks, councils and bureaucracy": [
       {
-        "headline": "Stray dogs 'a growing problem' for Townsville in 2026",
-        "source": "NewsCop",
+        "headline": "BORDER COLLIES LEAD THE PACK AS IPSWICH'S TOP DOGS",
+        "source": "Local Ipswich News",
         "region": "Australia",
-        "date": "2026-08-24",
-        "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBYVzVpbVFGaGtmVWJxb3k4Q0xVMUhwX2ZwNjc2bEE0N2w5OGt1TGtVNmh0NVFaRUJWd2MyRHA1SjRqQUZ0RW0xcWNEQktxVFpOMHI5dTVnYjJxT09KSzNoYVpQeEg2OG5HeTBneDVHR3VNX0tTQkVYU19PTDE?oc=5",
-        "publisherUrl": "https://newscop.com.au",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE02V3QzMWVyUWRrb0Y4V1JwSUlieEhnUlpoOU5PSHhXalYzdmpJMGZfbzB5dk05anBhcmxqS1NreXFGd3pmQURoUUpKS3dVR1BVel9ZZEFkRzlTbFV6a0sxeF90S09DbXZVLWZNWWtXX1FSWEJNX1hDQlVFYw?oc=5",
+        "publisherUrl": "https://localipswichnews.com.au",
         "sourceFeed": "Australian local council dogs"
       }
     ],
     "NT News best headlines": [
       {
-        "headline": "'You cannot build them back': Tennis club closure sparks government backlash",
+        "headline": "'Last considered, first punished': Newman accuses Labor of 'not caring' about regional communities",
         "source": "NT News",
         "region": "Northern Territory",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNakhmMGg0XzVVMXl3ZnRVZ0ZpbS1mZXhXYXNNQXp3NWRpYzByYlVvZTFtVXhweExxVW1LaG1Ua0xpOVphS1NweUZheEJpSFlEalNqSld3dlBSX2gyUnMzcWVRYkNKWkVnb3RiRWNpRzdUWVc4NGxkUUxSdFRFLXNBTm40c0NJNzFCREdmRXpDWDdxV3FXNE5KVi1GdlpMdWZ4NzlRMDlPcjVjN3ZaVHZtaWFvMmNPV2toWWM5TzNRMjZYSjREZnFOY1lwU1lNbjBLZmVJSkJZV3FHOGJMbkpHdmVxdnROam8?oc=5",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOdjYzOE1DOVlhRDF0Z1BRUDVxSVNSeFpCcnl2YXAyRS1UTWhab2xHZmZoZ3FFNF83bThwMHozRXN2SFl0SGhGSUxNNFYzY1ZRUEFJQ2RsTVh6aDVxdmtqT0hMRms0cUl1cGlXM2htQ0RHNGV6bC14ZFd4MGpaakNVLWNRMm5UajhyZ1JuRlhCTmtMakx6SThtUkNkZzEyRUpZRklKUVpyMFJtZ0J4RHNhUV9MTE4wN2dDWFJiSFRDRVQ2ZFZxbmpVa0w4OFI1VThlYWotYXljckJpdmhneWFjYWxUMjVVZW1hWjRIbFhQYlVHT3gzNGt4RC1hQjhaTzhU?oc=5",
         "publisherUrl": "https://www.ntnews.com.au",
         "sourceFeed": "NT News headlines"
       },
       {
-        "headline": "Knights score bizarre falcon try!",
+        "headline": "SaillGP: Crews demonstrate bizarre pre-race rituals!",
         "source": "NT News",
         "region": "Northern Territory",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZmNkeS1OeXZrTUJNNkdubE9kRWpKUjA0QnVHaFZoLWQxZnFRT014Ulh0YngtWTVVMzl3Y2pQeDlvUjZRQ3ZqM2FNeHJnNHZVQ1F1eXctWlhvTk55ZTNuNU9zdVh2bjB2aHJtNFR6WUVPZHRvZEdvSDhBc1F4QWVrVXNqcmNSN25VR0h0aTdhcjNKQkptUWhqVnQ4M09wM3Y5WjZxN0NQNXZwNWM?oc=5",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOVWp5aWpWT1FLbllySWpGeFdEOGhQajF4dmlhaDFETDY2R0Ixalp2cm4yUGU1RkxDQjV1bDVlNjNBekEtX0tFeXVsMmtfV1lsdExGQlpETFJFLTlsel90RS1nLXRON1FjTEJETmpISXJ4ZDhfQ1AtRGZJeFVsQnMwN1FSSVhHRHFvYXFQbWVSZlQtZXNKMDhaSHkySmQ3Mk1jRzhCVHFVTWVHT2NrSVJ1UUVFSTJvRXZaVHRaMA?oc=5",
         "publisherUrl": "https://www.ntnews.com.au",
         "sourceFeed": "NT News headlines"
       },
       {
-        "headline": "Council axes project over fire station contamination",
+        "headline": "Crows hoodoo broken, bizarre injury stuns all",
         "source": "NT News",
         "region": "Northern Territory",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPdTEySjNKSjJBWDF1cjN1Z01qUW9TWEJkN1Z3eVVmTlhJdExOMnNZS2x2dGpzVThUbW9oSzlKNmNYanRna1loWDVrZm4yTUNqZkRfNEF1YUlRZzUyRktxaG1WWVBnMUU0MGJ6SG83QXI5QnNnTWR0RXFicXU4OGc2ZEdfMmpDQTVDTzlva1R6OWtxUHZTUEtjZGF1U2cxT2F0OXhpMDlvUDltWDhiLVg2QlYwdjdLVzRsNW5FRlRoUlpOVUtJVkd2YkNlYjJINjkzQ3V1eUJTdUZmWTQxdmpWWk1ndk1aUmw4TWlESUZ4Q1ZxT1BfS3VjdFZ3?oc=5",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQLXZIV0lyVXFwdDMzTTNVWHN4ejhOeGVVWmRfLUpxREFfamp0b0YzY3VjZlFhNGZxT2dBYWJHS2RvZUNDTEtsTUtUZGhqNzNFLXltR21JaHhYTE4tVzljcnA2bE1vRVBHR3hNdUd4ZVdXSWdDZW1EY3JnTTQ5Sk1feDhBMDF3S2ViTzB5SF9qTVJmRkFMb0FjczI5cmI0Nk5NWXZ6NnNQXzM4SzlXaUZFMkwzMG9sMmJNcXFvM1pVQkMxaTc3bUlscjhhY3VuUGJJajhqbldrOXJwM1JzZEZv?oc=5",
         "publisherUrl": "https://www.ntnews.com.au",
         "sourceFeed": "NT News headlines"
       },
       {
-        "headline": "Dogs' season hanging by a thread, Manly keep dream alive",
+        "headline": "CareFlight NT serious safety lapse at Darwin airport sparks probe",
         "source": "NT News",
         "region": "Northern Territory",
-        "date": "2026-08-29",
-        "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQeUlHMEM3S2hIV2lXYjZSNHpHUGMzOWNPLUVTS2hiMnNXTlIwdFg0djl0bEFaNE5XcFF1UXlQYjBSNl9NLUNHSVY3dV9WR3FKYVhKX1VtaHc3TmF3ZlI3dGpkbmxCYlJqN3dRNnE0N1ozNThxbl9yN3BVUHdiOUtHWUN1V3RlemVTeTU3djRqR3lWWWpveDJoY1BWaENjMG1vc21OSVd3cWNUWnhtcVV6UnFHRzJZQnE1U2xSWTFoYV9EWHFaUXFMNlVqd1VHaHNQcGhtSFNGazNHcGlqV0p6ZWEycmhwQQ?oc=5",
+        "date": "2026-09-05",
+        "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOM2FsS01rZnlsRFlVYjJ4Njl0N3EwWjlRTWxWZXhIVkZ3ckRDamhWZWNzYUk4aXhpNlVBclNxb1NUa1dKUEF4YkZyWHQ1dUVfTF9JNTBJMGo5bUxvY3Fld1l0OGJwcDg0bG9GM3ZyZ3NDR1dDLUhNNlJtZ29WNGxpYXB6YUxwSm9GRHRyZklER0NkR3BVTnI0eVg2TzN6TWVwV250aDJHT0hCbFhvWjZBVWF5MFRIRXdDUFJQNlVweVM1alpNaEpxellKT203LVktcEw3eWxpX3BOMFZlOThnRUJCdEh1TVNxYlR0VmEzOUJaUQ?oc=5",
+        "publisherUrl": "https://www.ntnews.com.au",
+        "sourceFeed": "NT News odd headlines"
+      },
+      {
+        "headline": "'Green light to antisemitism': Opera House protest 'worst thing' to happen under NSW Labor",
+        "source": "NT News",
+        "region": "Northern Territory",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNdkNoRm02MUt5LXMxZzFWZWNRa2lqbnc5REhfTHlNeE9HNWVid3hqRnQyTk5SSG8wZllldnhRYkFVNTRtb2wxRWhLMjRSSDNsYWVWclJSd09xSi04bWlVRDhySzAzeVZWS285WmVxbDVFQU9LeTJmS0N5eDdKSl9QcWpzZ2JtVkdVQmlzUWlLaVgzUGFlWHJkaHBkQ1NSTnRYdWFOWkp3bXkxNjctVTRRaHRFbUppdE5HcXFIWlpVY1FWNVZ0WUtxMml1SDJDQW5mMXBhXzRRdXlvWGk1SGNwNW5MaFk5NTljeUtJWFVvNzVDLXhJNDdz?oc=5",
         "publisherUrl": "https://www.ntnews.com.au",
         "sourceFeed": "NT News headlines"
       },
       {
-        "headline": "Hold All Tickets: Huge Memsie Stakes Day Previewed + Rosehill & more | Punters",
+        "headline": "Rural dads' untold stories: A new podcast season",
         "source": "NT News",
         "region": "Northern Territory",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOckdaNXVlbXA5ZzAwYTdiNkUtQXVneUdtRFJIeVY4aTlsQWdZUEFLRTRuNnBkcW1aWThDQ1ZDSjFSZEJzaU5PeVFUNGJnLXdRLXhSbWZpZlF1ajJ6bHU1Wlp6RU1XdlhrdWJfTVhWOHUzYmZTb2tXLWduUzVVRmplZ3NTZjlTVnc4WUxtUF8tVHJuTktXWlgzbENUbjZscVpsRjJRdEF1U25KSk1ONWU3Y3kwMV83VmtqeFZGcTEwYjZYSXR3ekNIZWhLN0plQXRuQzZvQnhjRkF6Z2hxZms1cWFxcnh4TS1BblNZ?oc=5",
-        "publisherUrl": "https://www.ntnews.com.au",
-        "sourceFeed": "NT News headlines"
-      },
-      {
-        "headline": "Nathan Cleary loses it at brother's blow-up",
-        "source": "NT News",
-        "region": "Northern Territory",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQN3Rud1FyUWFMMk5HSVk1b2YyZmFIS21oWlZXZVR2N3VjRkhhc0hqTlZ6Y1FMQjJkczhjb0tMbmszT3lNRExUVTZOVzhWZllIOFFIYktZSFhqQ0g5QXNaVzZSUlFVdHBjVFNIX0wzQW9zNVZENHg4b0RmRTJlOWVnVXdoWk81ZHNPV0luR0h0MC1aX2N6cVc2SEZTcG5sUTlYcjVUMU9hQjVBeGRzeW1HTGQtLW5jRnFFY3hScjVVMlp2LTFkZFA5U0k5RTMtaWRxQ08xT0VqcTlnQk9fQVo0ZGEzUnlianViaFdPZFVObktGWnItZ3BzVg?oc=5",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOdU9QS1o5ZTBaVTNwM0syOUx4aWRRRWhJUXFDTUlRQk5BTGNiXzJSUWVqZGV1UHhYejBNdWFvajVLeUg1M1hxc2Z1Z1FLYmNXMS13WWpGYlVzV184Z0VjaVNJYTRIRjREdlJ6dnNmNWRHbEl1bzNiZGpXT3lrQ2JZVHBBZHJDd3ZOTktTOFRtbmItYkxsWGp3M05MN2JGaGM1bWtFQk9zc05FbEFMT0lLZjJUNXphSDI5Q1BLUC1BM18xRVlsQ2RxNklpNHNuSjl1R2lxbDJEbThBUG1TbzFGM0dJbw?oc=5",
         "publisherUrl": "https://www.ntnews.com.au",
         "sourceFeed": "NT News headlines"
       }
     ],
     "Dogs, aliens and odd skies": [
       {
-        "headline": "Disclosure Day 4K UHD Review: Spielberg Returns to the Alien Well",
-        "source": "Cinema Sentries",
+        "headline": "15 Best TV Shows About Aliens",
+        "source": "TVLine",
         "region": "World",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOW9uYzRoV3JNUWktOE5ES0hhYXE2bmU3RDdqWlFtSVc3SHJfQy1fS29UdUhDcUh6LWg0U0M3T2FUejIwTS1ab2pTWjZiOFRDVzluU3Yxc1lDNFp0NC03QVI4Wlgwd1RmME9tLXF2R0cxX2I1OFVJel91S0RGcDRoRWNldzFVWVJLNUYyeXU2bFNQZXlRMGNV?oc=5",
-        "publisherUrl": "https://cinemasentries.com",
-        "sourceFeed": "World UAP and UFO headlines"
-      },
-      {
-        "headline": "Memo to Ridley Scott: no one needs more Alien: Covenant movies - get the franchise back to stalk'n'slash",
-        "source": "The Guardian",
-        "region": "World",
-        "date": "2026-08-29",
-        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZkoxWUphUEtSYXVKUUZ4TWRCRUZobzctdkZGeXVDVm5KMTlTVzlldDFSRlprcG9nMVZIM0QzSXh1VU1FUEQtQUNrUGNMdE9STEZvRzRQOVM2cjk2MXNlUGtwX2lhUVdka0ZDUjh5YkxEc2VIN3NVQ3JzWkI4RFI2STF2VWlvQjE1ZXc?oc=5",
-        "publisherUrl": "https://www.theguardian.com",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBaS2dsTWVsOVp1SktIUXF0OFI4WGJfRDlmQURFNVlZM0M5UHJRVXNxajJ1STVKY3Zxamh6Z2d1X0JhN2J5dm5lZFNlaVdyNHRJbjRmZjVsamIwakRrdlZHRG9xNngyRG5vT1E?oc=5",
+        "publisherUrl": "https://www.tvline.com",
         "sourceFeed": "Sci-fi alien culture headlines"
       },
       {
-        "headline": "Roughly 50% of Americans are skeptical about UFO origins: Poll",
-        "source": "NewsNation",
+        "headline": "Ancient Mysteries and UFO Disclosure Take Center Stage at New Immersive Event",
+        "source": "suindependent.com",
         "region": "World",
-        "date": "2026-08-29",
-        "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB6cHlyUE1VdHJzWnNwa0Y4b0FYM0syYk50NGxaR18xeW9VbGw2aWhGZHZQb045ZkV6d3FMV0xqSEcxa0dtUk5oeDBCZHNOUVdGWUhCNzhlczloQlNpenR6WEExVkJhZmh5LWk0emktVEF5Sjl5MGtDZl9EckNIU2fSAYQBQVVfeXFMT01sbk8yLXVZc1JqM25FSXRrcWdfeGtycU42SXhlTGh3bTdTSzBRSUt0NExjNnhvSFRQeHFXVFVyUlJvdXU0S3F3R2ZEaGZvUDlYUHBCeHlyZjdXbmx6UTFLVXZZd3k3bHFTWG1UaWl5OWZLN1I4aGJ1bmJCWHA1bHZtTmM4?oc=5",
-        "publisherUrl": "https://www.newsnationnow.com",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOb29kbHgyMUZ3MDJNeXZiajJSQXNwUkh1WDFXNDlGVVBrdlEwMUNNTDBhYk5jX19Za1RicWN2NEgwa3dKTGxBMlA1MFRJV1dWN2EyTHVhM3VPRkdsbVdUQm1PS0xoSkdDY3RzTTFjV1JPSEYwQktZektyclVlaFRHTUFnWFJZUTZBTjZjWWNTSGRGeXBuU0Q1VHFENDRldkRMZ3o2bi1zOA?oc=5",
+        "publisherUrl": "https://suindependent.com",
         "sourceFeed": "World UAP and UFO headlines"
       },
       {
-        "headline": "Opinion | Our UFO Obsession Is a Distraction From National-Security Reality",
-        "source": "WSJ",
+        "headline": "UFO expert says Disclosure Day's portrayal of alien coverup doesn't seem like a coincidence",
+        "source": "aol.com",
         "region": "World",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQWGs4OXBnNmtYUTBERUYtQmdOUjBxQkRhOTdEYVBEY0Z1NVg0QU1XbERMcUl1X0FEeXpwVUdDNXlIMHJrcEwzT1hraU1WeE9JUnJha0theUxCclUwQTVSYnFTNjNRaENCeUNYMm5DUVhzS2huVnRCaC1FWUdMZm0tTzlNU1pWanBFZ1o1cFhpSmdPLWZmc1dGdlJJYmFpbktrMmlTR0llb3g0MWtLS3F2Z05wN0ZXOW5LR0E?oc=5",
-        "publisherUrl": "https://www.wsj.com",
+        "date": "2026-09-05",
+        "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOM1NQb2FhMExyYjR0cjFlQjduVjMzdkphWTBoSGZrXzExNVA3dXRjdnlZY2xXRE1DTy1LczNwT1lTTHNaTnZrbHZfdmZpUnFMdFFINXZOcWpUaXFYNEc5RXhtdE02VU1VSXJCMkNhaDFReElKTW1VMGNUeERESUEtRw?oc=5",
+        "publisherUrl": "https://www.aol.com",
         "sourceFeed": "World UAP and UFO headlines"
       },
       {
-        "headline": "Trump's UFO advisor says aliens could define the president's legacy",
-        "source": "inkl",
+        "headline": "Pentagon seeks access to vast private UFO records collection",
+        "source": "defensescoop.com",
         "region": "World",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPQmRwSmpXNk9lNmxCM0lfNUhybFBTV09KQVI0ZW5yZUVYaGl6dEF6RGdoMDhGQlctSUdnQmVOSTFZV3h4MXpENFRRRFNEdTlEQjdZc2ZGSXB1Q09SZmNiNHhwTTlTWnpLMDFaY1VOWTBkbnNmTXY4VnphTlpxTDFJSXJJb2syNU9iajVOSXhPamFvcHB2WXc?oc=5",
-        "publisherUrl": "https://www.inkl.com",
+        "date": "2026-09-03",
+        "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQS2lCbzZkQ1dobGtWVkFsYUQ5cmp4MDBzZDFjTlhpQ1hOWlVKTVBEY25aVWQxWTFUN2E0R2lyeTdyVlhoc3FqalFnT0pUUldlWXE4RWdnRUJTak1CR2VTUDdQTzFrS0tLazJIekpnb1dNMXpnTzR3SFFrUy1xN3ZKVEtTcFZMYjVCVjZxTUJvalN0ZlRhNXZoQ2h5ME1qQQ?oc=5",
+        "publisherUrl": "https://defensescoop.com",
         "sourceFeed": "World UAP and UFO headlines"
       },
       {
-        "headline": "Before Warning the Church About UFO Disclosure, God Had to Wake Up This Green Beret",
-        "source": "Charisma Magazine Online",
+        "headline": "How Full Alien Disclosure Could Make Trump Bigger Than Jesus, Stop Climate Collapse, Fix The Power & Economics Surrounding AI Data Centres And Pose Awkward Questions For King Charles - SMBtech",
+        "source": "smbtech.au",
         "region": "World",
-        "date": "2026-08-27",
-        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNR3dSNFRsX3czbm1zcGNtV0F1VEFLVEt3LXBhNExaMjRQU1gxaV9BUGZMZjY2MGJIYjBIV3pBVmNCeW9uazFsb2RzTkxKdW0yc05temJ3MzBBYmNUeHVqTFF1RVdWdlRyRVgzUmkxSndfek4zV1FVVWZnckxqS0ttaFNOd01ibVNYZV9Xc1RpUXVGTlA1ZG1idlpHY0tmY1IxbFE1aWNRSW11NUF2dlZId2VUbTlTZDlDcWh5QlBQSjFoQQ?oc=5",
-        "publisherUrl": "https://mycharisma.com",
+        "date": "2026-09-02",
+        "link": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQUE1ldXBIM2pnQ21iNmtJV1RNSXBCbU95MmIzZE5CRHlCdTJOaTdTNk04RVRrdGF3YVdiMWtEVVFsd3dBZVdxVzFWQUtFZ0N5N1VlNHRfQmgyQlc2LTcxS2s4LU1DVS1WTE9ZYjNUSkJlOEJDekI2ZU1oUjlCNGJqUHZ1TzB2b0tIS0dCX3R4YV9UeVFoRkw3VWs3WnVEWEp1SWEzVW1JMExYYjhHS25nOWhERzdTT2NGLUxDZ19rYjA0OWI5MUdhTm8xaHdwVi1vYlAyQi1Ud19uazRZa1lPVkRHTDdPb3lFVXlfZHJsTXc1WGwwS2pLSUlpZjlXcV9ScUkzSmh2V2UtNTdESnpnVmRqM3hxMVJ2cG40RER0SjFuTnNGRXlfcjRjNEg3OW9v?oc=5",
+        "publisherUrl": "https://smbtech.au",
+        "sourceFeed": "World UAP and UFO headlines"
+      },
+      {
+        "headline": "New questions surround UFO disclosure and the search for General McCasland | Backscroll",
+        "source": "YouTube",
+        "region": "World",
+        "date": "2026-09-02",
+        "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4VjVobmJObG9ZWkw1WURhSTZoWFZBTXhFbEM5ejFzdDEwRE45bjB4MF83N2dTMURXWF84U0ZzUk80cTdmX0NnMk03Y0J5S0gtRnY4TjhQOVFmd09B?oc=5",
+        "publisherUrl": "https://youtu.be",
         "sourceFeed": "World UAP and UFO headlines"
       }
     ],
@@ -459,56 +486,56 @@
     "Absurd headlines / pun headlines / NT News-style comedy": [],
     "World dog news": [
       {
-        "headline": "Dogs in town parks set for Town Council review",
-        "source": "JHNewsAndGuide.com",
-        "region": "Europe",
-        "date": "2026-08-24",
-        "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPTng2MTdXeDNGY29UY2g4aUJISzE4TUhlVkR3VlpKbTFHdl9WdDg3Yl9VNWZVVzhtM3NRUmpGcjBMOVhqRXJXR1JSMTg0NzhxNVk4RE1FaWRmQlg5TkhXS3BLM1BHdEt1dGZxdFRZa3FFVWloamg0dlNyRmNFN0ZDNllQcVlmQ1Y0ZkdjbGZYMnRqYjBfVWNkcHZCQmpNRHR2UWJBTXQ5eGRYNVlFaXVOSzRVN1RCV002YzB0c3YtRHEtYUktSGJCdW9Hay05V083T0RNZnA3WDRSaFN2TENSX0pmNHg?oc=5",
-        "publisherUrl": "https://www.jhnewsandguide.com",
-        "sourceFeed": "European dog news"
-      },
-      {
-        "headline": "Dog reunited with her 12 puppies on their first birthday",
+        "headline": "Jersey hospital therapy dogs praised in Make a Difference Awards",
         "source": "BBC",
         "region": "UK",
-        "date": "2026-08-29",
-        "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5mMFo4bGM4OTEyRWd4d1ZKektwSmpxT2M3MG9JSmRJdFZQTnBpSmJaeG83ZWYxdEc4SDBYTDRFQUN0QVktYkZnVGh5dy1Oc3dFRkw5eHhibw?oc=5",
+        "date": "2026-09-04",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBjaUlrcHEtanlDckJjZ0MyLTl3TmtkV0JKdEJpZEc2QmlPU1Vkczhsd0dDSk52NzVOZjNQN09YdkV1WlkwM0J2MmZteUlZZm1Xd2U4c0Nza2wyUQ?oc=5",
         "publisherUrl": "https://www.bbc.com",
         "sourceFeed": "BBC dogs"
       },
       {
-        "headline": "'Devoted' assistance dog always by owner's side",
+        "headline": "East London Guide Dogs training centre opens to public",
         "source": "BBC",
         "region": "UK",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1id1F1eGVFak9ESG84TjlGSXloNTZ2Z1FScHdkaXpWQTNwYUVydGxrVUZ6ckJFbHJEWVZXb1A0cXNZckRJRWx4NDlSRm9MRm1yT2ZsQ1VkS2RKQQ?oc=5",
+        "date": "2026-08-31",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBmbEdBVGwxMmZ2Zk1abjdaeW9mYkRIdHJaX2NnWXl0ejZiMEkxb0t3OU01LTNhY1Zlclk4clZ3NmhDWHlVbHp1WmlUZGhEZWtmNzJJaVU2dGQ5dw?oc=5",
         "publisherUrl": "https://www.bbc.com",
         "sourceFeed": "BBC dogs"
       },
       {
-        "headline": "Cumbrian dog awarded posthumously for saving owners from gas leak",
+        "headline": "Devizes family keeping their dog's memory alive with Harvey Rocks",
         "source": "BBC",
         "region": "UK",
-        "date": "2026-08-30",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBBRHBVNlNOLU9iQWt3ak9CM1JJWmpwLUItR0RkSGdGTGJoaGVINk9vR0FjSUJDYWo1Ykk2UmcwRWRKN0xFSFFoUzNLU2VNQ0JRMExIcTNTTDNIQQ?oc=5",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ORlNRMTVvZmtSbEtWR2haSDVWaWNOQ0hVYXhvSHdxaHVEYWJlSmZxdnFUeU9iOTlIdEJ6NG5jd3pILUplQjB3elNDZVZYZVQxVEpQY2plc0lnQQ?oc=5",
         "publisherUrl": "https://www.bbc.com",
         "sourceFeed": "BBC dogs"
       },
       {
-        "headline": "Owner 'heartbroken' after vandals target dog bus",
+        "headline": "Players find comfort and companionship with canines on tour",
+        "source": "Reuters",
+        "region": "World",
+        "date": "2026-09-06",
+        "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZEdJS1hwaFVvaUtjeVVBdVpqc041LTNCZmNhTTA0dnpIWWY2MXR1Y2xRSFpZRVlNWnd5SjNEZW9SeFZXZ0pNT2F6bGk4UnRpazVDZklhcEtRSzJpXzBpaXpJR2pHYk9ELTVLTzFyNjhxb0dzUnFWS2NteG5HYjRCWnpKeUFLOWpWb3RxWmdUbnZOQ284b1dabXUtUktpUHZJb0tyYw?oc=5",
+        "publisherUrl": "https://www.reuters.com",
+        "sourceFeed": "Reuters dogs"
+      },
+      {
+        "headline": "Dog 'grounded' after rescue from roof of house",
         "source": "BBC",
         "region": "UK",
-        "date": "2026-08-29",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9jX2RfWFBsQ09NV3VHMU5WSVRLRzAtdERWYjlRcHc0WE1pT1dkbVdQcUJPV2FwS3pDUHEzcFRBQ3d6ckVSMlRzTmJWNjAxRmdhUnNqa3ZTT1lEZw?oc=5",
+        "date": "2026-09-04",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHanBBVmdhOGhOU3lmUHR0WlZoU3Q4SzdjT2FvbmpOM0lzeFc4MTVkN043M2UxdVZXM25HUm1jNVl3MHBobUdZN05jMmRKMWdyQ3ExUW1Ec0NCUQ?oc=5",
         "publisherUrl": "https://www.bbc.com",
         "sourceFeed": "BBC dogs"
       },
       {
-        "headline": "Rescued dog gives birth to record-breaking litter",
+        "headline": "Cow stampede in Sudbury caused by husky dog, police say",
         "source": "BBC",
         "region": "UK",
-        "date": "2026-08-28",
-        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB1bU5iTXl4dVdlTFVVY3FvODJmX3gyN2pweFlsd1Y4am5fUDUwd002YkphRF9LVHFKbFZqNDhldFpHSl9SWkozZk9Dd254eWEtbW5lNlZQTEw4QQ?oc=5",
+        "date": "2026-09-02",
+        "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9NT2xDakRjYzk5LXVJZFphSmN6NmlnM09laUlFZ0xpY0g1LU5ZWjZ4MnZBUVV6ck5SY2dQUFhnb01XcEpvd3RveGxXNkd4QnN0dmR6SEZ0UWF6dw?oc=5",
         "publisherUrl": "https://www.bbc.com",
         "sourceFeed": "BBC dogs"
       }
@@ -516,29 +543,16 @@
   },
   "notes": [
     "ABC Australia dogs: skipped heavy/scarebait item in Australian dog news",
-    "ABC Australia dogs: skipped heavy/scarebait item in Australian dog news",
-    "ABC Australia dogs: skipped heavy/scarebait item in Australian dog news",
-    "Brisbane Times dogs: skipped heavy/scarebait item in Australian dog news",
     "Sydney Morning Herald dogs: skipped heavy/scarebait item in Australian dog news",
-    "The Age dogs: skipped heavy/scarebait item in Australian dog news",
-    "Courier-Mail dogs: skipped heavy/scarebait item in Australian dog news",
     "Courier-Mail dogs: skipped heavy/scarebait item in Australian dog news",
     "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
     "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
     "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News headlines: skipped heavy/scarebait item in NT News best headlines",
     "NT News odd headlines: skipped heavy/scarebait item in NT News best headlines",
     "NT News odd headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News odd headlines: skipped heavy/scarebait item in NT News best headlines",
-    "NT News odd headlines: skipped heavy/scarebait item in NT News best headlines",
+    "Bad dog bureaucracy: skipped heavy/scarebait item in Bad Dog stories",
+    "Bad dog bureaucracy: skipped heavy/scarebait item in Bad Dog stories",
+    "BBC dogs: skipped heavy/scarebait item in World dog news",
     "BBC dogs: skipped heavy/scarebait item in World dog news"
   ]
 }
