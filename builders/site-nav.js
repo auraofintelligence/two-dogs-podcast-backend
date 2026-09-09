@@ -167,6 +167,7 @@
         <a class="flow-button flow-map" href="${prefix}site-map.html"><span>Full Map</span><strong>Site Map</strong></a>
         ${next ? `<a class="flow-button" href="${hrefFor(next, prefix)}"><span>Next</span><strong>${next.label}</strong></a>` : "<span></span>"}
       </div>
+      <p class="flow-network-note"><a href="https://auraofintelligence.github.io/davinci-resolve-automations/">See the shared DaVinci video system</a></p>
     `;
   }
 

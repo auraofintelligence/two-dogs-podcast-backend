@@ -630,6 +630,16 @@ h2 {
   margin-top: 32px;
 }
 
+.flow-network-note {
+  margin: 18px 0 0;
+  text-align: center;
+}
+
+.flow-network-note a {
+  color: var(--accent, #23675d);
+  font-weight: 800;
+}
+
 .flow-button {
   background: var(--surface);
   border: 1px solid var(--line);
