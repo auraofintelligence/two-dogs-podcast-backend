@@ -1,0 +1,144 @@
+# Dog Headlines - 2026-10-19
+
+Search date/time: 19 Oct 2026, 07:30 AM AEST
+Articles searched from: 12 Oct 2026 to 18 Oct 2026
+
+## Sources searched
+
+- ABC Australia dogs (Australia) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Aabc.net.au%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- SBS Australia dogs (Australia) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Asbs.com.au%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Guardian Australia dogs (Australia) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Atheguardian.com%2Faustralia-news&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Brisbane Times dogs (Queensland) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Abrisbanetimes.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Sydney Morning Herald dogs (Australia) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Asmh.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen
+- The Age dogs (Australia) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Atheage.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Courier-Mail dogs (Queensland) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Acouriermail.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Queensland council dogs (Queensland) - https://news.google.com/rss/search?q=dog%20dogs%20council%20Queensland%20park%20registration%20fine&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Australian dog shows and contests (Australia) - https://news.google.com/rss/search?q=%22dog%20show%22%20OR%20%22best%20in%20show%22%20OR%20%22kennel%20club%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Queensland dog shows and trials (Queensland) - https://news.google.com/rss/search?q=%22dog%20show%22%20OR%20%22obedience%20trial%22%20OR%20%22agility%20trial%22%20Queensland&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Working dog trials Australia (Australia) - https://news.google.com/rss/search?q=%22sheepdog%20trial%22%20OR%20%22working%20dog%20trial%22%20OR%20%22yard%20dog%20trial%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Dog agility obedience flyball (World) - https://news.google.com/rss/search?q=dog%20agility%20OR%20%22obedience%20trial%22%20OR%20flyball%20competition&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Dogs Australia and member bodies (Australia) - https://news.google.com/rss/search?q=%22Dogs%20Australia%22%20OR%20%22Dogs%20Queensland%22%20OR%20%22canine%20council%22%20event&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Breed clubs and dog societies Australia (Australia) - https://news.google.com/rss/search?q=%22breed%20club%22%20dog%20event%20Australia%20OR%20%22dog%20society%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Major international dog shows (World) - https://news.google.com/rss/search?q=Crufts%20OR%20%22Westminster%20Kennel%20Club%22%20OR%20%22National%20Dog%20Show%22&hl=en-AU&gl=AU&ceid=AU%3Aen
+- International kennel societies (World) - https://news.google.com/rss/search?q=%22American%20Kennel%20Club%22%20OR%20%22The%20Kennel%20Club%22%20OR%20%22Federation%20Cynologique%20Internationale%22&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Australian local council dogs (Australia) - https://news.google.com/rss/search?q=dog%20council%20park%20registration%20leash%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- NT News headlines (Northern Territory) - https://news.google.com/rss/search?q=site%3Antnews.com.au&hl=en-AU&gl=AU&ceid=AU%3Aen
+- NT News odd headlines (Northern Territory) - https://news.google.com/rss/search?q=%22NT%20News%22%20weird%20OR%20bizarre%20OR%20croc%20OR%20Darwin%20OR%20Territory&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Australian UAP and UFO headlines (Australia) - https://news.google.com/rss/search?q=UAP%20OR%20UFO%20OR%20alien%20OR%20extraterrestrial%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- World UAP and UFO headlines (World) - https://news.google.com/rss/search?q=UAP%20OR%20UFO%20OR%20alien%20OR%20extraterrestrial%20disclosure&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Sci-fi alien culture headlines (World) - https://news.google.com/rss/search?q=%22science%20fiction%22%20alien%20OR%20aliens%20film%20television&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Working dogs Australia (Australia) - https://news.google.com/rss/search?q=%22working%20dog%22%20OR%20%22farm%20dog%22%20OR%20%22sheepdog%22%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Farm dogs and cattle dogs (Australia) - https://news.google.com/rss/search?q=%22cattle%20dog%22%20OR%20kelpie%20OR%20%22border%20collie%22%20farm%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Dog science behaviour (World) - https://news.google.com/rss/search?q=dog%20science%20behaviour%20study%20research&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Animal welfare Australia (Australia) - https://news.google.com/rss/search?q=dog%20rescue%20award%20community%20Australia%20animal%20welfare&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Bad dog bureaucracy (Australia) - https://news.google.com/rss/search?q=dog%20fine%20attack%20ban%20court%20council%20Australia&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Humans strange near dogs (World) - https://news.google.com/rss/search?q=dog%20weird%20bizarre%20strange%20owner%20neighbour%20park&hl=en-AU&gl=AU&ceid=AU%3Aen
+- NT News-style dog absurdity (Australia) - https://news.google.com/rss/search?q=dog%20dogs%20bizarre%20weird%20funny%20%22NT%20News%22%20OR%20pun&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Famous and celebrity dogs (World) - https://news.google.com/rss/search?q=famous%20dog%20celebrity%20dog%20film%20dog%20royal%20dog&hl=en-AU&gl=AU&ceid=AU%3Aen
+- BBC dogs (UK) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Abbc.com%2Fnews&hl=en-AU&gl=AU&ceid=AU%3Aen
+- Reuters dogs (World) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Areuters.com&hl=en-AU&gl=AU&ceid=AU%3Aen
+- AP dogs (US / World) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20site%3Aapnews.com&hl=en-AU&gl=AU&ceid=AU%3Aen
+- European dog news (Europe) - https://news.google.com/rss/search?q=dog%20OR%20dogs%20Europe%20council%20park%20science&hl=en-AU&gl=AU&ceid=AU%3Aen
+
+## Categories and headlines
+
+### Australian dog news
+
+- [Gone to the dogs: racing fans mourn closure of 'Wenty', Sydney's historic greyhound track](https://news.google.com/rss/articles/CBMi1gFBVV95cUxOQkFBaGRzbFZyY3A1N2pUS1RseEZnNmItak0tU1EweThJaWU4UVpnbU5hSVRxX29nVHQweEFwSFgxU3ljWHplODY4R0Y1ZzJYZ1B0Z2hFY0VoU0t1M1BKR0N3Y3RnZFdxNmZZWXBlTEEwc0wzVmdqOGVGXzNOaE1XVFFTRjRLMjFoYTdUMGNxRmFORTlkclRCQVFJcmotUlVTN3Y1WHZERG95MWZQRHdnR0FCLWl1dW5MUm9naEwwcXRsaFg3aE9tUGxZSXFCZFRwY2RGeG9B?oc=5)
+  - Source: The Guardian | Region: Australia | Date: 2026-10-17
+- [Last lap at Wenty Park as greyhounds go the final distance](https://news.google.com/rss/articles/CBMitgFBVV95cUxOdUd1dFJzNXp1V2R4QzB6blFSc2h4T0MzYU5BQUE2UUJFV1ViTDFOaDRzenlDNnp5YjUxN21xbFM5eHlJRUJOLUQ3MERLdmlMNXN1NzhqN0YtSFo1aURtX3YtM1hGN2toREJCbFpncTZOcDZjenZGTW1QUkU5eW8ydTVLQXhXVTIweHA0Z2t4SzdvRmVESkxwQ1lweFUtUndoVl80emtmYVJEaXptT2lHTE42dEU5QQ?oc=5)
+  - Source: SMH.com.au | Region: Australia | Date: 2026-10-17
+- [Last dash at Wentworth Park triggers fight over Sydney's future home of greyhound racing](https://news.google.com/rss/articles/CBMi3gFBVV95cUxQMlB0Y1RoVkh6eVpiU3FNYVdReUt3eUdPZ1RaNjFQeVRrbEtaeFlwUFphcE0xZ2JaMVFiLWNOU25kYlRBVEZRRGpMdURvX0Y4TWFtWjZvSEV6NU1MdnV0enR5YVAxMm1iRlFuNks2VC1UeC02LS1veHdmYlp5bkwtYjVPU3dlRjl5UWVxSzk3d1lvajJibFNFbDNOdGtrd0VtS3dORjVINTFWQlh6SzMtc3Z0eVlvZmI5ejVxbmF6c2hVblFQVzF3aHphTXFGcjhrZUp5RmU5V24tSHZYU3c?oc=5)
+  - Source: SMH.com.au | Region: Australia | Date: 2026-10-16
+- [Why do small dogs live longer than big dogs? Scientists may have found the answer](https://news.google.com/rss/articles/CBMipgFBVV95cUxQOEJ0azZOSnpsanRCVFdNSm5fYVA0cUZhcnhOYzBvQVFBeUFQck1HT1VVVlk2d1JIVkpOYWs4SHl2Vl9VNDRXVDBCM0h1M0NVOEkwTzVDOGE5RDFtQy15eUtrSWFwZHljNHIzZTVvRF9VaThIbklyaS1GUTBuUFBuZENnQXUyNWdpc1hRaGt0d2EyU3lWQWJTUWZXYWduRFF6eTJ4bXdn?oc=5)
+  - Source: SBS | Region: Australia | Date: 2026-10-14
+
+### Dog contests, shows and trials
+
+- [National Dog Show 2026 to celebrate major milestone](https://news.google.com/rss/articles/CBMipgFBVV95cUxQSEM4enh1enVhaklSdDlnVmFKY19jc3VzRGVPRUN6Z29vZUJySDVjTmI3Uzc0TUtQRGpFQ1JzdmdJeHZPU1dyaFIwN3F3Q1BzWjRISXVwS0xYVUtlN3pWYkZXVHN2czZRdE9LQXJFQS1fbmtTSTlHenFVOExrX1ZHU0w1RDFGTTE3MXBDNHh2STNEbUI4U1ZHdV81UWxIWW16dEFxVXNn0gGuAUFVX3lxTE8yWTl2dEc2M0FKa3kwRXk5WmJUUzBoMDB6Q2FLbFJHeFE0TUpndGJGbWJ0TXpidEotLVBKa3hwdUhkSGJGYjNyRmdBak9VUkRBR2Z4M3F1RVhxd0NGR1FYMGREeTBxQmhvYXVIY0ZDdXVQcUlsRkZ6N1IzNFdBSGVHMDZ0TC1oMnZiWWp2SXl1YjkyMU5fU012TWZHRE1MV0F3Y3dxZDgtd1Q2Tm9CZw?oc=5)
+  - Source: NBC10 Philadelphia | Region: World | Date: 2026-10-17
+- [Spotlight on dogs instead of horses at Grand Oaks agility competition](https://news.google.com/rss/articles/CBMi4AFBVV95cUxOSWU4X2FpTGdVMVYwRDBEeU44bUdxQnIzVlExRTFiMTY4YU1teFZfRTA2cmY3a3FZMW1VejB1VXljakc1am14TzhmQkJCUG1TTFpPbVZIM3B6dG1CVnI1RU9KcUxmVFBsY1h4bUFwY21ZeGtXb1pEQlNieUFwb3ZCVjhIT0hJWndhX0NNOUR1QVY4TEVvS3AwMEhJWFFQT2xhWjVnZ0VHalhwLVVUOXpMSEtOZXFXcWdGdVdWMGpfOTlHZjE3T0pTV2RmQjZIRmFhWWVVZWxPVk04aFF3VkoxMg?oc=5)
+  - Source: Leesburg Daily Commercial | Region: World | Date: 2026-10-14
+- [Chinese Shar-Pei owners gather in Wichita Falls for national dog show](https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVzhMbHBKUG4zMkl3dU1fQXZMLXNpZ3lNSVFJN1Nsem5mSDhpOE5FU251eTNBNEVRRWdObnR0WXdKdmZ6MUl6QjJaSTV1MUxVWWVqR2JwOGFsS2V1NVJQT3czN1BONWFmNWVqY2FfYXMyU0U0Z0Ewd0tNaVJ0MFFieGlQQTlTV1ZtNUNaUnZFVER0U1pTVFk2SkhCZVR5bV8teUJscXFWNko3dw?oc=5)
+  - Source: News Channel 6 | Wichita Falls, TX | Region: World | Date: 2026-10-13
+- [Flying Brick MC wins Best in Show at Australian Cider Awards](https://news.google.com/rss/articles/CBMingFBVV95cUxQdmNYdGxaR3hTOFpheEhTOHBZOG1CQTNIWWhOekltTUtQckxCWnRJaXR3UjJNT3pKT2Z0b2UwaTQ3eGxEdUxkcGI0YjdGSWdXMjNJcmxfMnBzVzRZZWhlT1Q5X3RUejBZWG5ucTgycFV6Vlo0Zl9fdDF5ak9SMWxJQ29keW03QUFLR3RsYTVCUm1NT2g4TDNFc0MzNlVoUQ?oc=5)
+  - Source: Drinks Trade | Region: Australia | Date: 2026-10-16
+
+### Dog societies, breed clubs and events
+
+- [A French Bulldog's Acceptance Speech for Being Named the American Kennel Club's Most Popular Dog Breed for the Fourth Consecutive Year](https://news.google.com/rss/articles/CBMi_AFBVV95cUxQcDdnUmpxZmFZSnM5Tjh2TXhPemhYV3lEVzZKb0dncWJHWDIzTTM2bERPM0V5UkJzMElPRjZzSTBRa1JpbFZnQVNSU2NJYWp2RFRFT3RSZEFpRlh6V19wUnoxNlhLVUdWd2ZJVTFBYVY0b3B1N3FwR29EZDVmSDhxWHFMU1U5Mnp5TEgzVDgwZ1NIUkVIYnBkb3NsenptaTVoQ00wVDVOU3FsSWJkdUV0R0JHSkJlckZoLWRfSy1ZSExOUTY0M2NIQ2pRblI3NGluLVRNekdjeVVFbGlBNW5RZVNFRkgtTXFkM0xQZW1mQ0d6eHN2RjQ4ZTJUZW4?oc=5)
+  - Source: McSweeney's Internet Tendency | Region: World | Date: 2026-10-15
+
+### NT News best headlines
+
+- [Palmerston Council weighs smart glasses ban over child predator concerns](https://news.google.com/rss/articles/CBMiywFBVV95cUxPR1F1dHRTb1V6N29lWVdheVN4dmp6R3hQdzNDSjlpMk1sZlVGODQ4Y29qRWZEMWUyQUhSQm5OdlE1OXlPSnhRd29GQVNZdDcyS2R3Q3o1OVVtMzYtQjFqMGNYcEtHQTE0aUlPdWQ3c0I5UFNZUkdySGhVOE9nUlAwb2lQWGFNSW9fZXlZYlUxMHVQMW5iLXRPVGpudEJIdExmeU54VzctVm5HTy1WYXRCNHZWYU85NTFJYnNGYmt6SWJHUDN5bXlSSUJ1bw?oc=5)
+  - Source: NT News | Region: Northern Territory | Date: 2026-10-18
+- ['Absolute joke': Tucker Carlson blasted over bizarre bestiality podcast remarks](https://news.google.com/rss/articles/CBMi5gFBVV95cUxONlc1WXRWT1BMUFBOX0FzNjNlVzlldEdhaDJmeEp3amNUcTZQOHRiY2p4dk5vNHBGOEVDNk5SLTV2NjR6bVJVSlJhQ2dIdmNuWlk1QlI2WVBScFIxSnVjYnROS05BdDNqRGhXandtaHFLQVlDa2NZcl91VlFtdmRLcWtOa1VwV09wd2U4VjZVMUE0MzJ2bERtNHVlbEplRXR1NUc3VW1ZUlJSVDBvTkxlLUhibTlxZ2h4ZzNNWWE3d2pmeFZpbXNiTkRLeVdBbEpZREpUSjc1eGR6QlVCUkdjcjNkUEtoZw?oc=5)
+  - Source: NT News | Region: Northern Territory | Date: 2026-10-18
+- [Police raid sparks closure of iconic NT pubs as owner alleges 'harassment'](https://news.google.com/rss/articles/CBMi_gFBVV95cUxOZkdHOVJ3TTJjQU03TkRWMEZGVW1iUUcyaE0yeTFNRzZDVndESlZENE1sVUdJNlVDQ3pmLWEtVktBdUlfTXFxbXNva01tQ2pzQmtyVU4wck9FdlN2azdjVzV1WnRQY0F2RHYxMXlwZ0U1LS1hME02LXZtZ0NzdFBmU0VubGZNdFRhVUVsNGwxMFBldzhmRmsxaktCY0JjUFRBMFc2N29qRTdBZUh3VFk1Y2h0aTdjWUVYUmoxSzk5T3NpM3JfeWhjajBnNGFrRUNvSGJKU0FyUkUweElvS2ttckJrUlhOVWNGWWdPWWNkUzNlSEhOZko5bjREaFh2dw?oc=5)
+  - Source: NT News | Region: Northern Territory | Date: 2026-10-18
+- [Council opens new aged care facility](https://news.google.com/rss/articles/CBMilAJBVV95cUxObGR2NFF6VFVtdWVTZUo2Q1JCZ09wNDVQUk9FVU5tVWNyZERyM09HcmJ2UE1welRaR25oOGJrd3BCbzJQanUwZVU1SVhkTlpWX1JJa3BwblBBMDNybm5RcHBCX1gzdmdUUTFDTzFGMTFZcWFub254c0NwT0ZqRGU4VjB5RG5jWlpROUtsd0s1Z25EZF9BYVVzN21BMGd6NktqNlhvQlU1RkEtUHZRNVhIa2czTy04MjZFNW1HQmVyb3hLdm94ZFllb1pPaVJQeVB2MWNVOERxel9icTg3Zk1lcmNBaXB2Sjg0emRtVkFZZjJZcTVpcUt2OGZlQTQ1X0hLNWkteXdzaldzQm5CdEJMbzQzYkg?oc=5)
+  - Source: NT News | Region: Northern Territory | Date: 2026-10-17
+- [Trump's savage takedown of 'paid protester' sparks rally chaos](https://news.google.com/rss/articles/CBMi1AFBVV95cUxNSzBCN0IzMzl6Q1ZSX3Y5NEFYVGNlQjl6d2RZNUx2NktFb1JFLWFpS20tM0ROd1VJakpja0tEUDBrRkt6X0Z4RF9UVGV0dk1NWnFCSGJDUHpmdlVOUzkyNENDTHd6TERTRnlnUThYTHR6eUdBMGRXUVpPTXNkeGJWVHFaWnFraFFSQ3I1NEw4UkdodG56RjBuWFZlRWIyUTMtZWxZa0pSdy01T3lsdHMxdk9iR2JCWTFPcF9ibXdmYkhvN0FBakR5XzNJQnVfTy11VTQzUw?oc=5)
+  - Source: NT News | Region: Northern Territory | Date: 2026-10-17
+- [REVEALED: Business liquidations in the Litchfield council area](https://news.google.com/rss/articles/CBMiiwJBVV95cUxNMmIyZjN1QWVGU1ozUGZsZklDYkxUdFpnOVV3ZUFPR3ZvX2pJQjlubUFtdG5GNDRKNElKN2lhOGNsRmE4bTlHa0J2SmhTcmNtbkd5VDEyOTdRLUpVS3pmMXJoNDI1VXFuUG4wa1I4dmZQUVQ2dG41VmlwdFhFdFM5ZzZ2NW15NjdmRWdQS1cyaXJQR1BGN3lCelVhNHBURDJEeTcwc1RGODdweU9zTFVEUnc4YzJEdGZ4NW93OWlId3l2S3M3dDlRME56MW1jcnpTX2xjX0M0UDQ2TTFGRW8tYUZ1M2djVGtlVEtrLUhaNHVNY0d6ZXZCa2RuYWJ5ME5mT2Z4QWU1NHRaTjA?oc=5)
+  - Source: NT News | Region: Northern Territory | Date: 2026-10-17
+
+### Dogs, aliens and odd skies
+
+- [Steven Spielberg's 2026 Alien Movie Is Peacock's No. 1 Film for Nearly a Week](https://news.google.com/rss/articles/CBMijgFBVV95cUxQSjgtU1J2SHBucnY0MW5kckhlYkF1VXdYUWxwenQzYjVUa250TElJNzllOUZnTTRNcjZKZU95OUZVMHJ1c2xPTmRXVjhEUkRndWtNOHBjY2ZIU3BSOXNuUmF6N0lTSTZ3eVN3Z2o5LUdmbkxISnRKLUpsdFFwLWVfcVdCNnF5SjdKSThVanF3?oc=5)
+  - Source: Men's Journal | Region: World | Date: 2026-10-17
+- ['Allen': Netflix's Odd Alien Comedy From the Makers of 'Bluey' Gets a Release Date and Teaser](https://news.google.com/rss/articles/CBMikAFBVV95cUxQbWFmYTQyZEtCVUFQWlZtckFqb3ZaeUFWMGJZcUQyY3BpaEp6Rm1yMWtUeDZncXVfT2NjWUhpX19ZM2VoZ2JuUENTcXJ5OTNMUjBCMXc2MUgta3g0bW9hYmNEYUhfSFQzdzk0YmY0Q1BPSVFLbmd2VmRjWnYtcE1DOENFRjFEdWVxSDVod3VqZ2I?oc=5)
+  - Source: What's on Netflix | Region: Australia | Date: 2026-10-17
+- [Youngest NASA astronaut to walk the moon says UFOs are 'demonic' aircraft sent by the devil](https://news.google.com/rss/articles/CBMimwFBVV95cUxOTHl3SFlLb1FlODBmM0VpdW1mSWlaMndjd2pqaFlZMzZZZzhCU2plQ3R0NlM3RHEwSU12ME8tVzAwWkhoUXRxZ1Qwa2dmWm5DMW82NnhhZk1VR1BRMUJvSnZMM0lqTWxnUERrSi1td0hEVUhoQTlKRDFFaFhhY3BxT3ZobnFrVGdIcUhqRXl1eTd4VDR6M3M5N2FhYw?oc=5)
+  - Source: New York Post | Region: World | Date: 2026-10-13
+- ['Disclosure Day': Spielberg Tackles Aliens, Secrets and God](https://news.google.com/rss/articles/CBMid0FVX3lxTE4wYk5kbkZIcGFld3NTQ0I1cFprY2E4TU9EOWYxVGVQVGc4SWJraW9HcGpvSmhaYWdHdFNSLXVpeUE4MHZCdWZpY3lqUzlRVWVia1l1V0Y5TEZyd0lFdTlvSmViRmlsNENUeE5TazB1TDFPQUUtZWRF0gGHAUFVX3lxTFBKZXNCYVBMN3MweVU2ekZTZ0JEM1FkOFhXT19UQlY0YTZ6RFQ2Ym5ndzVtR0NFLWhQWDlETTR2djZ6ZUJuY25PUXBXSElVbGxIcUk5MGJ4RHNtTHZadnRhbUQzS2VBTllTdE1Wb1czRFV0SW9oUl9MUjVVZlN1bnZaeDN0SS1BUQ?oc=5)
+  - Source: Family Theater Productions | Region: World | Date: 2026-10-13
+- [Why Ross Coulthart says NASA's UAP disclosure isn't complete](https://news.google.com/rss/articles/CBMijwFBVV95cUxNQ3FRODNlSzVONkdSRl9TcDdScUtJdHRBV0ZIRkpXMEJwR1FWajAzM2Nsdk1BYVlJQUJtM2c0bDdxQkUyRFpmOGpUTllBakZlMXl2al8zRFZjUzAzTklsdWpKMTRYM3Z1UElfMWhCOEhZbFFRNzRtSzB6RDV4elJNR3h1aEtTZVNLNUgxN2xxWdIBlAFBVV95cUxPZHRqbG1wSFhQRGR3M0xIV3lqcGdkU1JzTng2cDZKYXhYUXA3LWRFNFdaSUU3UXhodk5GbDM4clUybkEwUVlSS3dIMjV1OFE0aXlBNy1sSFgycDNsVE1IcG5zbVpvUEV4SEowYUZiNEdHX1ZQQzFJNUhWUUw0d1V6eVg3R3YxMkdoZjhkc1hMaTkwVFpN?oc=5)
+  - Source: NewsNation | Region: World | Date: 2026-10-12
+- [How to watch 'Disclosure Day' online- stream Spielberg alien thriller at home](https://news.google.com/rss/articles/CBMiowFBVV95cUxOQ2tHVFFZQThKejVmZEJUMm5xbGFEZHVObFBXWUQ2RUF6OUlRdXNjaElLSHZYMHJkaXNuZG04TjVDRkdPN1pMWXpfb3JzajkxTjRrckxzYmlycU9CZnc1VFJiaDQzZGVxUk9DcmxNMmZhVnJvVFg4YlcwcE9BenE1SExjRElSeHMtamZEbHhRdnhGZnUweGFaRzA2YjhnMzQ1bmhz?oc=5)
+  - Source: Yahoo | Region: World | Date: 2026-10-12
+
+### Famous dogs / celebrity dogs
+
+- [12 Stars Who Rescued Their Dogs in Surprising Ways](https://news.google.com/rss/articles/CBMicEFVX3lxTE5PT29ZWFJuNGE5bzJCbFVIam52YUZEQl9DR3pnbG9fZWU4MTh6bjU0MDc4eTRHS1ZOQzNQSzRYblV2aUt4ZXItWktOZjlQNlRPSjlBTUtWellxYkxmOTVHWDA4Z3FhWnNsUXJjM3J6X3E?oc=5)
+  - Source: People.com | Region: World | Date: 2026-10-16
+
+### Bad Dog stories
+
+- [What you need to know if a dog comes at you or your pet](https://news.google.com/rss/articles/CBMikgFBVV95cUxQY2RWUGZMR0NiSUJkOW96cWd4bTFlbWZ3cUZQOUFjU1h5S3lpaTh2bkJRQXU4VUpORlVkaHhwd1pwSU1fRjF0cE5BOVkzbEtyb2Y2VGMzaDU3bnpXWk5oeFRJdl94dFRtdEdncXQxN3Nyb1E1dDZRZksxZWhDZ0FPYnhZYmRDbDYySmQ3ekxxVE5nUQ?oc=5)
+  - Source: Nine.com.au | Region: Australia | Date: 2026-10-18
+
+### World dog news
+
+- [Researchers train dogs to sniff out spotted lanternfly eggs to slow the spread of invasive pest](https://news.google.com/rss/articles/CBMi6AFBVV95cUxPVlBDem95a0FNYzhkbjBmdkxPOFJzRXY0N0FqZnNLUU9GNlRpTXIyWlZrNVFneXZiMjBXdXBSMkVoY3NOdnZPelpvc29vYkd5NnA0SEs2UGtzMjJYTDZVREFKWVlQOHFxc3Z0S1R5YTB2Yk52V0otaXA3MUlvbkE1aVhKU3FqMmVrbmppWDQ5cnpfWGppVlJ2dG9nR3lVc3JPWjBpWmZySVFWbmRmRThiVzBnRDNRYjhCd0FoODFTUVBIQzhrYUtNTFBzbHYyQ0Q4WVZFUGJORjRTTy1TMVN6bFVrNk8yQmhM?oc=5)
+  - Source: AP News | Region: US / World | Date: 2026-10-17
+- [Sheffield dog park plans to go ahead despite objections](https://news.google.com/rss/articles/CBMiW0FVX3lxTE0xNjNodTZLQkNxdHQ5NGlkejRzZWxDMGJkY2hFZ2hDZmZWZmhFSk5CRjY3dXJXTmI5WXhIX3g5ekRUa1dhNjYyRlRRSlpvUk9vVXdza19DRHlwMjQ?oc=5)
+  - Source: BBC | Region: UK | Date: 2026-10-15
+- [Large dogs age more quickly than small dogs at a molecular level](https://news.google.com/rss/articles/CBMipgFBVV95cUxQTGVzWmNmeWk3eHpsZ2FkdjRJSk5ZelN6LWdHYlZ6ODJkZ0xKbjYxU1lyM1g0MEsyd3BHVWlaRlRzLTJ1bW5QbDRtamRWd1pBek1zckdTRi11cGVQM1N0TENCY3hGTjdyNDFPV2VCOFdYbndibzVzaFF5b3pmT2dwTVV3Y3ZCNFNqOEdBdWZ5ZnZDT0d2eWJIVHViTGRLeE1lS0dGSU9n?oc=5)
+  - Source: Reuters | Region: World | Date: 2026-10-14
+- ['Having a guide dog has been a gamechanger'](https://news.google.com/rss/articles/CBMiW0FVX3lxTFAyTW1vSkpuMEc0TmlqZVZYTTZQLTJVZGE3d1dqck45SlQ3ekRRdDN0M29zb1d0QnhPMmFzcE1ZVzJhVEUxSjltdXo0LWt6VEpzT0VPT3lRWFE4am8?oc=5)
+  - Source: BBC | Region: UK | Date: 2026-10-12
+- [West in Pictures: 'Lido's dog event' and 'world BBQ finalists'](https://news.google.com/rss/articles/CBMiW0FVX3lxTE9LUXJtbWllZTdSRlowWlFlS2taVFlSbE5DdXA4OTNPbkpHNm4zN2FYOHFrYlZIOUs5ajVtTndpcGV5a0tTODV2aFBoa1hzeDJwcnMxQVFZenBLQ00?oc=5)
+  - Source: BBC | Region: UK | Date: 2026-10-18
+- [Blind dog learns to navigate the world using only his nose](https://news.google.com/rss/articles/CBMiW0FVX3lxTE1PYm9tTklwRWMtUGo5S1kxU2pBd2ROTWRUZTIxNVpjNVNMUWhsaGw3cFNIREVkWDV0ZEJhc3VYeXQybThHU2YwTEEzZ1BTTUVMMmtpUXlKbmMzelE?oc=5)
+  - Source: BBC | Region: UK | Date: 2026-10-17
+
+## Skipped heavy, tragedy or scarebait notes
+
+- ABC Australia dogs: skipped heavy/scarebait item in Australian dog news
+- Brisbane Times dogs: skipped heavy/scarebait item in Australian dog news
+- Brisbane Times dogs: skipped heavy/scarebait item in Australian dog news
+- Brisbane Times dogs: skipped heavy/scarebait item in Australian dog news
+- Sydney Morning Herald dogs: skipped heavy/scarebait item in Australian dog news
+- The Age dogs: skipped heavy/scarebait item in Australian dog news
+- Courier-Mail dogs: skipped heavy/scarebait item in Australian dog news
+- Courier-Mail dogs: skipped heavy/scarebait item in Australian dog news
+- Queensland council dogs: skipped heavy/scarebait item in Queensland / local council dog weirdness
+- NT News headlines: skipped heavy/scarebait item in NT News best headlines
+- NT News headlines: skipped heavy/scarebait item in NT News best headlines
+- NT News headlines: skipped heavy/scarebait item in NT News best headlines
+- NT News headlines: skipped heavy/scarebait item in NT News best headlines
+- NT News odd headlines: skipped heavy/scarebait item in NT News best headlines
+- BBC dogs: skipped heavy/scarebait item in World dog news
+- AP dogs: skipped heavy/scarebait item in World dog news
